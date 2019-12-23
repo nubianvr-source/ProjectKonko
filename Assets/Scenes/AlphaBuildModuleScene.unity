@@ -1248,7 +1248,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &230181949
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5531,7 +5531,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &854024590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11117,7 +11117,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &1567857113
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12376,11 +12376,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DoNotTesselate: 0
   savedPos: {x: 0, y: 0, z: 0}
-  savedUp: {x: 0, y: 0, z: 0}
-  savedRectSize: {x: 0, y: 0}
-  savedColor: {r: 0, g: 0, b: 0, a: 0}
+  savedUp: {x: 0, y: 1, z: 0}
+  savedRectSize: {x: 221.2, y: 85.8}
+  savedColor: {r: 1, g: 1, b: 1, a: 1}
   savedTextUV0: {x: 0, y: 0}
-  savedFill: 0
+  savedFill: 1
 --- !u!4 &1778721357 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4325957677421342, guid: ee58b044a94296f4b8b04a34dff2f933,

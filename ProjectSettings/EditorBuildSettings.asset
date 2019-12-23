@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/SplashScreenScene.unity
     guid: 7af442fe8fc0f7449a0178770ec6090e
   - enabled: 1
+    path: Assets/Scenes/MenuScene.unity
+    guid: ed434cd1ae94ac84eb47ad41a82ccce8
+  - enabled: 1
     path: Assets/Scenes/AlphaBuildModuleScene.unity
     guid: 2c5cc6eb0bcd93c4492bffa014b47c63
   m_configObjects: {}
