@@ -1,4 +1,4 @@
-﻿Shader "Custom/Flip Normals" {
+﻿Shader "Flip Normals" {
     Properties {
         _MainTex ("Base (RGB)", 2D) = "white" {}
     }

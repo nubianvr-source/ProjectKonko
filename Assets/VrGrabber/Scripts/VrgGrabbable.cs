@@ -12,6 +12,7 @@ public class VrgGrabbable : MonoBehaviour
     public bool isScalable = true;
     public bool avoidIntersection = false;
     public float maxSpeed = 10f;
+    private LightBulbTriggerScript lightBulbTriggerScript;
 
     public UnityEvent onGrabbed = new UnityEvent();
     public UnityEvent onReleased = new UnityEvent();
@@ -115,14 +116,20 @@ public class VrgGrabbable : MonoBehaviour
 
         onGrabbed.Invoke();
 
-        return grabId_++;
-    }
+        FindObjectOfType<AudioEngine>().PlayAudio("PickupSound");
 
-    public void OnReleased(VrgGrabber grabber)
+        return grabId_++;
+           
+        }
+
+        public void OnReleased(VrgGrabber grabber)
     {
+
         grabbers_.Remove(grabber);
 
         onReleased.Invoke();
+
+            
     }
 
     public void OnGrabClicked(VrgGrabber grabber)

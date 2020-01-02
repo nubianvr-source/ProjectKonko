@@ -1,27 +1,81 @@
 fileFormatVersion: 2
 guid: ff44a2c0c2416c449bc3204ddd6c77e0
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: base
-    100002: //RootNode
-    100004: switch
-    400000: base
-    400002: //RootNode
-    400004: switch
-    2100000: Mat.4
-    2100002: Mat
-    2100004: battery_top_orange
-    2100006: P-N Junction diode_positive bias
-    2100008: switch_on
-    2100010: switch_off
-    2300000: base
-    2300002: switch
-    3300000: base
-    3300002: switch
-    4300000: base
-    4300002: switch
-  externalObjects: {}
+  serializedVersion: 26
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: base
+  - first:
+      1: 100002
+    second: //RootNode
+  - first:
+      1: 100004
+    second: switch
+  - first:
+      4: 400000
+    second: base
+  - first:
+      4: 400002
+    second: //RootNode
+  - first:
+      4: 400004
+    second: switch
+  - first:
+      21: 2100000
+    second: Mat.4
+  - first:
+      21: 2100002
+    second: Mat
+  - first:
+      21: 2100004
+    second: battery_top_orange
+  - first:
+      21: 2100006
+    second: P-N Junction diode_positive bias
+  - first:
+      21: 2100008
+    second: switch_on
+  - first:
+      21: 2100010
+    second: switch_off
+  - first:
+      23: 2300000
+    second: base
+  - first:
+      23: 2300002
+    second: switch
+  - first:
+      33: 3300000
+    second: base
+  - first:
+      33: 3300002
+    second: switch
+  - first:
+      43: 4300000
+    second: base
+  - first:
+      43: 4300002
+    second: switch
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat
+    second: {fileID: -2310514774154243031, guid: 91fe513a4b7a8eb4ca7c1a578e8984a7,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.4
+    second: {fileID: -2400404728525148765, guid: 91fe513a4b7a8eb4ca7c1a578e8984a7,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: P-N Junction diode_positive bias
+    second: {fileID: -8392691750467446049, guid: 91fe513a4b7a8eb4ca7c1a578e8984a7,
+      type: 3}
   materials:
     importMaterials: 1
     materialName: 0
@@ -56,6 +110,7 @@ ModelImporter:
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
@@ -63,18 +118,19 @@ ModelImporter:
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -83,10 +139,11 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -96,6 +153,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
