@@ -12,7 +12,7 @@ public class VrgGrabbable : MonoBehaviour
     public bool isScalable = true;
     public bool avoidIntersection = false;
     public float maxSpeed = 10f;
-    private LightBulbTriggerScript lightBulbTriggerScript;
+ 
 
     public UnityEvent onGrabbed = new UnityEvent();
     public UnityEvent onReleased = new UnityEvent();

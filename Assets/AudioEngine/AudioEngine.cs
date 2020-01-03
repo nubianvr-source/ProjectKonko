@@ -37,6 +37,18 @@ public class AudioEngine : MonoBehaviour
         s.source.Play();
     }
 
+    public void StopAudio(string name)
+    {
+        Sound s = Array.Find(sounds, sound => sound.audioClipName == name);
+        if (s == null)
+        {
+            Debug.LogWarning("Sound Asset" + name + "not found");
+            return;
+
+        }
+        s.source.Stop();
+    }
+
     public void onHover()
     {
         PlayAudio("ButtonHoverSound");

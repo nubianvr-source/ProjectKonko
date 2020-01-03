@@ -17,6 +17,10 @@ public class WireScript : MonoBehaviour
 
     public SwitchIconScript switchIcon;
 
+    public DiodeObjectScript diodeObject;
+
+    public DiodeTriggerScript diodeTrigger;
+
     public LightBulbComponent bulbComponent;
 
     public Text infoTextBox;
@@ -24,6 +28,12 @@ public class WireScript : MonoBehaviour
     private bool isBatteryInTrigger;
 
     private bool isLightBulbInTrigger;
+
+    private bool isDiodePositiveBias;
+
+    [HideInInspector]
+    public bool isCurrentRunning;
+
 
 
     // Start is called before the first frame update
@@ -37,6 +47,7 @@ public class WireScript : MonoBehaviour
     {
         isBatteryInTrigger = batteryTrigger.isInTrigger;
         isLightBulbInTrigger = lightBulbTrigger.isInTrigger;
+        isDiodePositiveBias = diodeObject.isPositiveBias;
         
     }
 
@@ -46,13 +57,28 @@ public class WireScript : MonoBehaviour
         {
             if (isLightBulbInTrigger)
             {
+
+                if (isDiodePositiveBias)
+                {
+
+                isCurrentRunning = true;
                 infoTextBox.text = "Circuit is On";
                 GetComponent<LineRenderer>().material = LiveWire;
                 lightBulbTrigger.lightBulbIcon.LightBulbIconOn();
                 batteryTrigger.batteryIcon.BatteryPowerActive();
                 wireIcon.WireActiveFunc();
                 switchIcon.SwitchOn();
-                //bulbComponent.lightBulbComp.GetComponent<MeshRenderer>().material = bulbComponent.LightOnMat;
+                bulbComponent.lightOn();
+
+                }
+
+
+                else
+                {
+                    //Play sound prompt or indicate error for diode in reverse bias
+                    infoTextBox.text = "Circuit On but the diode is set in negative or reverse bias";
+                }
+               
                 
             }
 
@@ -75,14 +101,14 @@ public class WireScript : MonoBehaviour
 
     public void setCircuitInactive()
     {
-        
+        isCurrentRunning = false;
         infoTextBox.text = "Circuit is Off";
         GetComponent<LineRenderer>().material = wireInactive;
         lightBulbTrigger.lightBulbIcon.LightBulbIconOff();
         batteryTrigger.batteryIcon.BatteryPowerInactive();
         wireIcon.WireInactiveFunc();
         switchIcon.SwitchOff();
-        //bulbComponent.lightBulbComp.GetComponent<MeshRenderer>().material = bulbComponent.LightOnMat;
+        bulbComponent.lightOff();
 
 
 
