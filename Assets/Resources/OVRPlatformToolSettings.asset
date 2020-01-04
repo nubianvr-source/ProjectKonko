@@ -25,9 +25,9 @@ MonoBehaviour:
   - 
   - 
   releaseChannels:
-  - 
-  - 
-  - 
+  - Alpha
+  - Alpha
+  - Alpha
   riftBuildDiretory: 
   riftBuildVersion: 
   riftLaunchFile: 
@@ -54,5 +54,5 @@ MonoBehaviour:
   - configList: []
   - configList: []
   - configList: []
-  targetPlatform: 3
+  targetPlatform: 1
   runOvrLint: 1
