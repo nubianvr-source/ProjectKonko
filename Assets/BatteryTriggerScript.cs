@@ -53,7 +53,7 @@ public class BatteryTriggerScript : MonoBehaviour
     {
         if (other.gameObject.tag == "Battery")
         {
-            FindObjectOfType<AudioEngine>().PlayAudio("SuccessTrigger");
+           FindObjectOfType<AudioManager>().PlaySound("SuccessTrigger");
 
             isInTrigger = true;
 
@@ -65,7 +65,7 @@ public class BatteryTriggerScript : MonoBehaviour
     {
         if (other.gameObject.tag == "Battery")
         {
-            FindObjectOfType<AudioEngine>().PlayAudio("");
+            FindObjectOfType<AudioManager>().PlaySound("");
             isInTrigger = false;
 
         }

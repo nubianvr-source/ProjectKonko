@@ -55,7 +55,7 @@ public class LightBulbTriggerScript : MonoBehaviour
     {
         if (other.gameObject.tag == "LightBulb")
         {
-            FindObjectOfType<AudioEngine>().PlayAudio("SuccessTrigger");
+          FindObjectOfType<AudioManager>().PlaySound("SuccessTrigger");
 
             isInTrigger = true;
 
@@ -67,7 +67,7 @@ public class LightBulbTriggerScript : MonoBehaviour
     {
         if (other.gameObject.tag == "LightBulb")
         {
-            FindObjectOfType<AudioEngine>().PlayAudio("");
+            FindObjectOfType<AudioManager>().PlaySound("");
             isInTrigger = false;
             
         }

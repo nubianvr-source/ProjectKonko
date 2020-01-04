@@ -116,9 +116,9 @@ public class VrgGrabbable : MonoBehaviour
 
         onGrabbed.Invoke();
 
-        FindObjectOfType<AudioEngine>().PlayAudio("PickupSound");
+         FindObjectOfType<AudioManager>().PlaySound("PickupSound");
 
-        return grabId_++;
+            return grabId_++;
            
         }
 
