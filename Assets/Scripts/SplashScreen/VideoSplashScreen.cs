@@ -53,7 +53,7 @@ public class VideoSplashScreen : MonoBehaviour
     // LoadActualGame loads the actual game
     void LoadActualGame()
     {
-        SceneManager.LoadScene("MainMenuScene");
+        SceneManager.LoadSceneAsync("MainMenuScene", LoadSceneMode.Single);
     }
 
     void OnVideoEnd(VideoPlayer vPlayer)
