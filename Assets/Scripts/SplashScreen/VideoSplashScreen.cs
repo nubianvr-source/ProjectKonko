@@ -6,7 +6,7 @@ using UnityEngine.Video;
 
 public class VideoSplashScreen : MonoBehaviour
 {
-    public VideoClip[] splashClips;
+    public SplashClip[] splashClips;
 
     // VideoPlayer component attached to this gameObject
     VideoPlayer videoPlayer;
@@ -17,7 +17,7 @@ public class VideoSplashScreen : MonoBehaviour
     void Awake()
     {
         videoPlayer = GetComponent<VideoPlayer>();
-        videoPlayer.clip = splashClips[currentClip];
+        videoPlayer.clip = splashClips[currentClip].clip;
         videoPlayer.Play();
     }
 
@@ -29,7 +29,7 @@ public class VideoSplashScreen : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1) || Input.GetMouseButtonDown(2))
+        if ((Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1) || Input.GetMouseButtonDown(2)) && !splashClips[currentClip].noSkip)
         {
             NextClip();
         }
@@ -46,7 +46,7 @@ public class VideoSplashScreen : MonoBehaviour
             return;
         }
 
-        videoPlayer.clip = splashClips[currentClip];
+        videoPlayer.clip = splashClips[currentClip].clip;
         videoPlayer.Play();
     }
 
@@ -59,5 +59,15 @@ public class VideoSplashScreen : MonoBehaviour
     void OnVideoEnd(VideoPlayer vPlayer)
     {
         NextClip();
+    }
+
+
+
+
+    [System.Serializable]
+    public class SplashClip
+    {
+        public VideoClip clip;
+        public bool noSkip;
     }
 }

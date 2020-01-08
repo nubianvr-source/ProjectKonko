@@ -252,5 +252,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   splashClips:
-  - {fileID: 32900000, guid: b3afdac933b8a7942bf704cbf2573fa4, type: 3}
-  - {fileID: 32900000, guid: 4c1f120688acba84ca18ba83d87b1b7f, type: 3}
+  - clip: {fileID: 32900000, guid: b3afdac933b8a7942bf704cbf2573fa4, type: 3}
+    noSkip: 1
+  - clip: {fileID: 32900000, guid: 4b1432903e512e342b248208d5b8d2b3, type: 3}
+    noSkip: 0
