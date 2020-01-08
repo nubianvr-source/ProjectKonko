@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MainMenuManager : MonoBehaviour
+public class MainMenuScript : MonoBehaviour
 {
     public GameObject[] menuScreens;
     public int initialScreenIndex = 0;
@@ -12,7 +12,7 @@ public class MainMenuManager : MonoBehaviour
         ShowOnlyScreen(initialScreenIndex);
     }
 
-    public void ShowOnlyScreen(int index)
+    void ShowOnlyScreen(int index)
     {
         if (index >= menuScreens.Length) return;
 

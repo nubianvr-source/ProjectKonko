@@ -41,12 +41,20 @@ public class BatteryTriggerScript : MonoBehaviour
     {
         endLerpPosition = BatteryTransform.position;
         defaultLerpPosition = defaultTransform.position;
+        rigidbodyPhysics.constraints = RigidbodyConstraints.FreezeAll;
     }
 
     // Update is called once per frame
     void Update()
     {
         startLerpPosition = circuitComp.transform.position;
+    }
+
+
+    public void unlockBatteryConstraints()
+    {
+        rigidbodyPhysics.constraints = RigidbodyConstraints.None;
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -81,6 +89,7 @@ public class BatteryTriggerScript : MonoBehaviour
             circuitComp.transform.localEulerAngles = new Vector3(0, 0, 0);
             rigidbodyPhysics.velocity = Vector3.zero;
             rigidbodyPhysics.angularVelocity = Vector3.zero;
+            rigidbodyPhysics.constraints = RigidbodyConstraints.FreezeAll;
             this.gameObject.SetActive(false);
         }
 
@@ -90,6 +99,7 @@ public class BatteryTriggerScript : MonoBehaviour
             circuitComp.transform.localEulerAngles = new Vector3(0, 0, 0);
             rigidbodyPhysics.velocity = Vector3.zero;
             rigidbodyPhysics.angularVelocity = Vector3.zero;
+            rigidbodyPhysics.constraints = RigidbodyConstraints.FreezeAll;
         }
     }
 }
