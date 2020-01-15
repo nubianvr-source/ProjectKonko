@@ -14,9 +14,11 @@ maintain a leaderboard functionality for Virtual Reality lessons.
 ##### Setup
 
 **Using Git Bash**
+
 Click on the clone or download button and copy the https link (or SSH link if you prefer) and clone it into your preferred directory.
 
 **Using GitHub Desktop**
+
 Click on the clone or download button in the GitHub and click on Open in Desktop. Wait till the project is done cloning and then add it to your list of projects by using Unity Hub and add a new project by browsing to the folder where you cloned the project into. 
 
 ## A Note about Asset Sources
