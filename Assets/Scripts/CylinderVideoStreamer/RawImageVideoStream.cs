@@ -21,7 +21,10 @@ public class RawImageVideoStream : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-         
+        videoReference.loopPointReached += (player) =>
+        {
+            nextUIView();
+        };
     }
 
     void Update()
