@@ -1,17 +1,17 @@
 ﻿using System;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using Konko.SceneManagement;
 
 public class MainMenuScript : MonoBehaviour
 {
     public GameObject[] menuScreens;
-    public GameObject mainGame;
     public int initialScreenIndex = 0;
     public int currentScreenIndex = 0;
 
+    public SceneManager sceneManager;
+
     void OnEnable()
     {
-        UnloadMainGame();
         ShowOnlyScreen(initialScreenIndex);
     }
 
@@ -49,26 +49,9 @@ public class MainMenuScript : MonoBehaviour
         Array.ForEach(menuScreens, screen => screen.SetActive(false));
     }
 
-    public void LoadLesson(int buildIndex)
-    {
-        SceneManager.LoadScene(buildIndex, LoadSceneMode.Single);
-    }
 
-    public void LoadLesson(string sceneName)
+    public void LoadLesson(int number)
     {
-        SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
-    }
-
-    public void LoadMainGame()
-    {
-        mainGame.SetActive(true);
-        HideAllScreens();
-    }
-
-
-    public void UnloadMainGame()
-    {
-        mainGame.SetActive(false);
-        ShowOnlyScreen(currentScreenIndex);
+        sceneManager.LoadScene("lesson_" + number, fade: true);
     }
 }
