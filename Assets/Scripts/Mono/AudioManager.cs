@@ -11,9 +11,10 @@ public struct SoundParameters
     public bool Loop;
     [Range(0f, 1f)]
     public float spatial3DAudioBlend;
+   
 }
 [System.Serializable()]
-public class Sound
+public class VideoList
 {
     #region Variables
 
@@ -38,6 +39,7 @@ public class Sound
         Source.volume = Parameters.Volume;
         Source.pitch = Parameters.Pitch;
         Source.loop = Parameters.Loop;
+        Source.spatialBlend = Parameters.spatial3DAudioBlend;
 
         Source.Play();
     }
@@ -52,7 +54,7 @@ public class AudioManager : MonoBehaviour {
 
     public static       AudioManager    Instance        = null;
 
-    [SerializeField]    Sound[]         sounds          = null;
+    [SerializeField]    VideoList[]         sounds          = null;
     [SerializeField]    AudioSource     sourcePrefab    = null;
 
     //[SerializeField]    String          startupTrack    = String.Empty;
@@ -133,7 +135,7 @@ public class AudioManager : MonoBehaviour {
 
     #region Getters
 
-    Sound GetSound(string name)
+    VideoList GetSound(string name)
     {
         foreach (var sound in sounds)
         {

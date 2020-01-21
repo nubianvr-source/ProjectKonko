@@ -692,7 +692,7 @@ RectTransform:
   m_Children:
   - {fileID: 1221013924195397299}
   m_Father: {fileID: 4856132127364845142}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -902,7 +902,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1221013924574954301}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.82300884
+  m_Size: 0.82300895
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1529,7 +1529,7 @@ RectTransform:
   m_Children:
   - {fileID: 1221013922969497045}
   m_Father: {fileID: 4856132127364845142}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1852,7 +1852,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4856132127364845142}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1221013923572777723
 MonoBehaviour:
@@ -1880,7 +1880,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1221013923572777720}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ddb9c3b750e7a34d8b38587db8c47c0, type: 3}
+  m_Script: {fileID: 11500000, guid: 91d6342baa87b3b46b8287c9dbee4811, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   events: {fileID: 11400000, guid: 8e0c26d6986631643bcc9fe8626c36ae, type: 2}
@@ -1891,7 +1891,7 @@ MonoBehaviour:
     questionInfoTextObject: {fileID: 1221013924516452112}
     scoreText: {fileID: 1221013923061922664}
     resolutionScreenAnimator: {fileID: 1221013924195397303}
-    resolutionBG: {fileID: 1221013923291619897}
+    resolutionBG: {fileID: 1221013924195397300}
     resolutionStateInfoText: {fileID: 1221013922653918055}
     resolutionScoreText: {fileID: 1221013924145333686}
     highScoreText: {fileID: 1221013923389278184}
@@ -1899,12 +1899,9 @@ MonoBehaviour:
     finishUIElements: {fileID: 1221013922964281896}
   parameters:
     margins: 15
-    correctBGColor: {r: 0.3007723, g: 1, b: 0, a: 1}
-    incorrectBGColor: {r: 1, g: 0, b: 0, a: 1}
-    finalBGColor: {r: 0, g: 0.6536479, b: 1, a: 1}
-  _currentPanel: {fileID: 0}
-  firstPanel: {fileID: 0}
-  secondPanel: {fileID: 0}
+    correctBGColor: {r: 0.18431373, g: 0.76470596, b: 0.14901961, a: 1}
+    incorrectBGColor: {r: 0.76470596, g: 0.15686275, b: 0.14901961, a: 1}
+    finalBGColor: {r: 0.14901961, g: 0.5058824, b: 0.76470596, a: 1}
 --- !u!1 &1221013923676247519
 GameObject:
   m_ObjectHideFlags: 0
@@ -1934,7 +1931,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4856132127364845142}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1221013923676247505
 MonoBehaviour:
@@ -1955,7 +1952,6 @@ MonoBehaviour:
       Volume: 0.4
       Pitch: 1
       Loop: 0
-      spatial3DAudioBlend: 0
     Source: {fileID: 0}
   - name: IncorrectSFX
     clip: {fileID: 8300000, guid: b2cde81c1526d304786f03e9cedb4604, type: 3}
@@ -1963,7 +1959,6 @@ MonoBehaviour:
       Volume: 0.4
       Pitch: 1
       Loop: 0
-      spatial3DAudioBlend: 0
     Source: {fileID: 0}
   - name: CountdownSFX
     clip: {fileID: 8300000, guid: 20f8537e455b1a945a15ba1a454c7517, type: 3}
@@ -1971,7 +1966,6 @@ MonoBehaviour:
       Volume: 0.4
       Pitch: 0.85
       Loop: 0
-      spatial3DAudioBlend: 0
     Source: {fileID: 0}
   - name: GameMusic
     clip: {fileID: 8300000, guid: 5c2d1fcea55170649a5e1b77c5181d67, type: 3}
@@ -1979,7 +1973,6 @@ MonoBehaviour:
       Volume: 0.2
       Pitch: 1
       Loop: 1
-      spatial3DAudioBlend: 0
     Source: {fileID: 0}
   sourcePrefab: {fileID: 82509203759054478, guid: 0b2c85631b731e34faec7b3adb879f79,
     type: 3}
@@ -2127,12 +2120,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DoNotTesselate: 0
-  savedPos: {x: -832.28815, y: -515, z: 0}
-  savedUp: {x: 0, y: 1, z: 0}
+  savedPos: {x: 0, y: 0, z: 0}
+  savedUp: {x: 0, y: 0, z: 0}
   savedRectSize: {x: 320, y: 145}
-  savedColor: {r: 1, g: 1, b: 1, a: 1}
+  savedColor: {r: 0, g: 0, b: 0, a: 0}
   savedTextUV0: {x: 0, y: 0}
-  savedFill: 1
+  savedFill: 0
 --- !u!1 &1221013923868324182
 GameObject:
   m_ObjectHideFlags: 0
@@ -2276,12 +2269,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DoNotTesselate: 0
-  savedPos: {x: 832.28815, y: 515, z: 0}
-  savedUp: {x: 0, y: 1, z: 0}
+  savedPos: {x: 0, y: 0, z: 0}
+  savedUp: {x: 0, y: 0, z: 0}
   savedRectSize: {x: 610, y: 145}
-  savedColor: {r: 1, g: 1, b: 1, a: 1}
+  savedColor: {r: 0, g: 0, b: 0, a: 0}
   savedTextUV0: {x: 0, y: 0}
-  savedFill: 1
+  savedFill: 0
 --- !u!1 &1221013924039064065
 GameObject:
   m_ObjectHideFlags: 0
@@ -3002,7 +2995,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0.000022888184}
   m_SizeDelta: {x: 0, y: 100}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &1221013924480188441
@@ -3578,7 +3571,7 @@ MonoBehaviour:
   DoNotTesselate: 0
   savedPos: {x: 392.2882, y: -107.5, z: 0}
   savedUp: {x: 0, y: 1, z: 0}
-  savedRectSize: {x: 30, y: 468.53983}
+  savedRectSize: {x: 30, y: 468.5399}
   savedColor: {r: 1, g: 1, b: 1, a: 1}
   savedTextUV0: {x: 0, y: 0}
   savedFill: 1
@@ -3799,10 +3792,10 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1221013923572777721}
-  - {fileID: 1221013923676247504}
   - {fileID: 1221013923375932413}
   - {fileID: 1221013923000109972}
+  - {fileID: 1221013923572777721}
+  - {fileID: 1221013923676247504}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

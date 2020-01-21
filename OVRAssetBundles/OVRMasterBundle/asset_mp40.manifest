@@ -1,0 +1,17 @@
+ManifestFileVersion: 0
+CRC: 3455341635
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: ae84d95945b6d6052ff7eeaefd8a827c
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9533ec91352ac8573a011616e38420f1
+HashAppended: 0
+ClassTypes:
+- Class: 329
+  Script: {instanceID: 0}
+Assets:
+- Assets/Videos/INtro_1_1.mp4
+- Assets/Videos/Greenmount - equirectangular.mp4
+Dependencies: []

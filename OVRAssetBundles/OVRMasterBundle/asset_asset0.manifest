@@ -1,0 +1,25 @@
+ManifestFileVersion: 0
+CRC: 1252079087
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: c6f40ed927e47d32c69dff7ba8a2af2e
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: feb1aab52995a09501f45cefb7138d37
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+Assets:
+- Assets/Fonts/Objectivity-Bold SDF.asset
+Dependencies:
+- C:/Users/Anspeed/Documents/GitHub/ProjectKonko/OVRAssetBundles/OVRMasterBundle/asset_resources

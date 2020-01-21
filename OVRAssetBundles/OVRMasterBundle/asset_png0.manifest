@@ -1,0 +1,49 @@
+ManifestFileVersion: 0
+CRC: 1074528768
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: f9dff23397582c2efce3c35ae2a8e1ed
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: ea5cc690cc030104e9b029e48f06c140
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 89
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/Oculus/SampleFramework/Usage/OVROverlay/Textures/Tile_Texture_Henry.png
+- Assets/Textures/dialogue boxes and containers/Correct answer dialogue box-43.png
+- Assets/Textures/Controls/Back normal-06.png
+- Assets/Textures/MISC/electrical icon-92.png
+- Assets/Textures/Side panel circuit state interface/element-60.png
+- Assets/Textures/Buttons/Begin Adventure-02.png
+- Assets/Textures/Side panel circuit state interface/element-68.png
+- Assets/Textures/Controls/next click-09.png
+- Assets/Textures/Buttons/Begin Adventure-01.png
+- Assets/Textures/MISC/opening illustration-90.png
+- Assets/Oculus/SampleFramework/Usage/SharedAssets/Textures/room_atlas_02.png
+- Assets/Textures/dialogue boxes and containers/Hello Character space-04.png
+- Assets/Textures/Side panel circuit state interface/element-58.png
+- Assets/Textures/Side panel circuit state interface/element-62.png
+- Assets/Textures/Controls/Back hover-07.png
+- Assets/Oculus/SampleFramework/Usage/SharedAssets/Textures/room_atlas_02_msm.png
+- Assets/Textures/MISC/nubianvr-black.png
+- Assets/Textures/dialogue boxes and containers/ScientistImage.png
+- Assets/Oculus/SampleFramework/Usage/SharedAssets/Textures/room_atlas_02_emi.png
+- Assets/Textures/Side panel circuit state interface/element-72.png
+- Assets/Textures/Side panel circuit state interface/element-76.png
+- Assets/Textures/Controls/Next normal-18.png
+- Assets/Textures/Side panel circuit state interface/element-65.png
+- Assets/Textures/Controls/Next hover-10.png
+- Assets/Textures/Buttons/Begin Adventure-03.png
+- Assets/Textures/Controls/back click-08.png
+- Assets/Textures/dialogue boxes and containers/Question dialogue box wide-34.png
+- Assets/HDRI/abandoned_hall_01_1k.png
+- Assets/Textures/dialogue boxes and containers/Hello welcome message-05.png
+- Assets/Oculus/SampleFramework/Usage/SharedAssets/Textures/room_atlas_02_nml.png
+Dependencies: []
