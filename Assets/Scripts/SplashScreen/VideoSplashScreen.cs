@@ -1,70 +1,100 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using Konko.SceneManagement;
+using UnityEngine.UI;
 using UnityEngine.Video;
 
 public class VideoSplashScreen : MonoBehaviour
 {
-    public SplashClip[] splashClips;
+    public SplashClip[] clips;
+
+    public RawImage display;
 
     // VideoPlayer component attached to this gameObject
     VideoPlayer videoPlayer;
 
-    int currentClip = 0;
+    AudioSource audioPlayer;
+
+    SceneManager sceneManager;
+
+    int currentIndex, targetIndex;
 
     // Start is called before the first frame update
     void Awake()
     {
+        sceneManager = FindObjectOfType<SceneManager>();
+
         videoPlayer = GetComponent<VideoPlayer>();
-        videoPlayer.clip = splashClips[currentClip].clip;
-        videoPlayer.Play();
+        audioPlayer = GetComponent<AudioSource>();
     }
 
     // Start is called before the first frame update
     void OnEnable()
     {
-        videoPlayer.loopPointReached += OnVideoEnd;
+        Next();
+
+        videoPlayer.loopPointReached += player =>
+        {
+            Next();
+        };
+    }
+
+    void Start()
+    {
+        
     }
 
     void Update()
     {
-        if ((Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1) || Input.GetMouseButtonDown(2)) && !splashClips[currentClip].noSkip)
+        if(Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1) || Input.GetMouseButtonDown(2))
         {
-            NextClip();
+            if (!clips[currentIndex].noSkip) Next();
+        }
+    }
+
+    void Next()
+    {
+        StopCoroutine(playVideo());
+
+        if (targetIndex >= clips.Length)
+        {
+            sceneManager.LoadScene("main_menu", fade: true);
+        }
+        else
+        {
+            currentIndex = targetIndex;
+            targetIndex++;
+            videoPlayer.clip = clips[currentIndex].clip;
+            StartCoroutine(playVideo());
         }
     }
 
 
-    public void NextClip()
-    {
-        currentClip++;
 
-        if (currentClip >= splashClips.Length)
+    IEnumerator playVideo()
+    {
+        videoPlayer.Prepare();
+        while (!videoPlayer.isPrepared)
         {
-            LoadActualGame();
-            return;
+            yield return null;
         }
 
-        videoPlayer.clip = splashClips[currentClip].clip;
+        display.texture = videoPlayer.texture;
         videoPlayer.Play();
-    }
+        audioPlayer.Play();
 
-    // LoadActualGame loads the actual game
-    void LoadActualGame()
-    {
-        SceneManager.LoadSceneAsync("MainMenuScene", LoadSceneMode.Single);
-    }
-
-    void OnVideoEnd(VideoPlayer vPlayer)
-    {
-        NextClip();
     }
 
 
 
 
-    [System.Serializable]
+
+
+
+
+    [Serializable]
     public class SplashClip
     {
         public VideoClip clip;
