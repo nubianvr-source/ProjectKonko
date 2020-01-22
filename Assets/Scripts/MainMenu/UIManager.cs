@@ -13,6 +13,9 @@ namespace Konko.UIManagement
         public int currentScreenIndex = 0;
 
         public SceneManager sceneManager;
+        public OVRScreenFade screenFade;
+
+        public bool allScreensHidden { get; private set; }
 
         // Start is called before the first frame update
         void Start()
@@ -36,25 +39,56 @@ namespace Konko.UIManagement
         {
             if (index >= screens.Length) return;
 
-            currentScreenIndex = index;
-
-            HideAllScreens();
-            screens[index].Show();
+            ShowOnlyScreen(screens[index].name);
         }
 
         public void ShowOnlyScreen(string name)
         {
-            UIScreen targetScreen = Array.Find(screens, s => s.name == name);
-
-            if (targetScreen == null) return;
-
-            HideAllScreens();
-            targetScreen.Show();
+            StartCoroutine(ShowOnly(name));
         }
 
         public void HideAllScreens()
         {
+            StartCoroutine(HideAll());
+        }
+
+
+
+        IEnumerator ShowOnly(string name)
+        {
+            UIScreen targetScreen = Array.Find(screens, s => s.name == name);
+
+            if (targetScreen == null) yield return null;
+
+            HideAllScreens();
+
+            while (!allScreensHidden)
+            {
+                yield return new WaitForEndOfFrame();
+            }
+
+            targetScreen.Show();
+
+            currentScreenIndex = Array.FindIndex(screens, s => s.name == name);
+
+            screenFade.FadeScreenIn();
+        }
+
+
+        IEnumerator HideAll()
+        {
+            allScreensHidden = false;
+
+            screenFade.FadeScreenOut();
+
+            while (screenFade.screenIsActive)
+            {
+                yield return new WaitForEndOfFrame();
+            }
+
             Array.ForEach(screens, s => s.Hide());
+
+            allScreensHidden = true;
         }
 
 

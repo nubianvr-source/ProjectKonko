@@ -21,6 +21,8 @@ public class VideoSplashScreen : MonoBehaviour
 
     int currentIndex, targetIndex;
 
+    bool skipped;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -50,7 +52,11 @@ public class VideoSplashScreen : MonoBehaviour
     {
         if(Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1) || Input.GetMouseButtonDown(2))
         {
-            if (!clips[currentIndex].noSkip) Next();
+            if (!clips[currentIndex].noSkip && !skipped)
+            {
+                Next();
+                skipped = true;
+            }
         }
     }
 
@@ -69,6 +75,8 @@ public class VideoSplashScreen : MonoBehaviour
             videoPlayer.clip = clips[currentIndex].clip;
             StartCoroutine(playVideo());
         }
+
+        skipped = false;
     }
 
 
@@ -84,7 +92,6 @@ public class VideoSplashScreen : MonoBehaviour
         display.texture = videoPlayer.texture;
         videoPlayer.Play();
         audioPlayer.Play();
-
     }
 
 
