@@ -14,7 +14,7 @@ public struct SoundParameters
    
 }
 [System.Serializable()]
-public class VideoList
+public class Sound
 {
     #region Variables
 
@@ -54,7 +54,7 @@ public class AudioManager : MonoBehaviour {
 
     public static       AudioManager    Instance        = null;
 
-    [SerializeField]    VideoList[]         sounds          = null;
+    [SerializeField]    Sound[]         sounds          = null;
     [SerializeField]    AudioSource     sourcePrefab    = null;
 
     //[SerializeField]    String          startupTrack    = String.Empty;
@@ -135,7 +135,7 @@ public class AudioManager : MonoBehaviour {
 
     #region Getters
 
-    VideoList GetSound(string name)
+    Sound GetSound(string name)
     {
         foreach (var sound in sounds)
         {
