@@ -2206,7 +2206,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 8400000, guid: 486eb7f6516a0be4cb979c2554cebd6f, type: 2}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -11780,6 +11780,7 @@ MonoBehaviour:
   initialScreenIndex: 0
   currentScreenIndex: 0
   sceneManager: {fileID: 697663822}
+  screenFade: {fileID: 1457139004}
 --- !u!1 &611496604
 GameObject:
   m_ObjectHideFlags: 0
@@ -12734,15 +12735,23 @@ MonoBehaviour:
   - name: splash
     entity: {fileID: 39285998}
     skyboxMaterial: {fileID: 2100000, guid: ccd75ae912810154ba5e132f6134b883, type: 2}
+    fadeOut: 1
+    fadeIn: 1
   - name: main_menu
     entity: {fileID: 1111396396}
     skyboxMaterial: {fileID: 2100000, guid: ef39d6b900caed343b5a0d4db41773c7, type: 2}
+    fadeOut: 1
+    fadeIn: 1
   - name: lesson_1
     entity: {fileID: 1615428836}
     skyboxMaterial: {fileID: 0}
+    fadeOut: 1
+    fadeIn: 1
   - name: lesson_1_360
     entity: {fileID: 1615428836}
     skyboxMaterial: {fileID: 0}
+    fadeOut: 0
+    fadeIn: 0
   primarySceneName: splash
 --- !u!4 &697663823
 Transform:
@@ -14506,6 +14515,7 @@ MonoBehaviour:
   initialScreenIndex: 0
   currentScreenIndex: 0
   sceneManager: {fileID: 697663822}
+  screenFade: {fileID: 1457139004}
 --- !u!1 &795806316
 GameObject:
   m_ObjectHideFlags: 0
@@ -26613,7 +26623,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeTime: 1
   fadeColor: {r: 0.01, g: 0.01, b: 0.01, a: 1}
-  fadeOnStart: 1
+  fadeOnStart: 0
   renderQueue: 5000
 --- !u!1 &1459961220
 GameObject:
@@ -33159,17 +33169,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: lesson_1
           m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1849254005}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1782308329
 MonoBehaviour:

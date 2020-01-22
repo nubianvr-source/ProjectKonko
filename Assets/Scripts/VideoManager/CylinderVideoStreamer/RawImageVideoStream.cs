@@ -70,7 +70,7 @@ public class RawImageVideoStream : MonoBehaviour
         NextView.SetActive(true);
         LeftVideoPanel.SetActive(false);
         RightVideoPanel.SetActive(false);
-        sceneManager.UnloadScene("lessons", true);
+        sceneManager.UnloadScene("lessons");
     }
 
     private void checkOver()
@@ -86,7 +86,6 @@ public class RawImageVideoStream : MonoBehaviour
         {
             print("done playing");
             nextUIView();
-
         }
     }
 }

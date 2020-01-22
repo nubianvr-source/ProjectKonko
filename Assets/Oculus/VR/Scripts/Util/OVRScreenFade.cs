@@ -44,10 +44,12 @@ public class OVRScreenFade : MonoBehaviour
 
     public float currentAlpha { get; private set; }
 
-	/// <summary>
-	/// Automatically starts a fade in
-	/// </summary>
-	void Start()
+    public bool screenIsActive { get; private set; } = true;
+
+    /// <summary>
+    /// Automatically starts a fade in
+    /// </summary>
+    void Start()
 	{
 		if (gameObject.name.StartsWith("OculusMRC_"))
 		{
@@ -117,14 +119,14 @@ public class OVRScreenFade : MonoBehaviour
 	/// <summary>
 	/// Start a fade out
 	/// </summary>
-	public void FadeOut()
+	public void FadeScreenOut()
     {
-        StartCoroutine(Fade(0,1));
+        StartCoroutine(FadeOut());
     }
 
-    public void FadeIn()
+    public void FadeScreenIn()
     {
-        StartCoroutine(Fade(1, 0));
+        StartCoroutine(FadeIn());
     }
 
 
@@ -191,6 +193,39 @@ public class OVRScreenFade : MonoBehaviour
 			yield return new WaitForEndOfFrame();
 		}
 	}
+
+    IEnumerator FadeIn()
+    {
+        screenIsActive = false;
+
+        float elapsedTime = 0.0f;
+        while (elapsedTime < fadeTime)
+        {
+            elapsedTime += Time.deltaTime;
+            currentAlpha = Mathf.Lerp(1f, 0f, Mathf.Clamp01(elapsedTime / fadeTime));
+            SetMaterialAlpha();
+            yield return new WaitForEndOfFrame();
+        }
+
+        screenIsActive = true;
+    }
+
+
+    IEnumerator FadeOut()
+    {
+        screenIsActive = true;
+
+        float elapsedTime = 0.0f;
+        while (elapsedTime < fadeTime)
+        {
+            elapsedTime += Time.deltaTime;
+            currentAlpha = Mathf.Lerp(0f, 1f, Mathf.Clamp01(elapsedTime / fadeTime));
+            SetMaterialAlpha();
+            yield return new WaitForEndOfFrame();
+        }
+
+        screenIsActive = false;
+    }
 
     /// <summary>
     /// Update material alpha. UI fade and the current fade due to fade in/out animations (or explicit control)
