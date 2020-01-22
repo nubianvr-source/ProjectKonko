@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Video;
 
 namespace Konko.SceneManagement
 {
@@ -9,6 +10,7 @@ namespace Konko.SceneManagement
     {
         public Scene[] scenes;
         public string primarySceneName;
+        //public VideoPlayer videoPlayer;
 
         Skybox mainSkybox;
         OVRScreenFade screenFade;
@@ -22,7 +24,7 @@ namespace Konko.SceneManagement
             mainSkybox = FindObjectOfType<Skybox>();
             screenFade = FindObjectOfType<OVRScreenFade>();
 
-            LoadScene(primarySceneName, fade: true);
+            LoadScene(primarySceneName, fadeIn: true);
         }
 
         // Update is called once per frame
@@ -33,7 +35,7 @@ namespace Konko.SceneManagement
 
 
         
-        public void LoadScene(string name, LoadMode mode = LoadMode.Single, bool fade = false)
+        public void LoadScene(string name, LoadMode mode = LoadMode.Single, bool fadeIn = false)
         {
             Scene scene = Array.Find(scenes, s => s.name == name);
 
@@ -54,24 +56,25 @@ namespace Konko.SceneManagement
 
             activeScene = name;
 
-            if(fade) screenFade.FadeIn();
+            if(fadeIn) screenFade.FadeIn();
 
             StageScene(scene);
 
             print("scene " + scene.name + " has been loaded.");
         }
 
-        public void LoadScene(int index, LoadMode mode = LoadMode.Single, bool fade = false)
+        public void LoadScene(int index, LoadMode mode = LoadMode.Single, bool fadeIn = false)
         {
-            LoadScene(scenes[index].name, mode, fade);
+            LoadScene(scenes[index].name, mode, fadeIn);
         }
 
-        public void UnloadScene(string name)
+        public void UnloadScene(string name, bool fadeOut = false)
         {
             Scene scene = Array.Find(scenes, s => s.name == name);
 
             if (scene == null) return;
 
+            if (fadeOut) screenFade.FadeOut();
             scene.Unload();
             if (loadedScenes.Contains(name)) loadedScenes.Remove(name);
 
@@ -108,11 +111,13 @@ namespace Konko.SceneManagement
 
         public void Load()
         {
+            
             entity.SetActive(true);
         }
 
         public void Unload()
         {
+            
             entity.SetActive(false);
         }
     }

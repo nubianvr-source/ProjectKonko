@@ -52,6 +52,6 @@ public class MainMenuScript : MonoBehaviour
 
     public void LoadLesson(int number)
     {
-        sceneManager.LoadScene("lesson_" + number, fade: true);
+        sceneManager.LoadScene("lesson_" + number, fadeIn: true);
     }
 }

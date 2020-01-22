@@ -39,7 +39,7 @@ public class DialogueManager : MonoBehaviour
             EndDialogue();
             NextPanelVisible.SetActive(true);
             CurrentPanelVisible.SetActive(false);
-            FindObjectOfType<AudioManager>().StopSound("Theme");
+           // FindObjectOfType<AudioManager>().StopSound("Theme");
 
             return;
         }

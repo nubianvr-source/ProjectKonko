@@ -62,7 +62,7 @@ namespace Konko.UIManagement
 
         public void LoadNextScene(string sceneName)
         {
-            sceneManager.LoadScene(sceneName, fade: true);
+            sceneManager.LoadScene(sceneName, fadeIn: true);
         }
     }
 

@@ -60,7 +60,7 @@ public class VideoSplashScreen : MonoBehaviour
 
         if (targetIndex >= clips.Length)
         {
-            sceneManager.LoadScene("main_menu", fade: true);
+            sceneManager.LoadScene("main_menu", fadeIn: true);
         }
         else
         {

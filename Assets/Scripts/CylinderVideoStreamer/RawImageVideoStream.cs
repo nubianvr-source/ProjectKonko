@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Video;
+using Konko.SceneManagement;
 
 public class RawImageVideoStream : MonoBehaviour
 {
@@ -15,12 +16,18 @@ public class RawImageVideoStream : MonoBehaviour
     public RawImage rawImageAsset3;
     public GameObject CurrentView;
     public GameObject NextView;
+    public GameObject LeftVideoPanel;
+    public GameObject RightVideoPanel;
+    SceneManager sceneManager;
+    public string nextScene;
+    public string currentScene;
 
     public float delay = 0.3f;
 
     // Start is called before the first frame update
     void Start()
     {
+        sceneManager = FindObjectOfType<SceneManager>();
         videoReference.loopPointReached += (player) =>
         {
             nextUIView();
@@ -47,7 +54,7 @@ public class RawImageVideoStream : MonoBehaviour
         {
             yield return waitForSeconds;
         }
-
+        rawImageAsset1.color = new Color32(255, 255, 255, 255);
         rawImageAsset1.texture = videoReference.texture;
         rawImageAsset2.texture = videoReference.texture;
         rawImageAsset3.texture = videoReference.texture;
@@ -61,7 +68,9 @@ public class RawImageVideoStream : MonoBehaviour
         videoReference.Stop();
         CurrentView.SetActive(false);
         NextView.SetActive(true);
-
+        LeftVideoPanel.SetActive(false);
+        RightVideoPanel.SetActive(false);
+        sceneManager.UnloadScene("lessons", true);
     }
 
     private void checkOver()
