@@ -9,8 +9,11 @@ public class VideoHnadler360 : MonoBehaviour
     public VideoPlayer videoPlayer;
     public GameObject nextUI;
     public OVRScreenFade screenFade;
+    public Material videoSkyboxMat;
     public Material inGameSkyboxMat;
     public Skybox skybox;
+    public GameObject uipointer;
+    public GameObject vrgrabber;
 
 
 
@@ -29,12 +32,21 @@ public class VideoHnadler360 : MonoBehaviour
         
     }
 
+    public void Play360Video() 
+    {
+        videoPlayer.Play();
+        skybox.material = videoSkyboxMat;
+        uipointer.SetActive(false);
+    
+    }
+
     public void nextUIView()
     {
         videoPlayer.Stop();
         nextUI.SetActive(true);
         screenFade.OnLevelFinishedLoading();
-       // RenderSettings.skybox = inGameSkyboxMat;
+        // RenderSettings.skybox = inGameSkyboxMat;
         skybox.material = inGameSkyboxMat;
+        vrgrabber.SetActive(true);
     }
 }
