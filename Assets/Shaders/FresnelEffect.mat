@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: FresnelEffect
-  m_Shader: {fileID: 4800000, guid: af2b001efd351914b94a3d5b5b5c3282, type: 3}
+  m_Shader: {fileID: 4800000, guid: 7b476e869583a414cb11330a6bb87225, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0

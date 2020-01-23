@@ -1,0 +1,19 @@
+ManifestFileVersion: 0
+CRC: 1242912597
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 9b0a7eabb516e191dd575e2abb23bea6
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9533ec91352ac8573a011616e38420f1
+HashAppended: 0
+ClassTypes:
+- Class: 329
+  Script: {instanceID: 0}
+Assets:
+- Assets/Videos/INtro_1_1.mp4
+- Assets/Videos/intro 360.mp4
+- Assets/ExternalAssets/Videos/Hollow Knight 2019.12.18 - 13.07.15.01.mp4
+- Assets/Videos/Greenmount - equirectangular.mp4
+Dependencies: []

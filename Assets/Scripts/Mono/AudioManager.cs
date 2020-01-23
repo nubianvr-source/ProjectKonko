@@ -11,6 +11,7 @@ public struct SoundParameters
     public bool Loop;
     [Range(0f, 1f)]
     public float spatial3DAudioBlend;
+   
 }
 [System.Serializable()]
 public class Sound
@@ -38,6 +39,7 @@ public class Sound
         Source.volume = Parameters.Volume;
         Source.pitch = Parameters.Pitch;
         Source.loop = Parameters.Loop;
+        Source.spatialBlend = Parameters.spatial3DAudioBlend;
 
         Source.Play();
     }

@@ -44,8 +44,19 @@ public class OVRScreenFade : MonoBehaviour
 
     public float currentAlpha { get; private set; }
 
-	void Awake()
+    public bool screenIsActive { get; private set; } = true;
+
+    /// <summary>
+    /// Automatically starts a fade in
+    /// </summary>
+    void Start()
 	{
+		if (gameObject.name.StartsWith("OculusMRC_"))
+		{
+			Destroy(this);
+			return;
+		}
+
 		// create the fade material
 		fadeMaterial = new Material(Shader.Find("Oculus/Unlit Transparent Color"));
 		fadeMesh = gameObject.AddComponent<MeshFilter>();
@@ -98,35 +109,34 @@ public class OVRScreenFade : MonoBehaviour
 		mesh.uv = uv;
 
 		SetFadeLevel(0);
+
+		if (fadeOnStart)
+		{
+			StartCoroutine(Fade(1, 0));
+		}
 	}
 
-    /// <summary>
-    /// Start a fade out
-    /// </summary>
-    public void FadeOut()
+	/// <summary>
+	/// Start a fade out
+	/// </summary>
+	public void FadeScreenOut()
     {
-        StartCoroutine(Fade(0,1));
+        StartCoroutine(FadeOut());
+    }
+
+    public void FadeScreenIn()
+    {
+        StartCoroutine(FadeIn());
     }
 
 
 	/// <summary>
 	/// Starts a fade in when a new level is loaded
 	/// </summary>
-	void OnLevelFinishedLoading(int level)
+	public void OnLevelFinishedLoading()
 	{
 		StartCoroutine(Fade(1,0));
 	}
-
-    /// <summary>
-    /// Automatically starts a fade in
-    /// </summary>
-    void Start()
-    {
-        if (fadeOnStart)
-        {
-            StartCoroutine(Fade(1,0));
-        }
-    }
 
 	void OnEnable()
 	{
@@ -183,6 +193,39 @@ public class OVRScreenFade : MonoBehaviour
 			yield return new WaitForEndOfFrame();
 		}
 	}
+
+    IEnumerator FadeIn()
+    {
+        screenIsActive = false;
+
+        float elapsedTime = 0.0f;
+        while (elapsedTime < fadeTime)
+        {
+            elapsedTime += Time.deltaTime;
+            currentAlpha = Mathf.Lerp(1f, 0f, Mathf.Clamp01(elapsedTime / fadeTime));
+            SetMaterialAlpha();
+            yield return new WaitForEndOfFrame();
+        }
+
+        screenIsActive = true;
+    }
+
+
+    IEnumerator FadeOut()
+    {
+        screenIsActive = true;
+
+        float elapsedTime = 0.0f;
+        while (elapsedTime < fadeTime)
+        {
+            elapsedTime += Time.deltaTime;
+            currentAlpha = Mathf.Lerp(0f, 1f, Mathf.Clamp01(elapsedTime / fadeTime));
+            SetMaterialAlpha();
+            yield return new WaitForEndOfFrame();
+        }
+
+        screenIsActive = false;
+    }
 
     /// <summary>
     /// Update material alpha. UI fade and the current fade due to fade in/out animations (or explicit control)
