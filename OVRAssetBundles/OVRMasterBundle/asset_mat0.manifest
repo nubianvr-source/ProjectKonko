@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 478860939
+CRC: 3678897415
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 6c8aaf84e95a5292aed5e617a421e770
+    Hash: 4061446f2c4ce8fed3054c165d7ae0f3
   TypeTreeHash:
     serializedVersion: 2
     Hash: 8278a24bf5db0dc34f1a4fa4479d89b1
@@ -21,17 +21,26 @@ ClassTypes:
   Script: {instanceID: 0}
 Assets:
 - Assets/VrGrabber/Materials/Vrg Line.mat
+- Assets/Shaders/FresnelEffect.mat
 - Assets/Oculus/SampleFramework/Usage/GuardianBoundarySystem/Materials/DebugDrawLine.mat
+- Assets/Models/3DModels/SwitchMat.mat
+- Assets/Oculus/SampleFramework/Core/TouchControllers/Materials/lambert1.mat
+- Assets/Models/3DModels/SwitchLeverOff.mat
 - Assets/Oculus/SampleFramework/Usage/SharedAssets/Materials/MAT_room_atlas_02.mat
+- Assets/Models/3DModels/LightBulbOffMat.mat
 - Assets/Material/PlasticMat.mat
+- Assets/Material/chair_and_table.mat
 - Assets/Oculus/SampleFramework/Usage/OVROverlay/Materials/Tile_Mat_Henry.mat
 - Assets/Oculus/SampleFramework/Usage/SharedAssets/Skyboxes/Sky_01/Skybox01.mat
 - Assets/Environment/Abdn360Mat.mat
 - Assets/Environment/360NubianVRSplash.mat
 - Assets/Oculus/VoiceMod/Scenes/Materials/Color.mat
+- Assets/CurvedUI/Demo Scenes/Demo Scenes Content/CUI_laserbeam.mat
 - Assets/Oculus/VR/Meshes/OculusGoController/Materials/OculusGoControllerMat.mat
+- Assets/Environment/FlashLight360.mat
 Dependencies:
 - C:/Users/Anspeed/Documents/GitHub/ProjectKonko/OVRAssetBundles/OVRMasterBundle/asset_png0
 - C:/Users/Anspeed/Documents/GitHub/ProjectKonko/OVRAssetBundles/OVRMasterBundle/asset_png1
 - C:/Users/Anspeed/Documents/GitHub/ProjectKonko/OVRAssetBundles/OVRMasterBundle/asset_rendertexture0
+- C:/Users/Anspeed/Documents/GitHub/ProjectKonko/OVRAssetBundles/OVRMasterBundle/asset_shader0
 - C:/Users/Anspeed/Documents/GitHub/ProjectKonko/OVRAssetBundles/OVRMasterBundle/asset_tga0

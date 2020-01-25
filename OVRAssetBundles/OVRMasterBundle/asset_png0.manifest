@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 2857220684
+CRC: 1866443722
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 56ad47e8e48916dafaf2d7b6cdded8c2
+    Hash: 4c2213eb3ee7ed04b1ad2f4866842ccb
   TypeTreeHash:
     serializedVersion: 2
     Hash: cb3f6df5cbc4a2990c44c2787bc9553a
@@ -30,6 +30,9 @@ Assets:
 - Assets/Textures/MISC/opening illustration-90.png
 - Assets/Oculus/SampleFramework/Usage/SharedAssets/Skyboxes/Sky_01/Skybox01_Left+X.png
 - Assets/Oculus/SampleFramework/Usage/SharedAssets/Textures/room_atlas_02.png
+- Assets/Models/3DModels/Diode.png
+- Assets/Models/3DModels/UV_off.png
+- Assets/Models/3DModels/tex/UV_Texture_battery.png
 - Assets/Textures/dialogue boxes and containers/Hello Character space-04.png
 - Assets/Textures/UIAssets/PofileSettingsBtn.png
 - Assets/Textures/Side panel circuit state interface/element-58.png
@@ -37,11 +40,8 @@ Assets:
 - Assets/Oculus/SampleFramework/Usage/SharedAssets/Skyboxes/Sky_01/Skybox01_Up+Y.png
 - Assets/Oculus/SampleFramework/Usage/SharedAssets/Skyboxes/Sky_01/Skybox01_Right-X.png
 - Assets/Textures/Controls/Back hover-07.png
+- Assets/Models/3DModels/bulb_off.png
 - Assets/Oculus/SampleFramework/Usage/SharedAssets/Textures/room_atlas_02_msm.png
 - Assets/Textures/MISC/nubianvr-black.png
 - Assets/Textures/UIAssets/BasicElectronicsLogo.png
-- Assets/Textures/dialogue boxes and containers/ScientistImage.png
-- Assets/Oculus/SampleFramework/Usage/SharedAssets/Textures/room_atlas_02_emi.png
-- Assets/Textures/Side panel circuit state interface/element-72.png
-- Assets/Textures/Side panel circuit state interface/element-76.png
 Dependencies: []

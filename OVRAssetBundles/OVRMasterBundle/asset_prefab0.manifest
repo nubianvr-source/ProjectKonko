@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 2654322146
+CRC: 2769629330
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 5375a59b2f916f022c95bfd3e21f369f
+    Hash: b602ee905d53ef3df9340039907dc4d4
   TypeTreeHash:
     serializedVersion: 2
-    Hash: ce61a8189a4b8b9927c755b2deaaaedc
+    Hash: 8c5f402d19e6fd1c4efee538324df62e
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -31,12 +31,16 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 81
   Script: {instanceID: 0}
+- Class: 84
+  Script: {instanceID: 0}
 - Class: 114
   Script: {fileID: 11500000, guid: df9f338034892c44ebb62d97894772f1, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 7e933e81d3c20c74ea6fdc708a67e3a5, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 40f52bb2b49943a498e44b97d4085085, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 4f7337e215da414488c951d4dc7b68ea, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: ac27124318cf8e84aa7350c2ac1cdb80, type: 3}
 - Class: 114
@@ -55,13 +59,20 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 135
   Script: {instanceID: 0}
+- Class: 328
+  Script: {instanceID: 0}
+- Class: 329
+  Script: {instanceID: 0}
 Assets:
 - Assets/Oculus/Avatar/Content/Prefabs/LocalAvatar.prefab
 - Assets/VrGrabber/Prefabs/Vrg Right Grabber.prefab
 - Assets/Oculus/SampleFramework/Usage/SharedAssets/Prefabs/TablePf.prefab
+- Assets/Scripts/VideoManager/360VideoPlayer.prefab
 - Assets/CurvedUI/Prefabs/CurvedUILaserPointer.prefab
 - Assets/Oculus/VR/Prefabs/OVRCameraRig.prefab
 Dependencies:
 - C:/Users/Anspeed/Documents/GitHub/ProjectKonko/OVRAssetBundles/OVRMasterBundle/asset_resources
 - C:/Users/Anspeed/Documents/GitHub/ProjectKonko/OVRAssetBundles/OVRMasterBundle/asset_mat0
 - C:/Users/Anspeed/Documents/GitHub/ProjectKonko/OVRAssetBundles/OVRMasterBundle/asset_fbx0
+- C:/Users/Anspeed/Documents/GitHub/ProjectKonko/OVRAssetBundles/OVRMasterBundle/asset_mp40
+- C:/Users/Anspeed/Documents/GitHub/ProjectKonko/OVRAssetBundles/OVRMasterBundle/asset_rendertexture0

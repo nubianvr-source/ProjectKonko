@@ -39,28 +39,29 @@ namespace Konko.UIManagement
         {
             if (index >= screens.Length) return;
 
-            ShowOnlyScreen(screens[index].name);
+            ShowOnlyScreenFadeOn(screens[index].name);
         }
 
-        public void ShowOnlyScreen(string name)
+        public void ShowOnlyScreenFadeOn(string name)
         {
-            StartCoroutine(ShowOnly(name));
+            StartCoroutine(ShowOnlyFadeOn(name));
         }
 
-        public void HideAllScreens()
+
+        public void HideAllScreensFadeOn()
         {
-            StartCoroutine(HideAll());
+            StartCoroutine(HideAllFadeOn());
         }
 
 
 
-        IEnumerator ShowOnly(string name)
+        IEnumerator ShowOnlyFadeOn(string name)
         {
             UIScreen targetScreen = Array.Find(screens, s => s.name == name);
 
             if (targetScreen == null) yield return null;
 
-            HideAllScreens();
+            HideAllScreensFadeOn();
 
             while (!allScreensHidden)
             {
@@ -75,7 +76,24 @@ namespace Konko.UIManagement
         }
 
 
-        IEnumerator HideAll()
+        public void ShowOnlyScreenFadeOff(string name)
+        {
+            UIScreen targetScreen = Array.Find(screens, s => s.name == name);
+
+            if (targetScreen == null) return;
+
+            HideAllScreensFadeOff();
+            targetScreen.Show();
+        }
+
+        public void HideAllScreensFadeOff()
+        {
+            Array.ForEach(screens, s => s.Hide());
+        }
+
+
+
+        IEnumerator HideAllFadeOn()
         {
             allScreensHidden = false;
 

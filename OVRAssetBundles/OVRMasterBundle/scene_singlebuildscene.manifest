@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 1619496083
+CRC: 1836605351
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: c78efc58d6c05171ef2d7081a5b30546
+    Hash: a5edda8f04f9b332e6ddc8e54afad051
   TypeTreeHash:
     serializedVersion: 2
-    Hash: dfd634b04aa5791c5496f67e74a03f22
+    Hash: d5afe60b3d6e07809f3b18bb8fc78c1d
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -76,6 +76,8 @@ ClassTypes:
 - Class: 114
   Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
 - Class: 114
+  Script: {fileID: 11500000, guid: 94dca5a2483247d42b1a0cc50fe3b9cd, type: 3}
+- Class: 114
   Script: {fileID: 11500000, guid: 40f52bb2b49943a498e44b97d4085085, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 4f7337e215da414488c951d4dc7b68ea, type: 3}
@@ -136,8 +138,6 @@ ClassTypes:
 - Class: 114
   Script: {fileID: 11500000, guid: 4467168fef125e24f90f1ae921b74638, type: 3}
 - Class: 114
-  Script: {fileID: 11500000, guid: a143d484c4a07c149a0985086b75d989, type: 3}
-- Class: 114
   Script: {fileID: 11500000, guid: ab4c698e8a196d4478cfd166580a0270, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 0d623c9f01482b048b3f0f69a8faed4b, type: 3}
@@ -152,9 +152,9 @@ ClassTypes:
 - Class: 114
   Script: {fileID: 11500000, guid: 075b40d1dbf145149a1e8d83953e12cc, type: 3}
 - Class: 114
-  Script: {fileID: 11500000, guid: c998c738ee8ce7c42af3eb46558d68cd, type: 3}
-- Class: 114
   Script: {fileID: 11500000, guid: 93d4728c61c639140ad3d98ffd28bc25, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: c998c738ee8ce7c42af3eb46558d68cd, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 95e148e6aee5c8a4caea02bce04bc00c, type: 3}
 - Class: 114
@@ -165,6 +165,8 @@ ClassTypes:
   Script: {fileID: 11500000, guid: 3c570ba09fb54ae4e95cffeb1b4ae0b5, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: aae26871d312dfa46acd6383ed9a0b29, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: a143d484c4a07c149a0985086b75d989, type: 3}
 - Class: 115
   Script: {instanceID: 0}
 - Class: 120
@@ -203,8 +205,8 @@ Dependencies:
 - C:/Users/Anspeed/Documents/GitHub/ProjectKonko/OVRAssetBundles/OVRMasterBundle/asset_png1
 - C:/Users/Anspeed/Documents/GitHub/ProjectKonko/OVRAssetBundles/OVRMasterBundle/asset_mat0
 - C:/Users/Anspeed/Documents/GitHub/ProjectKonko/OVRAssetBundles/OVRMasterBundle/asset_prefab0
+- C:/Users/Anspeed/Documents/GitHub/ProjectKonko/OVRAssetBundles/OVRMasterBundle/asset_fbx0
 - C:/Users/Anspeed/Documents/GitHub/ProjectKonko/OVRAssetBundles/OVRMasterBundle/asset_mp40
 - C:/Users/Anspeed/Documents/GitHub/ProjectKonko/OVRAssetBundles/OVRMasterBundle/asset_rendertexture0
 - C:/Users/Anspeed/Documents/GitHub/ProjectKonko/OVRAssetBundles/OVRMasterBundle/asset_asset0
-- C:/Users/Anspeed/Documents/GitHub/ProjectKonko/OVRAssetBundles/OVRMasterBundle/asset_fbx0
 - C:/Users/Anspeed/Documents/GitHub/ProjectKonko/OVRAssetBundles/OVRMasterBundle/asset_mixer0
