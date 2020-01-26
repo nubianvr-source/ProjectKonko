@@ -23,6 +23,8 @@ public class WireScript : MonoBehaviour
 
     public LightBulbComponent bulbComponent;
 
+    public GameObject continueBtn;
+
     public Text infoTextBox;
 
     private bool isBatteryInTrigger;
@@ -40,6 +42,7 @@ public class WireScript : MonoBehaviour
     void Start()
     {
         setCircuitInactive();
+        continueBtn.SetActive(false);
     }
 
     // Update is called once per frame
@@ -58,27 +61,17 @@ public class WireScript : MonoBehaviour
             if (isLightBulbInTrigger)
             {
 
-                if (isDiodePositiveBias)
-                {
 
                 isCurrentRunning = true;
-                infoTextBox.text = "Circuit is On";
+                infoTextBox.text = "Great Light Bulb came on";
                 GetComponent<LineRenderer>().material = LiveWire;
                 lightBulbTrigger.lightBulbIcon.LightBulbIconOn();
                 batteryTrigger.batteryIcon.BatteryPowerActive();
                 wireIcon.WireActiveFunc();
-                switchIcon.SwitchOn();
                 bulbComponent.lightOn();
-
-                }
-
-
-                else
-                {
-                    //Play sound prompt or indicate error for diode in reverse bias
-                    infoTextBox.text = "Circuit On but the diode is set in negative or reverse bias";
-                }
-               
+                continueBtn.SetActive(true);
+                switchIcon.SwitchOn();
+                
                 
             }
 
@@ -107,8 +100,9 @@ public class WireScript : MonoBehaviour
         lightBulbTrigger.lightBulbIcon.LightBulbIconOff();
         batteryTrigger.batteryIcon.BatteryPowerInactive();
         wireIcon.WireInactiveFunc();
-        switchIcon.SwitchOff();
         bulbComponent.lightOff();
+        switchIcon.SwitchOff();
+        
 
 
 

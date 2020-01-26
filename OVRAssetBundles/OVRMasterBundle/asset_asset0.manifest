@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 1252079087
+CRC: 2049565613
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: c6f40ed927e47d32c69dff7ba8a2af2e
+    Hash: 22a40333abb014ffd6d3b1fb115c1fed
   TypeTreeHash:
     serializedVersion: 2
-    Hash: feb1aab52995a09501f45cefb7138d37
+    Hash: 4c326c49a57878b9db0f74545b755883
 HashAppended: 0
 ClassTypes:
 - Class: 21
@@ -16,10 +16,13 @@ ClassTypes:
 - Class: 48
   Script: {instanceID: 0}
 - Class: 114
+  Script: {fileID: 11500000, guid: e8faff297627c8342b0daf6cb33050b8, type: 3}
+- Class: 114
   Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
 - Class: 115
   Script: {instanceID: 0}
 Assets:
+- Assets/Prefabs/Game/GameEvents.asset
 - Assets/Fonts/Objectivity-Bold SDF.asset
 Dependencies:
 - C:/Users/Anspeed/Documents/GitHub/ProjectKonko/OVRAssetBundles/OVRMasterBundle/asset_resources

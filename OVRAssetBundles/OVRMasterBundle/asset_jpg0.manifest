@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 3766564901
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 0c96d55256beaa16afb52119bb1a7ae5
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 1e19a299b959f5b712c049d7eedf4f33
+HashAppended: 0
+ClassTypes:
+- Class: 89
+  Script: {instanceID: 0}
+Assets:
+- Assets/HDRI/room_2.jpg
+Dependencies: []

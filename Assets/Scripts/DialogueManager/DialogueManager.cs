@@ -57,6 +57,7 @@ public class DialogueManager : MonoBehaviour
         foreach (char letter in sentence.ToCharArray())
         {
             dialogueText.text += letter;
+            AudioManager.Instance.PlaySound("Typing");
             yield return null;
         }
     }
