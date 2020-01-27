@@ -13,9 +13,12 @@ public class AnswerData : MonoBehaviour {
     [Header("Textures")]
     [SerializeField]    Sprite          uncheckedToggle     = null;
     [SerializeField]    Sprite          checkedToggle       = null;
+    [SerializeField] Color unselectedButtonTextColor;
+    [SerializeField] Color selectedButtonTextColor;
 
     [Header("References")]
     [SerializeField]    GameEvents      events              = null;
+
 
     private             RectTransform   _rect               = null;
     public              RectTransform   Rect
@@ -74,5 +77,6 @@ public class AnswerData : MonoBehaviour {
         if (toggle == null) return;
 
         toggle.sprite = (Checked) ? checkedToggle : uncheckedToggle;
+        infoTextObject.color = (Checked) ? selectedButtonTextColor : unselectedButtonTextColor;
     }
 }

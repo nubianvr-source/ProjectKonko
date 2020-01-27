@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 2654322146
+CRC: 844162208
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 5375a59b2f916f022c95bfd3e21f369f
+    Hash: ef36ce1138dc14cc9e1f7c4064ce82d7
   TypeTreeHash:
     serializedVersion: 2
-    Hash: ce61a8189a4b8b9927c755b2deaaaedc
+    Hash: ba6db1a027f225b9820d153e27ab0a4c
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -18,6 +18,8 @@ ClassTypes:
 - Class: 21
   Script: {instanceID: 0}
 - Class: 23
+  Script: {instanceID: 0}
+- Class: 28
   Script: {instanceID: 0}
 - Class: 33
   Script: {instanceID: 0}
@@ -31,14 +33,28 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 81
   Script: {instanceID: 0}
+- Class: 82
+  Script: {instanceID: 0}
+- Class: 84
+  Script: {instanceID: 0}
 - Class: 114
   Script: {fileID: 11500000, guid: df9f338034892c44ebb62d97894772f1, type: 3}
 - Class: 114
+  Script: {fileID: 11500000, guid: 004b8ec0c25535c409b1f6115963d476, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: a783f671592674b589cfc4953e28656b, type: 3}
+- Class: 114
   Script: {fileID: 11500000, guid: 7e933e81d3c20c74ea6fdc708a67e3a5, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 40f52bb2b49943a498e44b97d4085085, type: 3}
 - Class: 114
+  Script: {fileID: 11500000, guid: 4f7337e215da414488c951d4dc7b68ea, type: 3}
+- Class: 114
   Script: {fileID: 11500000, guid: ac27124318cf8e84aa7350c2ac1cdb80, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 4bac952560759894b9f97cf7a50bf10c, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 5178bc8574ce2bf4388e787a2e2af326, type: 3}
 - Class: 114
@@ -48,20 +64,49 @@ ClassTypes:
 - Class: 114
   Script: {fileID: 11500000, guid: 367959482ff0f0948b11d2021ee48a8b, type: 3}
 - Class: 114
+  Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: e8faff297627c8342b0daf6cb33050b8, type: 3}
+- Class: 114
   Script: {fileID: 11500000, guid: 00f3402a2ea5bff4880c0313515240cd, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 4e62188adca544cf1b96ccf1630f15f9, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
 - Class: 115
   Script: {instanceID: 0}
 - Class: 120
   Script: {instanceID: 0}
 - Class: 135
   Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+- Class: 222
+  Script: {instanceID: 0}
+- Class: 223
+  Script: {instanceID: 0}
+- Class: 224
+  Script: {instanceID: 0}
+- Class: 328
+  Script: {instanceID: 0}
+- Class: 329
+  Script: {instanceID: 0}
 Assets:
 - Assets/Oculus/Avatar/Content/Prefabs/LocalAvatar.prefab
+- Assets/Prefabs/UI/AnswerPrefab.prefab
 - Assets/VrGrabber/Prefabs/Vrg Right Grabber.prefab
 - Assets/Oculus/SampleFramework/Usage/SharedAssets/Prefabs/TablePf.prefab
+- Assets/Scripts/VideoManager/360VideoPlayer.prefab
+- Assets/Prefabs/Audio/SourcePrefab.prefab
 - Assets/CurvedUI/Prefabs/CurvedUILaserPointer.prefab
 - Assets/Oculus/VR/Prefabs/OVRCameraRig.prefab
 Dependencies:
 - C:/Users/Anspeed/Documents/GitHub/ProjectKonko/OVRAssetBundles/OVRMasterBundle/asset_resources
+- C:/Users/Anspeed/Documents/GitHub/ProjectKonko/OVRAssetBundles/OVRMasterBundle/asset_png1
 - C:/Users/Anspeed/Documents/GitHub/ProjectKonko/OVRAssetBundles/OVRMasterBundle/asset_mat0
 - C:/Users/Anspeed/Documents/GitHub/ProjectKonko/OVRAssetBundles/OVRMasterBundle/asset_fbx0
+- C:/Users/Anspeed/Documents/GitHub/ProjectKonko/OVRAssetBundles/OVRMasterBundle/asset_asset0
+- C:/Users/Anspeed/Documents/GitHub/ProjectKonko/OVRAssetBundles/OVRMasterBundle/asset_rendertexture0
+- C:/Users/Anspeed/Documents/GitHub/ProjectKonko/OVRAssetBundles/OVRMasterBundle/asset_mp40

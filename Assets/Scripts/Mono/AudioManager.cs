@@ -18,21 +18,21 @@ public class Sound
 {
     #region Variables
 
-    [SerializeField]    String              name            = String.Empty;
-    public              String              Name            { get { return name; } }
+    [SerializeField] String name = String.Empty;
+    public String Name { get { return name; } }
 
-    [SerializeField]    AudioClip           clip            = null;
-    public              AudioClip           Clip            { get { return clip; } }
+    [SerializeField] AudioClip clip = null;
+    public AudioClip Clip { get { return clip; } }
 
-    [SerializeField]    SoundParameters     parameters      = new SoundParameters();
-    public              SoundParameters     Parameters      { get { return parameters; } }
+    [SerializeField] SoundParameters parameters = new SoundParameters();
+    public SoundParameters Parameters { get { return parameters; } }
 
     [HideInInspector]
-    public              AudioSource         Source          = null;
+    public AudioSource Source = null;
 
     #endregion
 
-    public void PlayAudio ()
+    public void PlayAudio()
     {
         Source.clip = Clip;
 
@@ -43,9 +43,14 @@ public class Sound
 
         Source.Play();
     }
-    public void StopAudio ()
+    public void StopAudio()
     {
         Source.Stop();
+    }
+
+    public void PauseAudio()
+    {
+        Source.Pause();
     }
 }
 public class AudioManager : MonoBehaviour {
@@ -116,6 +121,21 @@ public class AudioManager : MonoBehaviour {
         {
             Debug.LogWarning("Sound by the name " + name + " is not found! Issues occured at AudioManager.PlaySound()");
         }
+    }
+
+    // Function called when you want to pause a playing sound
+    public void PauseSound(string name)
+    {
+        var sound = GetSound(name);
+        if (sound != null)
+        {
+            sound.PauseAudio();
+        }
+        else
+        {
+            Debug.LogWarning("Sound by the name " + name + " is not found! Issues occured at AudioManager.PauseSound()");
+        }
+
     }
     /// <summary>
     /// Function that is called to stop a playing sound.

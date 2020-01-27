@@ -10,6 +10,9 @@ public class DialogueManager : MonoBehaviour
     public GameObject CurrentPanelVisible;
     public GameObject NextPanelVisible;
     public TextMeshProUGUI dialogueText;
+    public string nextUIView;
+    public Konko.UIManagement.UIManager uiManager;
+
 
     // Start is called before the first frame update
     void Start()
@@ -28,17 +31,16 @@ public class DialogueManager : MonoBehaviour
             sentences.Enqueue(sentence);
         }
 
-        DisplayNextSentence();
+        DisplayNextSentence(nextUIView);
     }
 
-    public void DisplayNextSentence() 
+    public void DisplayNextSentence(string name) 
     
     {
         if (sentences.Count == 0)
         {
             EndDialogue();
-            NextPanelVisible.SetActive(true);
-            CurrentPanelVisible.SetActive(false);
+            uiManager.ShowOnlyScreenFadeOn(name);
            // FindObjectOfType<AudioManager>().StopSound("Theme");
 
             return;
@@ -55,6 +57,7 @@ public class DialogueManager : MonoBehaviour
         foreach (char letter in sentence.ToCharArray())
         {
             dialogueText.text += letter;
+            AudioManager.Instance.PlaySound("Typing");
             yield return null;
         }
     }

@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 2857220684
+CRC: 3107102050
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 56ad47e8e48916dafaf2d7b6cdded8c2
+    Hash: a62ea059a2372b9008b56c19a3b87429
   TypeTreeHash:
     serializedVersion: 2
     Hash: cb3f6df5cbc4a2990c44c2787bc9553a
@@ -20,6 +20,8 @@ Assets:
 - Assets/Textures/Controls/Back normal-06.png
 - Assets/Textures/UIAssets/LessonsBtnHolder.png
 - Assets/Textures/UIAssets/play.png
+- Assets/Textures/Side panel circuit state interface/element-59.png
+- Assets/Textures/Sprites/Circle.png
 - Assets/Textures/MISC/electrical icon-92.png
 - Assets/Textures/Side panel circuit state interface/element-60.png
 - Assets/Textures/Buttons/Begin Adventure-02.png
@@ -30,18 +32,16 @@ Assets:
 - Assets/Textures/MISC/opening illustration-90.png
 - Assets/Oculus/SampleFramework/Usage/SharedAssets/Skyboxes/Sky_01/Skybox01_Left+X.png
 - Assets/Oculus/SampleFramework/Usage/SharedAssets/Textures/room_atlas_02.png
+- Assets/Models/3DModels/Diode.png
+- Assets/Models/3DModels/UV_off.png
+- Assets/Models/3DModels/tex/UV_Texture_battery.png
+- Assets/Textures/Side panel circuit state interface/element-57.png
 - Assets/Textures/dialogue boxes and containers/Hello Character space-04.png
 - Assets/Textures/UIAssets/PofileSettingsBtn.png
+- Assets/Textures/Side panel circuit state interface/element-64.png
 - Assets/Textures/Side panel circuit state interface/element-58.png
 - Assets/Textures/Side panel circuit state interface/element-62.png
 - Assets/Oculus/SampleFramework/Usage/SharedAssets/Skyboxes/Sky_01/Skybox01_Up+Y.png
 - Assets/Oculus/SampleFramework/Usage/SharedAssets/Skyboxes/Sky_01/Skybox01_Right-X.png
-- Assets/Textures/Controls/Back hover-07.png
-- Assets/Oculus/SampleFramework/Usage/SharedAssets/Textures/room_atlas_02_msm.png
-- Assets/Textures/MISC/nubianvr-black.png
-- Assets/Textures/UIAssets/BasicElectronicsLogo.png
-- Assets/Textures/dialogue boxes and containers/ScientistImage.png
-- Assets/Oculus/SampleFramework/Usage/SharedAssets/Textures/room_atlas_02_emi.png
-- Assets/Textures/Side panel circuit state interface/element-72.png
-- Assets/Textures/Side panel circuit state interface/element-76.png
+- Assets/Textures/dialogue boxes and containers/Question dialogue box-23.png
 Dependencies: []

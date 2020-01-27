@@ -1,34 +1,47 @@
 ManifestFileVersion: 0
-CRC: 3050867087
+CRC: 2081026688
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: a24e75800b002922c22b18d081911854
+    Hash: 40e7b47486c333a05330bd9578b2dcf3
   TypeTreeHash:
     serializedVersion: 2
-    Hash: ea5cc690cc030104e9b029e48f06c140
+    Hash: cb3f6df5cbc4a2990c44c2787bc9553a
 HashAppended: 0
 ClassTypes:
 - Class: 28
   Script: {instanceID: 0}
-- Class: 89
-  Script: {instanceID: 0}
 - Class: 213
   Script: {instanceID: 0}
 Assets:
+- Assets/Textures/Controls/Back hover-07.png
+- Assets/Models/3DModels/bulb_off.png
+- Assets/Oculus/SampleFramework/Usage/SharedAssets/Textures/room_atlas_02_msm.png
+- Assets/Textures/Buttons/possible answers two liner click-49.png
+- Assets/Textures/MISC/nubianvr-black.png
+- Assets/Textures/UIAssets/BasicElectronicsLogo.png
+- Assets/Textures/Buttons/possible answers one liner normal-38.png
+- Assets/Textures/dialogue boxes and containers/ScientistImage.png
+- Assets/Oculus/SampleFramework/Usage/SharedAssets/Textures/room_atlas_02_emi.png
+- Assets/Textures/Side panel circuit state interface/element-72.png
+- Assets/Textures/Side panel circuit state interface/element-76.png
 - Assets/Textures/UIAssets/CloseMenuBtn.png
 - Assets/Textures/Controls/Next normal-18.png
+- Assets/Textures/Side panel circuit state interface/element-61.png
 - Assets/Textures/Side panel circuit state interface/element-65.png
 - Assets/Textures/UIAssets/LessonsBtn.png
 - Assets/Textures/Controls/Next hover-10.png
 - Assets/Oculus/SampleFramework/Usage/SharedAssets/Skyboxes/Sky_01/Skybox01_Front+Z.png
+- Assets/Models/3DModels/bulb_on.png
 - Assets/Textures/UIAssets/NormalBtnState.png
 - Assets/Textures/UIAssets/Pause.png
 - Assets/Textures/Buttons/Begin Adventure-03.png
 - Assets/Oculus/SampleFramework/Usage/SharedAssets/Skyboxes/Sky_01/Skybox01_Down-Y.png
 - Assets/Textures/Controls/back click-08.png
 - Assets/Textures/dialogue boxes and containers/Question dialogue box wide-34.png
-- Assets/HDRI/abandoned_hall_01_1k.png
+- Assets/Models/3DModels/UV_map_body.png
 - Assets/Textures/dialogue boxes and containers/Hello welcome message-05.png
+- Assets/Models/3DModels/UV_on.png
 - Assets/Oculus/SampleFramework/Usage/SharedAssets/Textures/room_atlas_02_nml.png
+- Assets/Textures/Side panel circuit state interface/element-70.png
 Dependencies: []

@@ -8,12 +8,13 @@ public class VideoHnadler360 : MonoBehaviour
 
     public VideoPlayer videoPlayer;
     public GameObject nextUI;
-    public OVRScreenFade screenFade;
+    public Konko.UIManagement.UIManager uiManager;
     public Material videoSkyboxMat;
     public Material inGameSkyboxMat;
     public Skybox skybox;
     public GameObject uipointer;
     public GameObject vrgrabber;
+    public string NextUIView;
 
 
 
@@ -43,8 +44,7 @@ public class VideoHnadler360 : MonoBehaviour
     public void nextUIView()
     {
         videoPlayer.Stop();
-        nextUI.SetActive(true);
-        screenFade.OnLevelFinishedLoading();
+        uiManager.ShowOnlyScreenFadeOn(NextUIView);
         // RenderSettings.skybox = inGameSkyboxMat;
         skybox.material = inGameSkyboxMat;
         vrgrabber.SetActive(true);

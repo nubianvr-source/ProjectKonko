@@ -4,6 +4,7 @@ using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using CurvedUI;
 
 public class GameManager : MonoBehaviour {
 
@@ -19,6 +20,10 @@ public class GameManager : MonoBehaviour {
     [SerializeField]    Color               timerHalfWayOutColor    = Color.yellow;
     [SerializeField]    Color               timerAlmostOutColor     = Color.red;
     private             Color               timerDefaultColor       = Color.white;
+
+    [SerializeField] CurvedUI.CurvedUISettings curvedUI;
+    [SerializeField] string NextUIView;
+    [SerializeField] Konko.UIManagement.UIManager uiManager;
 
     private             List<AnswerData>    PickedAnswers           = new List<AnswerData>();
     private             List<int>           FinishedQuestions       = new List<int>();
@@ -79,9 +84,19 @@ public class GameManager : MonoBehaviour {
         UnityEngine.Random.InitState(seed);
 
         Display();
+        curvedUI.BlocksRaycasts = false;
     }
 
     #endregion
+
+    IEnumerator ExecuteAfterTime(float time)
+    {
+        yield return new WaitForSeconds(time);
+
+        uiManager.ShowOnlyScreenFadeOn(NextUIView);
+
+        // Code to execute after the delay
+    }
 
     /// <summary>
     /// Function that is called to update new selected answer.
@@ -155,13 +170,12 @@ public class GameManager : MonoBehaviour {
         if (IsFinished)
         {
             SetHighscore();
+            //curvedUI.BlocksRaycasts = true;
+            StartCoroutine(ExecuteAfterTime(5));
         }
 
-        var type 
-            = (IsFinished) 
-            ? UIManager.ResolutionScreenType.Finish 
-            : (isCorrect) ? UIManager.ResolutionScreenType.Correct 
-            : UIManager.ResolutionScreenType.Incorrect;
+        var type
+            = (IsFinished) ? UIManager.ResolutionScreenType.Finish : (isCorrect) ? UIManager.ResolutionScreenType.Correct : UIManager.ResolutionScreenType.Incorrect;
 
         if (events.DisplayResolutionScreen != null)
         {
