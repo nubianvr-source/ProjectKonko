@@ -3,7 +3,7 @@ Project Konko is an Open Source Virtual Reality lesson creator built in Unity an
 - deploy 2D & 360 video lessons in Virtual Reality
 - manipulate 3D object in Virtual Reality environments
 - build multiple choice lesson assessment in Virtual Reality
-- maintain a leaderboard functionality for Virtual Reality lessons.
+- maintain a badge & leaderboard functionality for Virtual Reality lessons.
 
 ## Getting Started
 
@@ -23,7 +23,7 @@ Click on the clone or download button in the GitHub and click on Open in Desktop
 
 ## A Note about Asset Sources
 
-Assets for this project were design and created by the Lime X Honey (link to their social media page can be placed here) team, and (we state the permission of reusability here)
+Assets for this project were design and created by the Lime X Honey (https://www.behance.net/limexhoney) team, and (we state the permission of reusability here)
 Project Structure
 Project structure is split into various graphical elements, gameplay prefabs, materials and textures, the primary scene, and scripts.
 ##### Environment
