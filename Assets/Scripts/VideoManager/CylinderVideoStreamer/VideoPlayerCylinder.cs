@@ -1,57 +1,45 @@
 ﻿using System;
-using UnityEngine.Video;
 using UnityEngine;
+using UnityEngine.Video;
 
-public class VideoPlayerCylinder : MonoBehaviour
+namespace VideoManager.CylinderVideoStreamer
 {
-    public static VideoPlayerCylinder instance;
-
-    public Videos[] videoList;
-
-    void Awake()
+    public class VideoPlayerCylinder : MonoBehaviour
     {
-       /* 
-         if (instance != null)
-        {
-            Destroy(gameObject);
-        }
-        else 
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        */
 
-        foreach (Videos v in videoList)
+
+        public Videos[] videoList;
+        //public VideoPlayer videoPlayerRef ;
+
+        private void Awake()
         {
-            v.videoPlayer = gameObject.GetComponent<VideoPlayer>();
-            v.videoPlayer.clip = v.videoClip;
-            v.videoPlayer.isLooping = v.loop;
-        }
+            foreach (var video in videoList)
+            {
+                video.videoPlayer = gameObject.GetComponent<VideoPlayer>();
+                video.videoPlayer.name = video.videoName;
+                video.videoPlayer.clip = video.videoClip;
+                video.videoPlayer.isLooping = video.loop;
+            }
         
-    }
-
-    public void PlayVideo(string video)
-    {
-        Videos v = Array.Find(videoList, item => item.videoName == video);
-        if (v == null)
-        {
-            Debug.LogError("Video:" + video + "not found!");
-            return;
         }
-        v.videoPlayer.Prepare();
-        v.videoPlayer.Play();
-    }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+        public void PlayVideo(string videoName)
+        {
+            var videos = Array.Find(videoList, video => video.videoName == videoName);
+            videos.videoPlayer.Play();
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
+
+        // Start is called before the first frame update
+        void Start()
+        {
         
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+        
+        }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
 using UnityEngine.UI;
+using VideoManager.CylinderVideoStreamer;
 
 public class PlayPauseBtn : MonoBehaviour
 {
@@ -10,12 +11,13 @@ public class PlayPauseBtn : MonoBehaviour
     public GameObject LeftVideoPanel;
     public GameObject RightVideoPanel;
     public VideoPlayer videoPlayer;
-    RawImageVideoStream CylinderVideo2d;
+    public RawImageVideoStream CylinderVideo2d;
     public RawImage rawImageRight;
     public RawImage rawImageLeft;
     public RawImage rawImageCenter;
     public Sprite playIcon;
     public Sprite pauseIcon;
+    public Image playPauseIcon;
 
     
     Color32 rawImageHoverExit = new Color32(255, 255, 255, 255);
@@ -46,7 +48,7 @@ public class PlayPauseBtn : MonoBehaviour
 
     public void onHoverEnterColorChange()
     {
-        GetComponent<Image>().color = new Color32(255, 255, 255, 255);
+        playPauseIcon.color = new Color32(255, 255, 255, 255);
        rawImageCenter.GetComponent<RawImage>().color = rawImageHoverEnter;
        rawImageLeft.GetComponent<RawImage>().color = rawImageHoverEnter;
        rawImageRight.GetComponent<RawImage>().color = rawImageHoverEnter;
@@ -54,7 +56,7 @@ public class PlayPauseBtn : MonoBehaviour
 
     public void onHoverExitColorChange()
     {
-        GetComponent<Image>().color = new Color32(255, 255, 255, 0);
+        playPauseIcon.color = new Color32(255, 255, 255, 0);
         rawImageCenter.GetComponent<RawImage>().color = rawImageHoverExit;
         rawImageLeft.GetComponent<RawImage>().color = rawImageHoverExit;
         rawImageRight.GetComponent<RawImage>().color = rawImageHoverExit;
@@ -71,19 +73,19 @@ public class PlayPauseBtn : MonoBehaviour
             CylinderVideo2d.startPlayingVideoRefence();
             LeftVideoPanel.SetActive(true);
             RightVideoPanel.SetActive(true);
-            GetComponent<Image>().sprite = pauseIcon;
+            playPauseIcon.sprite = pauseIcon;
         }
         else 
         {
             if (videoPlayer.isPlaying)
             {
                 videoPlayer.Pause();
-                GetComponent<Image>().sprite = playIcon;
+                playPauseIcon.sprite = playIcon;
             }
             else
             {
                 videoPlayer.Play();
-                GetComponent<Image>().sprite = pauseIcon;
+                playPauseIcon.sprite = pauseIcon;
             }
         }
     }
@@ -91,7 +93,7 @@ public class PlayPauseBtn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        CylinderVideo2d = FindObjectOfType<RawImageVideoStream>();
+      //  CylinderVideo2d = FindObjectOfType<RawImageVideoStream>();
     }
 
     // Update is called once per frame

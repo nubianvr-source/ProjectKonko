@@ -1,14 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class LightBulbIcon : MonoBehaviour
 {
 
-    public Sprite LightBulbOn;
+    [FormerlySerializedAs("LightBulbOn")] public Sprite lightBulbOn;
 
-    public Sprite LightBulbOff;
+    [FormerlySerializedAs("LightBulbOff")] public Sprite lightBulbOff;
 
     // Start is called before the first frame update
     void Start()
@@ -24,13 +25,13 @@ public class LightBulbIcon : MonoBehaviour
 
     public void LightBulbIconOn()
     {
-        gameObject.GetComponent<Image>().sprite = LightBulbOn;
+        gameObject.GetComponent<Image>().sprite = lightBulbOn;
        
     }
 
     public void LightBulbIconOff()
     {
-        gameObject.GetComponent<Image>().sprite = LightBulbOff;
+        gameObject.GetComponent<Image>().sprite = lightBulbOff;
     
     }
 }

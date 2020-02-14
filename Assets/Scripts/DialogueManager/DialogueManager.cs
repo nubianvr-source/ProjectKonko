@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Video;
 
 
 public class DialogueManager : MonoBehaviour
@@ -39,9 +40,11 @@ public class DialogueManager : MonoBehaviour
     {
         if (sentences.Count == 0)
         {
+            
             EndDialogue();
             uiManager.ShowOnlyScreenFadeOn(name);
-           // FindObjectOfType<AudioManager>().StopSound("Theme");
+
+            // FindObjectOfType<AudioManager>().StopSound("Theme");
 
             return;
         }
@@ -66,4 +69,6 @@ public class DialogueManager : MonoBehaviour
         Debug.Log("End of Dialogue");
 
     }
+
+   
 }

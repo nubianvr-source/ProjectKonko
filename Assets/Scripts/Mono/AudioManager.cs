@@ -18,13 +18,13 @@ public class Sound
 {
     #region Variables
 
-    [SerializeField] String name = String.Empty;
+    [SerializeField] private String name = String.Empty;
     public String Name { get { return name; } }
 
-    [SerializeField] AudioClip clip = null;
+    [SerializeField] private AudioClip clip = null;
     public AudioClip Clip { get { return clip; } }
 
-    [SerializeField] SoundParameters parameters = new SoundParameters();
+    [SerializeField] private SoundParameters parameters = new SoundParameters();
     public SoundParameters Parameters { get { return parameters; } }
 
     [HideInInspector]
@@ -59,8 +59,8 @@ public class AudioManager : MonoBehaviour {
 
     public static       AudioManager    Instance        = null;
 
-    [SerializeField]    Sound[]         sounds          = null;
-    [SerializeField]    AudioSource     sourcePrefab    = null;
+    [SerializeField] private Sound[]         sounds          = null;
+    [SerializeField] private AudioSource     sourcePrefab    = null;
 
     //[SerializeField]    String          startupTrack    = String.Empty;
 
@@ -71,7 +71,7 @@ public class AudioManager : MonoBehaviour {
     /// <summary>
     /// Function that is called on the frame when a script is enabled just before any of the Update methods are called the first time.
     /// </summary>
-    void Awake()
+    private void Awake()
     {
         if (Instance != null)
         { Destroy(gameObject); }
@@ -85,7 +85,7 @@ public class AudioManager : MonoBehaviour {
     /// <summary>
     /// Function that is called when the script instance is being loaded.
     /// </summary>
-    void Start()
+    private void Start()
     {
        PlaySound("Theme");
         
@@ -96,11 +96,11 @@ public class AudioManager : MonoBehaviour {
     /// <summary>
     /// Function that is called to initializes sounds.
     /// </summary>
-    void InitSounds()
+    private void InitSounds()
     {
         foreach (var sound in sounds)
         {
-            AudioSource source = (AudioSource)Instantiate(sourcePrefab, gameObject.transform);
+            var source = Instantiate(sourcePrefab, gameObject.transform);
             source.name = sound.Name;
 
             sound.Source = source;
@@ -155,7 +155,7 @@ public class AudioManager : MonoBehaviour {
 
     #region Getters
 
-    Sound GetSound(string name)
+    private Sound GetSound(string name)
     {
         foreach (var sound in sounds)
         {

@@ -9,7 +9,7 @@ public class Videos{
 
     public bool loop = false;
 
+    public bool playOnWake = false;
 
-   
-    public VideoPlayer videoPlayer;
+   [HideInInspector] public VideoPlayer videoPlayer;
 }
