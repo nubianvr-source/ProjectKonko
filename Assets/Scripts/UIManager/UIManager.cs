@@ -9,53 +9,58 @@ using UnityEngine.UI;
 public struct UIManagerParameters
 {
     [Header("Answers Options")]
-    [SerializeField] float margins;
-    public float Margins { get { return margins; } }
+    [SerializeField]
+    private float margins;
+    public float Margins => margins;
 
     [Header("Resolution Screen Options")]
-    [SerializeField] Color correctBGColor;
-    public Color CorrectBGColor { get { return correctBGColor; } }
-    [SerializeField] Color incorrectBGColor;
-    public Color IncorrectBGColor { get { return incorrectBGColor; } }
-    [SerializeField] Color finalBGColor;
-    public Color FinalBGColor { get { return finalBGColor; } }
+    [SerializeField]
+    private Sprite correctBGColor; 
+    public Sprite CorrectBGColor => correctBGColor;
+    
+    [SerializeField] private Sprite incorrectBGColor;
+    public Sprite IncorrectBGColor => incorrectBGColor;
+    [SerializeField] private Color finalBGColor;
+    public Color FinalBGColor => finalBGColor;
 }
 [Serializable()]
 public struct UIElements
 {
-    [SerializeField] RectTransform answersContentArea;
-    public RectTransform AnswersContentArea { get { return answersContentArea; } }
+    [SerializeField] private RectTransform answersContentArea;
+    public RectTransform AnswersContentArea => answersContentArea;
 
-    [SerializeField] TextMeshProUGUI questionInfoTextObject;
-    public TextMeshProUGUI QuestionInfoTextObject { get { return questionInfoTextObject; } }
+    [SerializeField] private TextMeshProUGUI questionInfoTextObject;
+    public TextMeshProUGUI QuestionInfoTextObject => questionInfoTextObject;
 
-    [SerializeField] TextMeshProUGUI scoreText;
-    public TextMeshProUGUI ScoreText { get { return scoreText; } }
-
-    [Space]
-
-    [SerializeField] Animator resolutionScreenAnimator;
-    public Animator ResolutionScreenAnimator { get { return resolutionScreenAnimator; } }
-
-    [SerializeField] Image resolutionBG;
-    public Image ResolutionBG { get { return resolutionBG; } }
-
-    [SerializeField] TextMeshProUGUI resolutionStateInfoText;
-    public TextMeshProUGUI ResolutionStateInfoText { get { return resolutionStateInfoText; } }
-
-    [SerializeField] TextMeshProUGUI resolutionScoreText;
-    public TextMeshProUGUI ResolutionScoreText { get { return resolutionScoreText; } }
+    [SerializeField] private TextMeshProUGUI scoreText;
+    public TextMeshProUGUI ScoreText => scoreText;
 
     [Space]
 
-    [SerializeField] TextMeshProUGUI highScoreText;
-    public TextMeshProUGUI HighScoreText { get { return highScoreText; } }
+    [SerializeField]
+    private Animator resolutionScreenAnimator;
+    public Animator ResolutionScreenAnimator => resolutionScreenAnimator;
 
-    [SerializeField] CanvasGroup mainCanvasGroup;
-    public CanvasGroup MainCanvasGroup { get { return mainCanvasGroup; } }
+    [SerializeField] private Image resolutionBG;
+    public Image ResolutionBG => resolutionBG;
 
-    [SerializeField] RectTransform finishUIElements;
-    public RectTransform FinishUIElements { get { return finishUIElements; } }
+    [SerializeField] private TextMeshProUGUI resolutionStateInfoText;
+    public TextMeshProUGUI ResolutionStateInfoText => resolutionStateInfoText;
+
+    [SerializeField] private TextMeshProUGUI resolutionScoreText;
+    public TextMeshProUGUI ResolutionScoreText => resolutionScoreText;
+
+    [Space]
+
+    [SerializeField]
+    private TextMeshProUGUI highScoreText;
+    public TextMeshProUGUI HighScoreText => highScoreText;
+
+    [SerializeField] private CanvasGroup mainCanvasGroup;
+    public CanvasGroup MainCanvasGroup => mainCanvasGroup;
+
+    [SerializeField] private RectTransform finishUIElements;
+    public RectTransform FinishUIElements => finishUIElements;
 }
 public class UIManager : MonoBehaviour
 {
@@ -65,15 +70,18 @@ public class UIManager : MonoBehaviour
     public enum ResolutionScreenType { Correct, Incorrect, Finish }
 
     [Header("References")]
-    [SerializeField] GameEvents events = null;
+    [SerializeField]
+    private GameEvents events = null;
 
     [Header("UI Elements (Prefabs)")]
-    [SerializeField] AnswerData answerPrefab = null;
+    [SerializeField]
+    private AnswerData answerPrefab = null;
 
-    [SerializeField] UIElements uIElements = new UIElements();
+    [SerializeField] private UIElements uIElements = new UIElements();
 
     [Space]
-    [SerializeField] UIManagerParameters parameters = new UIManagerParameters();
+    [SerializeField]
+    private UIManagerParameters parameters = new UIManagerParameters();
 
     private List<AnswerData> currentAnswers = new List<AnswerData>();
     private int resStateParaHash = 0;
@@ -92,7 +100,7 @@ public class UIManager : MonoBehaviour
     /// <summary>
     /// Function that is called when the object becomes enabled and active
     /// </summary>
-    void OnEnable()
+    private void OnEnable()
     {
         events.UpdateQuestionUI += UpdateQuestionUI;
         events.DisplayResolutionScreen += DisplayResolution;
@@ -101,7 +109,7 @@ public class UIManager : MonoBehaviour
     /// <summary>
     /// Function that is called when the behaviour becomes disabled
     /// </summary>
-    void OnDisable()
+    private void OnDisable()
     {
         events.UpdateQuestionUI -= UpdateQuestionUI;
         events.DisplayResolutionScreen -= DisplayResolution;
@@ -111,7 +119,7 @@ public class UIManager : MonoBehaviour
     /// <summary>
     /// Function that is called when the script instance is being loaded.
     /// </summary>
-    void Start()
+    private void Start()
     {
         UpdateScoreUI();
         resStateParaHash = Animator.StringToHash("ScreenState");
@@ -134,7 +142,7 @@ public class UIManager : MonoBehaviour
     /// <summary>
     /// Function that is used to update new question UI information.
     /// </summary>
-    void UpdateQuestionUI(Question question)
+    private void UpdateQuestionUI(Question question)
     {
         uIElements.QuestionInfoTextObject.text = question.Info;
         CreateAnswers(question);
@@ -142,7 +150,7 @@ public class UIManager : MonoBehaviour
     /// <summary>
     /// Function that is used to display resolution screen.
     /// </summary>
-    void DisplayResolution(ResolutionScreenType type, int score)
+    private void DisplayResolution(ResolutionScreenType type, int score)
     {
         UpdateResUI(type, score);
         uIElements.ResolutionScreenAnimator.SetInteger(resStateParaHash, 2);
@@ -158,7 +166,8 @@ public class UIManager : MonoBehaviour
             StartCoroutine(IE_DisplayTimedResolution);
         }
     }
-    IEnumerator DisplayTimedResolution()
+
+    private IEnumerator DisplayTimedResolution()
     {
         yield return new WaitForSeconds(GameUtility.ResolutionDelayTime);
         uIElements.ResolutionScreenAnimator.SetInteger(resStateParaHash, 1);
@@ -168,19 +177,19 @@ public class UIManager : MonoBehaviour
     /// <summary>
     /// Function that is used to display resolution UI information.
     /// </summary>
-    void UpdateResUI(ResolutionScreenType type, int score)
+    private void UpdateResUI(ResolutionScreenType type, int score)
     {
         var highscore = PlayerPrefs.GetInt(GameUtility.SavePrefKey);
 
         switch (type)
         {
             case ResolutionScreenType.Correct:
-                uIElements.ResolutionBG.color = parameters.CorrectBGColor;
+                uIElements.ResolutionBG.GetComponent<Image>().sprite = parameters.CorrectBGColor;
                 uIElements.ResolutionStateInfoText.text = "CORRECT!";
                 uIElements.ResolutionScoreText.text = "+" + score;
                 break;
             case ResolutionScreenType.Incorrect:
-                uIElements.ResolutionBG.color = parameters.IncorrectBGColor;
+                uIElements.ResolutionBG.GetComponent<Image>().sprite = parameters.IncorrectBGColor;
                 uIElements.ResolutionStateInfoText.text = "WRONG!";
                 uIElements.ResolutionScoreText.text = "-" + score;
                 break;
@@ -199,7 +208,7 @@ public class UIManager : MonoBehaviour
     /// <summary>
     /// Function that is used to calculate and display the score.
     /// </summary>
-    IEnumerator CalculateScore()
+    private IEnumerator CalculateScore()
     {
         var scoreValue = 0;
         while (scoreValue < events.CurrentFinalScore)
@@ -214,7 +223,7 @@ public class UIManager : MonoBehaviour
     /// <summary>
     /// Function that is used to create new question answers.
     /// </summary>
-    void CreateAnswers(Question question)
+    private void CreateAnswers(Question question)
     {
         EraseAnswers();
 
@@ -235,7 +244,7 @@ public class UIManager : MonoBehaviour
     /// <summary>
     /// Function that is used to erase current created answers.
     /// </summary>
-    void EraseAnswers()
+    private void EraseAnswers()
     {
         foreach (var answer in currentAnswers)
         {
@@ -247,7 +256,7 @@ public class UIManager : MonoBehaviour
     /// <summary>
     /// Function that is used to update score text UI.
     /// </summary>
-    void UpdateScoreUI()
+    private void UpdateScoreUI()
     {
         uIElements.ScoreText.text = "Score: " + events.CurrentFinalScore;
     }
@@ -257,7 +266,7 @@ public class UIManager : MonoBehaviour
         TriggerOpenPanel(panel);
     }
 
-    void TriggerOpenPanel(UIPanel panel)
+    private void TriggerOpenPanel(UIPanel panel)
     {
         if (_currentPanel != null)
         {
@@ -267,7 +276,7 @@ public class UIManager : MonoBehaviour
         panel.OpenBehaviour();
     }
 
-    void TriggerClosePanel(UIPanel panel)
+    private void TriggerClosePanel(UIPanel panel)
     {
         panel.CloseBehaviour();
     }

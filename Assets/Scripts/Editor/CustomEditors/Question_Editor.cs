@@ -116,12 +116,12 @@ public class Question_Editor : Editor {
                 {
                     SerializedProperty isCorrectProp = answersProp.GetArrayElementAtIndex(i).FindPropertyRelative("_isCorrect");
 
-                    if (isCorrectProp.boolValue)
+                   if (isCorrectProp.boolValue)
                     {
-                        UncheckCorrectAnswers();
-                        answersProp.GetArrayElementAtIndex(i).FindPropertyRelative("_isCorrect").boolValue = true;
+                        UncheckCorrectAnswers(); 
+                       answersProp.GetArrayElementAtIndex(i).FindPropertyRelative("_isCorrect").boolValue = true;
 
-                        serializedObject.ApplyModifiedProperties();
+                    serializedObject.ApplyModifiedProperties(); 
                     }
                 }
             }

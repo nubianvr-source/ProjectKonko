@@ -899,6 +899,8 @@
             <e p="VideoSplashScreen.cs" t="Include" />
           </e>
           <e p="TransformLerpScript.cs" t="Include" />
+          <e p="UI_Screen.cs" t="Include" />
+          <e p="UI_System.cs" t="Include" />
           <e p="UIManager" t="Include">
             <e p="First_UIPanel.cs" t="Include" />
             <e p="Second_UIPanel.cs" t="Include" />

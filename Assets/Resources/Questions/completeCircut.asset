@@ -16,18 +16,23 @@ MonoBehaviour:
     form a complete circuit that will result in a lighted bulb?
   _answers:
   - _info: "Bulb, Battery, Wire, Switch\t "
-    _isCorrect: 1
+    _isCorrect: 0
+    _interventionText: 
   - _info: Battery, Wire, Switch, Resistor
     _isCorrect: 0
+    _interventionText: 
   - _info: Battery, Wire, Capacitor, Resistor
     _isCorrect: 0
+    _interventionText: 
   - _info: Bulb, Battery, Wire
     _isCorrect: 1
+    _interventionText: 
   - _info: 'Diode, Wire, Capacitor, Resistor
 
 '
     _isCorrect: 0
+    _interventionText: 
   _useTimer: 0
   _timer: 0
-  _answerType: 0
+  _answerType: 1
   _addScore: 10

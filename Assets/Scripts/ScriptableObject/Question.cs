@@ -10,6 +10,10 @@ public struct Answer
 
     [SerializeField] private bool _isCorrect;
     public bool IsCorrect { get { return _isCorrect; } }
+
+    [SerializeField] private string _interventionText;
+    public string interventionText => _interventionText;
+
 }
 [CreateAssetMenu(fileName = "New Question", menuName = "Quiz/new Question")]
 public class Question : ScriptableObject {
@@ -21,6 +25,7 @@ public class Question : ScriptableObject {
 
     [SerializeField]            Answer[]    _answers        = null;
     public                      Answer[]    Answers         { get { return _answers; } }
+    
 
     //Parameters
 
@@ -33,7 +38,7 @@ public class Question : ScriptableObject {
     [SerializeField] private    AnswerType  _answerType     = AnswerType.Multi;
     public                      AnswerType  GetAnswerType   { get { return _answerType; } }
 
-    [SerializeField] private    int         _addScore       = 10;
+    [SerializeField] private    int         _addScore       = 20;
     public                      int         AddScore        { get { return _addScore; } }
 
     /// <summary>
@@ -51,4 +56,5 @@ public class Question : ScriptableObject {
         }
         return CorrectAnswers;
     }
+    
 }
