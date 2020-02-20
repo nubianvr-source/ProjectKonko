@@ -16,16 +16,20 @@ MonoBehaviour:
   _answers:
   - _info: Battery
     _isCorrect: 1
+    _interventionText: Explain what a battery is
   - _info: 'Capacitor
 
 '
     _isCorrect: 0
+    _interventionText: 'Explain what a capacitor is '
   - _info: Resistor
     _isCorrect: 0
+    _interventionText: Explain what a resistor does
   - _info: 'LED
 
 '
     _isCorrect: 0
+    _interventionText: Explain what a LED does
   _useTimer: 0
   _timer: 0
   _answerType: 1

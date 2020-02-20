@@ -17,10 +17,12 @@ MonoBehaviour:
   _answers:
   - _info: "True\t"
     _isCorrect: 0
+    _interventionText: A matchbox does not conduct electricity
   - _info: 'False
 
 '
     _isCorrect: 1
+    _interventionText: Nice, a matchbox cant conduct electricty and that is true
   _useTimer: 0
   _timer: 0
   _answerType: 1

@@ -17,12 +17,16 @@ MonoBehaviour:
   _answers:
   - _info: Capacitor
     _isCorrect: 0
+    _interventionText: Explain what a capacitor does
   - _info: Resistor
     _isCorrect: 1
+    _interventionText: Explain what a resistor does
   - _info: Ammeter
     _isCorrect: 0
+    _interventionText: Explain what an Ammeter does
   - _info: Diode
     _isCorrect: 0
+    _interventionText: Explain what a diode is
   _useTimer: 0
   _timer: 0
   _answerType: 1

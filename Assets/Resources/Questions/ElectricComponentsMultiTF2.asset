@@ -17,10 +17,12 @@ MonoBehaviour:
   _answers:
   - _info: True
     _isCorrect: 1
+    _interventionText: Yes all of these componenets can actually conduct electricty
   - _info: 'False
 
 '
     _isCorrect: 0
+    _interventionText: All these components can actually conduct electricty
   _useTimer: 0
   _timer: 0
   _answerType: 1

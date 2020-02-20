@@ -19,8 +19,10 @@ MonoBehaviour:
 
 '
     _isCorrect: 0
+    _interventionText: Fire is an energy source but does not cundoct electricity
   - _info: False
     _isCorrect: 1
+    _interventionText: Correcr fire is not an electric source
   _useTimer: 0
   _timer: 0
   _answerType: 1

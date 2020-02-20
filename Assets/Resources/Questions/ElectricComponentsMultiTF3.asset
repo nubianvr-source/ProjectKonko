@@ -16,8 +16,13 @@ MonoBehaviour:
   _answers:
   - _info: True
     _isCorrect: 0
-  - _info: False
+    _interventionText: Unfortunately the bulb will not light up as there is no power
+      in the circuit
+  - _info: 'False
+
+'
     _isCorrect: 1
+    _interventionText: Correct all these components can not conduct electricity
   _useTimer: 0
   _timer: 0
   _answerType: 1

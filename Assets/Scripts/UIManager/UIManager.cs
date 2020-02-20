@@ -150,7 +150,7 @@ public class UIManager : MonoBehaviour
     /// <summary>
     /// Function that is used to display resolution screen.
     /// </summary>
-    private void DisplayResolution(ResolutionScreenType type, int score)
+    private void DisplayResolution(ResolutionScreenType type, string score)
     {
         UpdateResUI(type, score);
         uIElements.ResolutionScreenAnimator.SetInteger(resStateParaHash, 2);
@@ -177,7 +177,10 @@ public class UIManager : MonoBehaviour
     /// <summary>
     /// Function that is used to display resolution UI information.
     /// </summary>
-    private void UpdateResUI(ResolutionScreenType type, int score)
+    ///
+    /// 
+    /// Rename the variable "score" to something more appropriate
+    private void UpdateResUI(ResolutionScreenType type, string score)
     {
         var highscore = PlayerPrefs.GetInt(GameUtility.SavePrefKey);
 
@@ -185,13 +188,13 @@ public class UIManager : MonoBehaviour
         {
             case ResolutionScreenType.Correct:
                 uIElements.ResolutionBG.GetComponent<Image>().sprite = parameters.CorrectBGColor;
-                uIElements.ResolutionStateInfoText.text = "CORRECT!";
-                uIElements.ResolutionScoreText.text = "+" + score;
+                uIElements.ResolutionStateInfoText.text = score;
+                uIElements.ResolutionScoreText.text = "+" + "CORRECT!";
                 break;
             case ResolutionScreenType.Incorrect:
                 uIElements.ResolutionBG.GetComponent<Image>().sprite = parameters.IncorrectBGColor;
-                uIElements.ResolutionStateInfoText.text = "WRONG!";
-                uIElements.ResolutionScoreText.text = "-" + score;
+                uIElements.ResolutionStateInfoText.text = score;
+                uIElements.ResolutionScoreText.text = "-" + "WRONG!";
                 break;
             case ResolutionScreenType.Finish:
                 uIElements.ResolutionBG.color = parameters.FinalBGColor;

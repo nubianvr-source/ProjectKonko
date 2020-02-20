@@ -17,21 +17,25 @@ MonoBehaviour:
   _answers:
   - _info: "Bulb, Battery, Wire, Switch\t "
     _isCorrect: 0
-    _interventionText: 
+    _interventionText: Bulb, Battery, Wire, Switch will allow for a bulb to light
+      up
   - _info: Battery, Wire, Switch, Resistor
     _isCorrect: 0
-    _interventionText: 
+    _interventionText: 'Resistor, Battery, Wire, Switch will not light up as there
+      is no bulb '
   - _info: Battery, Wire, Capacitor, Resistor
     _isCorrect: 0
-    _interventionText: 
+    _interventionText: Battery, Wire, Capacitor, Resistor will not light up as ther
+      is no bulb as here as well
   - _info: Bulb, Battery, Wire
     _isCorrect: 1
-    _interventionText: 
+    _interventionText: Bulb, Battery, Wire  will have the light bulb light up as ther
+      is a bulb in the circuit
   - _info: 'Diode, Wire, Capacitor, Resistor
 
 '
     _isCorrect: 0
-    _interventionText: 
+    _interventionText: Diode, Wire, Capacitor, Resistor dont have a bulb in it
   _useTimer: 0
   _timer: 0
   _answerType: 1

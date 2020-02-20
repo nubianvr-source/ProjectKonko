@@ -1,4 +1,5 @@
-﻿using UnityEditor;
+﻿using System;
+using UnityEditor;
 using UnityEngine;
 
 [CustomEditor(typeof(Question))]
@@ -54,6 +55,7 @@ public class Question_Editor : Editor {
             fixedHeight = 30,
             alignment = TextAnchor.MiddleLeft
         };
+        
         questionInfoProp.stringValue = EditorGUILayout.TextArea(questionInfoProp.stringValue, textAreaStyle);
         GUILayout.Space(7.5f);
 
@@ -110,6 +112,17 @@ public class Question_Editor : Editor {
         {
             EditorGUI.BeginChangeCheck();
             EditorGUILayout.PropertyField(answersProp.GetArrayElementAtIndex(i));
+            GUILayout.Space(7.5f);
+            GUILayout.Label("Interventions:", EditorStyles.miniLabel);
+            
+            SerializedProperty interventions = answersProp.GetArrayElementAtIndex(i).FindPropertyRelative("_interventionText");
+            answersProp.GetArrayElementAtIndex(i).FindPropertyRelative("_interventionText").stringValue = EditorGUILayout.TextField(interventions.stringValue);
+            if (interventions.stringValue.Length <= 0)
+            {
+                 answersProp.GetArrayElementAtIndex(i).FindPropertyRelative("_interventionText").stringValue = String.Empty;
+            }
+
+           
             if (EditorGUI.EndChangeCheck())
             {
                 if (answerTypeProp.enumValueIndex == (int)Question.AnswerType.Single)

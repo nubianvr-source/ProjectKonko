@@ -17,12 +17,12 @@ MonoBehaviour:
   _answers:
   - _info: True
     _isCorrect: 1
-    _interventionText: 
+    _interventionText: All these componenets are electric components
   - _info: 'False
 
 '
     _isCorrect: 0
-    _interventionText: 
+    _interventionText: 'All these components are electric components '
   _useTimer: 0
   _timer: 0
   _answerType: 1

@@ -34,7 +34,10 @@ public class GameManager : MonoBehaviour {
     private             IEnumerator         IE_WaitTillNextRound    = null;
     private             IEnumerator         IE_StartTimer           = null;
 
+    private int answerIndex = 0;
+
     private             bool                IsFinished
+    
     {
         get
         {
@@ -113,7 +116,10 @@ public class GameManager : MonoBehaviour {
                 }
             }
             PickedAnswers.Clear();
+            
             PickedAnswers.Add(newAnswer);
+            answerIndex = newAnswer.AnswerIndex;
+
         }
         else
         {
@@ -179,7 +185,7 @@ public class GameManager : MonoBehaviour {
 
         if (events.DisplayResolutionScreen != null)
         {
-            events.DisplayResolutionScreen(type, Questions[currentQuestion].AddScore);
+            events.DisplayResolutionScreen(type, Questions[currentQuestion].Answers[answerIndex].interventionText);
         }
 
         AudioManager.Instance.PlaySound((isCorrect) ? "CorrectSFX" : "IncorrectSFX");
