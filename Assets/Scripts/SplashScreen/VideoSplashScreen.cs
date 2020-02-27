@@ -35,6 +35,8 @@ public class VideoSplashScreen : MonoBehaviour
     // Start is called before the first frame update
     void OnEnable()
     {
+        print(currentIndex);
+        print(targetIndex);
         Next();
 
         videoPlayer.loopPointReached += player =>

@@ -40,14 +40,14 @@ namespace NubianVR.UI
         // Start is called before the first frame update
         void Start()
         {
+            FadeIn();
             screens = GetComponentsInChildren<UI_Screen>(true);
             InitializeScreens();
-            if (m_StartScreen)
-            {
-                SwitchScreens(m_StartScreen);
-            }
+            if (!m_StartScreen) return;
+            SwitchScreens(m_StartScreen);
+            print("Screen Initialized");
 
-            FadeIn();
+
         }
 
         // Update is called once per frame
@@ -64,29 +64,38 @@ namespace NubianVR.UI
         {
             if (aScreen)
             {
-                if (currentScreen)
+                if (_currentScreen)
                 {
                     _currentScreen.CloseScreen();
-                    _previousScreen = currentScreen;
+                    _previousScreen = _currentScreen;
+                    print("Current Screen was true");
                 }
-
-                _currentScreen = aScreen;
-                _currentScreen.gameObject.SetActive(true);
+                _currentScreen = aScreen; 
+                _currentScreen.gameObject.SetActive(true); 
                 _currentScreen.StartScreen();
-
+                print("Current Screen was set from Ascreen");
                 onSwitchScreen?.Invoke();
             }
-
+                
         }
 
         public void FadeIn()
         {
-            ScreenFade.FadeScreenIn();
+            if (ScreenFade)
+            {
+                ScreenFade.FadeScreenIn();
+            }
+            
         }
 
         public void FadeOut()
         {
-            ScreenFade.FadeScreenOut();
+            if (ScreenFade)
+            {
+                ScreenFade.FadeScreenOut();
+            }
+
+            
         }
 
         public void GoToPreviousScreen()

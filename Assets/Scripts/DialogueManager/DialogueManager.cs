@@ -2,73 +2,71 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Events;
 using UnityEngine.Video;
 
 
-public class DialogueManager : MonoBehaviour
-{
-    private Queue<string> sentences;
-    public GameObject CurrentPanelVisible;
-    public GameObject NextPanelVisible;
-    public TextMeshProUGUI dialogueText;
-    public string nextUIView;
-    public Konko.UIManagement.UIManager uiManager;
-
-
-    // Start is called before the first frame update
-    void Start()
+    public class DialogueManager : MonoBehaviour
     {
-        sentences = new Queue<string>();
-        
-    }
+        private Queue<string> sentences;
+        public TextMeshProUGUI dialogueText;
+        public UnityEvent _dialogueSentencesFinished = new UnityEvent();
 
-    public void startDialogue(Dialogue dialogue)
-    {
-        Debug.Log("Starting conversation with" + dialogue.name);
-        sentences.Clear();
 
-        foreach (string sentence in dialogue.sentences)
+
+        // Start is called before the first frame update
+        void Start()
         {
-            sentences.Enqueue(sentence);
+            sentences = new Queue<string>();
+
         }
 
-        DisplayNextSentence(nextUIView);
-    }
-
-    public void DisplayNextSentence(string name) 
-    
-    {
-        if (sentences.Count == 0)
+        public void startDialogue(Dialogue dialogue)
         {
-            
-            EndDialogue();
-            uiManager.ShowOnlyScreenFadeOn(name);
+            Debug.Log("Starting conversation with" + dialogue.name);
+            sentences.Clear();
+           _dialogueSentencesFinished = dialogue.displaySentencesFinished; 
+            foreach (var sentence in dialogue.sentences)
+            {
+                sentences.Enqueue(sentence);
+            }
 
-            // FindObjectOfType<AudioManager>().StopSound("Theme");
-
-            return;
+            DisplayNextSentence();
         }
 
-        string sentence = sentences.Dequeue();
-        StopAllCoroutines();
-        StartCoroutine(TypeSentenceAnimate(sentence));
-    }
+        public void DisplayNextSentence()
 
-    IEnumerator TypeSentenceAnimate(string sentence)
-    {
-        dialogueText.text = "";
-        foreach (char letter in sentence.ToCharArray())
         {
-            dialogueText.text += letter;
-            AudioManager.Instance.PlaySound("Typing");
-            yield return null;
+            if (sentences.Count == 0)
+            {
+                EndDialogue();
+                _dialogueSentencesFinished.Invoke();
+                // FindObjectOfType<AudioManager>().StopSound("Theme");
+
+                return;
+            }
+
+            var sentence = sentences.Dequeue();
+            StopAllCoroutines();
+            StartCoroutine(TypeSentenceAnimate(sentence));
         }
-    }
-    void EndDialogue()
-    {
-        Debug.Log("End of Dialogue");
+
+        IEnumerator TypeSentenceAnimate(string sentence)
+        {
+            dialogueText.text = "";
+            foreach (char letter in sentence.ToCharArray())
+            {
+                dialogueText.text += letter;
+                AudioManager.Instance.PlaySound("Typing");
+                yield return null;
+            }
+        }
+
+        void EndDialogue()
+        {
+            Debug.Log("End of Dialogue");
+
+        }
+
 
     }
-
-   
-}

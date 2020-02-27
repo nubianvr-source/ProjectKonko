@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using CurvedUI;
+using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour {
 
@@ -12,6 +13,8 @@ public class GameManager : MonoBehaviour {
 
     private             Question[]          _questions              = null;
     public              Question[]          Questions               { get { return _questions; } }
+    
+    public UnityEvent questionAnswered = new UnityEvent();
 
     [SerializeField]    GameEvents          events                  = null;
 

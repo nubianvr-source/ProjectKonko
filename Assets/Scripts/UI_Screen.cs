@@ -16,12 +16,19 @@ namespace NubianVR.UI
 
         [Header("Main Properties")] 
         public Selectable m_StartSelectable;
+
+        [Header("Sky Box Properties")] 
+        public Material skyBoxMat;
+
+        public Skybox skyBox;
         
         [Header("Screen Events")]
         public UnityEvent onScreenStart = new UnityEvent();
         public UnityEvent onScreenClose = new UnityEvent();
         
         private Animator animator;
+        private CanvasGroup canvasGroup;
+        
         #endregion
 
         #region MainMethods
@@ -33,7 +40,9 @@ namespace NubianVR.UI
             {
                 EventSystem.current.SetSelectedGameObject(m_StartSelectable.gameObject);
             }
-            
+
+          
+
         }
 
         // Update is called once per frame
@@ -49,21 +58,34 @@ namespace NubianVR.UI
 
         public virtual void StartScreen()
         {
-            onScreenStart?.Invoke();
-
+            if (onScreenStart != null)
+            {
+                onScreenStart?.Invoke();
+            }
+            if (skyBoxMat)
+            {
+                skyBox.material = skyBoxMat;
+            }
             HandleAnimator("show");
+            //canvasGroup.alpha = 1;
         }
 
         public virtual void CloseScreen()
         {
-            onScreenClose?.Invoke();
+            if (onScreenClose != null)
+            {
+                onScreenClose?.Invoke();
+            }
+                
             HandleAnimator("hide");
+            //canvasGroup.alpha = 0;
         }
 
-        private void HandleAnimator(string aTrigger)
+        void HandleAnimator(string aTrigger)
         {
             if (animator)
             {
+                print("Animation Trigger = " + aTrigger);
                 animator.SetTrigger(aTrigger);
             }
         }

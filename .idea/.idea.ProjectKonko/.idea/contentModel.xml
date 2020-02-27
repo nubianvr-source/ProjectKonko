@@ -898,6 +898,7 @@
           <e p="SplashScreen" t="Include">
             <e p="VideoSplashScreen.cs" t="Include" />
           </e>
+          <e p="SplashUI_Screen.cs" t="Include" />
           <e p="TransformLerpScript.cs" t="Include" />
           <e p="UI_Screen.cs" t="Include" />
           <e p="UI_System.cs" t="Include" />
@@ -921,6 +922,7 @@
             </e>
             <e p="Videos.cs" t="Include" />
           </e>
+          <e p="VideoUI_Screen.cs" t="Include" />
         </e>
         <e p="Shaders" t="Include">
           <e p="Flip Normals Shader.shader" t="Include" />
