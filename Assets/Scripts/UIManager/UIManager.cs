@@ -14,6 +14,8 @@ public struct UIManagerParameters
     public float Margins => margins;
 
     [Header("Resolution Screen Options")]
+    
+    
     [SerializeField]
     private Sprite correctBGColor; 
     public Sprite CorrectBGColor => correctBGColor;
@@ -66,7 +68,8 @@ public class UIManager : MonoBehaviour
 {
 
     #region Variables
-
+    [Header("Resolution Time")]
+    public const float resolutionTime = GameUtility.ResolutionDelayTime;
     public enum ResolutionScreenType { Correct, Incorrect, Finish }
 
     [Header("References")]
@@ -123,6 +126,7 @@ public class UIManager : MonoBehaviour
     {
         UpdateScoreUI();
         resStateParaHash = Animator.StringToHash("ScreenState");
+        
     }
 
     private void Awake()
@@ -169,7 +173,7 @@ public class UIManager : MonoBehaviour
 
     private IEnumerator DisplayTimedResolution()
     {
-        yield return new WaitForSeconds(GameUtility.ResolutionDelayTime);
+        yield return new WaitForSeconds(resolutionTime);
         uIElements.ResolutionScreenAnimator.SetInteger(resStateParaHash, 1);
         uIElements.MainCanvasGroup.blocksRaycasts = true;
     }

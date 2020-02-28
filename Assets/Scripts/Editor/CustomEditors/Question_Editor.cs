@@ -90,6 +90,17 @@ public class Question_Editor : Editor {
                 }
             }
             addScoreProp.intValue = EditorGUILayout.IntSlider(new GUIContent("Add Score"), addScoreProp.intValue, 0, 100);
+            base.OnInspectorGUI();
+            SerializedProperty answeredQuestionCorrectProp = serializedObject.FindProperty("answeredQuestionCorrect"); 
+            
+             EditorGUIUtility.labelWidth = 25;
+             EditorGUIUtility.fieldWidth = 50;
+            EditorGUILayout.PropertyField(answeredQuestionCorrectProp);
+            
+            if(GUI.changed)
+            {
+                serializedObject.ApplyModifiedProperties();
+            }
         }
         GUILayout.Space(7.5f);
         GUILayout.Label("Answers", EditorStyles.miniLabel);

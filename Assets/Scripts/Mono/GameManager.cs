@@ -183,8 +183,11 @@ public class GameManager : MonoBehaviour {
             StartCoroutine(ExecuteAfterTime(5));
         }
 
-        var type
-            = (IsFinished) ? UIManager.ResolutionScreenType.Finish : (isCorrect) ? UIManager.ResolutionScreenType.Correct : UIManager.ResolutionScreenType.Incorrect;
+        UIManager.ResolutionScreenType type;
+        if (IsFinished)
+            type = UIManager.ResolutionScreenType.Finish;
+        else
+            type = (isCorrect) ? UIManager.ResolutionScreenType.Correct : UIManager.ResolutionScreenType.Incorrect;
 
         if (events.DisplayResolutionScreen != null)
         {

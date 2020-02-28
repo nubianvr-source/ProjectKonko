@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 [Serializable()]
 public struct Answer
@@ -13,6 +14,9 @@ public struct Answer
 
     [SerializeField] private string _interventionText;
     public string interventionText => _interventionText;
+    
+   
+
 
 }
 [CreateAssetMenu(fileName = "New Question", menuName = "Quiz/new Question")]
@@ -40,6 +44,13 @@ public class Question : ScriptableObject {
 
     [SerializeField] private    int         _addScore       = 20;
     public                      int         AddScore        { get { return _addScore; } }
+    
+     [SerializeField]
+     public UnityEvent answeredQuestionCorrect = new UnityEvent();
+     
+     [SerializeField]
+     public UnityEvent answeredQuestionWrong = new UnityEvent();
+    
 
     /// <summary>
     /// Function that is called to collect and return correct answers indexes.
