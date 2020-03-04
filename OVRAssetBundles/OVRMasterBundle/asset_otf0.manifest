@@ -1,0 +1,37 @@
+ManifestFileVersion: 0
+CRC: 149505253
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 9e5ad5cd35e7ff65095a9d97a67dc4a6
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9ce36ba0d2af6073be95f6cdd155d58c
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 128
+  Script: {instanceID: 0}
+Assets:
+- Assets/Fonts/Objectivity-Thin.otf
+- Assets/Fonts/Objectivity-MediumSlanted.otf
+- Assets/Fonts/Objectivity-Super.otf
+- Assets/Fonts/Objectivity-ThinSlanted.otf
+- Assets/Fonts/Objectivity-LightSlanted.otf
+- Assets/Fonts/Objectivity-ExtraBoldSlanted.otf
+- Assets/Fonts/Objectivity-Bold.otf
+- Assets/Fonts/Objectivity-Regular.otf
+- Assets/Fonts/Objectivity-Black.otf
+- Assets/Fonts/Objectivity-BlackSlanted.otf
+- Assets/Fonts/Objectivity-BoldSlanted.otf
+- Assets/Fonts/Objectivity-Medium.otf
+- Assets/Fonts/Objectivity-Light.otf
+- Assets/Fonts/Objectivity-ExtraBold.otf
+- Assets/Fonts/Objectivity-SuperSlanted.otf
+- Assets/Fonts/Objectivity-RegularSlanted.otf
+Dependencies: []

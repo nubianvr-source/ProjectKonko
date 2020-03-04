@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 152945889
+CRC: 249295813
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: c6e438388215f0ec5645faf737b65289
+    Hash: f6cc8a4c27e1751d4af6e7a0e2e6b330
   TypeTreeHash:
     serializedVersion: 2
     Hash: af57576da81d5d3ce45807ac11234de6
@@ -12,7 +12,10 @@ ClassTypes:
 - Class: 74
   Script: {instanceID: 0}
 Assets:
+- Assets/Animations/ScreenTransitions/BaseAnimations/Base_ScreenShow.anim
 - Assets/Animations/ResolutionScreen/ResolutionScreenHidden.anim
+- Assets/Animations/ScreenTransitions/BaseAnimations/Base_ScreenIdle.anim
+- Assets/Animations/ScreenTransitions/BaseAnimations/Base_ScreenHide.anim
 - Assets/Animations/ResolutionScreen/ResolutionScreen_FadeOut.anim
 - Assets/Animations/ResolutionScreen/ResolutionScreenPopUp.anim
 Dependencies: []

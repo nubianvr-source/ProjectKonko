@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 1680929561
+CRC: 2798830775
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 03cc48861ee1506a6be827756d75c9de
+    Hash: 0a9ebd38b2d27ea4ecc68adc486325db
   TypeTreeHash:
     serializedVersion: 2
-    Hash: a11d77d1b11d041205f08a7c185f928a
+    Hash: bc0de3b38c1942b7e51bfda4a19eb67b
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -130,8 +130,6 @@ ClassTypes:
 - Class: 114
   Script: {fileID: 11500000, guid: ae203d7c0ceb5784987065115d1956a7, type: 3}
 - Class: 114
-  Script: {fileID: 11500000, guid: fb7eadc75c311024c840962a08a007a6, type: 3}
-- Class: 114
   Script: {fileID: 11500000, guid: c998c738ee8ce7c42af3eb46558d68cd, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 33632c9f41a287740b75b4b0e25381aa, type: 3}
@@ -141,6 +139,8 @@ ClassTypes:
   Script: {fileID: 11500000, guid: aae26871d312dfa46acd6383ed9a0b29, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 95e148e6aee5c8a4caea02bce04bc00c, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: fb7eadc75c311024c840962a08a007a6, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: a143d484c4a07c149a0985086b75d989, type: 3}
 - Class: 115
@@ -169,17 +169,15 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 328
   Script: {instanceID: 0}
-- Class: 329
-  Script: {instanceID: 0}
 Assets:
 - Assets/Scenes/AlphaBuildModuleScene.unity
 Dependencies:
 - C:/Users/Anspeed/Documents/GitHub/ProjectKonko/OVRAssetBundles/OVRMasterBundle/asset_resources
 - C:/Users/Anspeed/Documents/GitHub/ProjectKonko/OVRAssetBundles/OVRMasterBundle/asset_png0
+- C:/Users/Anspeed/Documents/GitHub/ProjectKonko/OVRAssetBundles/OVRMasterBundle/asset_png1
 - C:/Users/Anspeed/Documents/GitHub/ProjectKonko/OVRAssetBundles/OVRMasterBundle/asset_mat0
 - C:/Users/Anspeed/Documents/GitHub/ProjectKonko/OVRAssetBundles/OVRMasterBundle/asset_prefab0
-- C:/Users/Anspeed/Documents/GitHub/ProjectKonko/OVRAssetBundles/OVRMasterBundle/asset_mp40
+- C:/Users/Anspeed/Documents/GitHub/ProjectKonko/OVRAssetBundles/OVRMasterBundle/asset_fbx0
 - C:/Users/Anspeed/Documents/GitHub/ProjectKonko/OVRAssetBundles/OVRMasterBundle/asset_rendertexture0
 - C:/Users/Anspeed/Documents/GitHub/ProjectKonko/OVRAssetBundles/OVRMasterBundle/asset_asset0
-- C:/Users/Anspeed/Documents/GitHub/ProjectKonko/OVRAssetBundles/OVRMasterBundle/asset_fbx0
 - C:/Users/Anspeed/Documents/GitHub/ProjectKonko/OVRAssetBundles/OVRMasterBundle/asset_mixer0

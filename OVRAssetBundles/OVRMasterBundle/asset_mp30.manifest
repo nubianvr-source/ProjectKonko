@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 16399530
+CRC: 3585167946
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 86ea5944b66472523b4054c8b1a8aa80
+    Hash: 9ddd00a6c513dc8be57722a8c06ae443
   TypeTreeHash:
     serializedVersion: 2
     Hash: 3f7d0c5e0986ec71841622bcb2f9be1c
@@ -12,6 +12,5 @@ ClassTypes:
 - Class: 83
   Script: {instanceID: 0}
 Assets:
-- Assets/SoundAssets/dialogueTypingSounds.mp3
-- Assets/SoundAssets/Soundtrack - Theme.mp3
+- Assets/SoundAssets/dialogueTypingSounds 1.mp3
 Dependencies: []

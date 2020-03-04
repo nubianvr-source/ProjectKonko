@@ -1,0 +1,55 @@
+ManifestFileVersion: 0
+CRC: 1781726081
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 1fafc5aacf5f33e5d192a650774822a2
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 2164263bd948184a9373784f776f453a
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+Assets:
+- Assets/Oculus/SampleFramework/Usage/SharedAssets/Materials/SportsBottle_metal.mat
+- Assets/Oculus/SampleFramework/Usage/SharedAssets/Materials/MAT_room_atlas_01.mat
+- Assets/Oculus/SampleFramework/Usage/SharedAssets/Materials/SoccerBlack.mat
+- Assets/Oculus/SampleFramework/Usage/DistanceGrab/Materials/SoccerWhiteWithOutline.mat
+- Assets/Oculus/SampleFramework/Usage/DistanceGrab/Materials/Ball10WithOutline.mat
+- Assets/Oculus/SampleFramework/Usage/SharedAssets/Materials/SoccerWhite.mat
+- Assets/Oculus/SampleFramework/Usage/DistanceGrab/GroundMaterial.mat
+- Assets/Oculus/SampleFramework/Usage/DistanceGrab/Materials/TriangleCursorTargeted.mat
+- Assets/Material/next.mat
+- Assets/Oculus/SampleFramework/Usage/DistanceGrab/Materials/Ball03WithOutline.mat
+- Assets/Oculus/SampleFramework/Usage/DistanceGrab/Materials/WoodBlockWithOutline.mat
+- Assets/Oculus/SampleFramework/Core/CustomHands/Materials/Hands_solid.mat
+- Assets/Textures/Side_panel_circuit_state_interface/Materials/element-65.mat
+- Assets/Oculus/SampleFramework/Usage/SharedAssets/Materials/Ball10.mat
+- Assets/Textures/Buttons/Materials/Begin Adventure-01.mat
+- Assets/Material/Left_UI_Mat.mat
+- Assets/Material/Board_Ui.mat
+- Assets/Oculus/SampleFramework/Usage/DistanceGrab/Materials/ToyCubeWithOutline.mat
+- Assets/Oculus/SampleFramework/Usage/SharedAssets/Materials/SportsBottle_lid.mat
+- Assets/Textures/Side_panel_circuit_state_interface/Materials/element-74.mat
+- Assets/Oculus/SampleFramework/Usage/DistanceGrab/Materials/SoccerBlackWithOutline.mat
+- Assets/Textures/Side_panel_circuit_state_interface/Materials/element-58.mat
+- Assets/Oculus/SampleFramework/Usage/SharedAssets/Materials/ToyCubeMat.mat
+- Assets/Textures/Controls/Materials/Replay normal-19.mat
+- Assets/Oculus/SampleFramework/Usage/DistanceGrab/Materials/TriangleCursorUntargeted.mat
+- Assets/Material/previous.mat
+- Assets/Material/VideoMat.mat
+- Assets/Oculus/SampleFramework/Usage/SharedAssets/Materials/Ball03.mat
+- Assets/Oculus/SampleFramework/Usage/DistanceGrab/Materials/SportsBottleLidWithOutline.mat
+- Assets/Textures/dialogue boxes and containers/Materials/dialogue box large-21.mat
+Dependencies:
+- C:/Users/Anspeed/Documents/GitHub/ProjectKonko/OVRAssetBundles/OVRMasterBundle/asset_png0
+- C:/Users/Anspeed/Documents/GitHub/ProjectKonko/OVRAssetBundles/OVRMasterBundle/asset_png1
+- C:/Users/Anspeed/Documents/GitHub/ProjectKonko/OVRAssetBundles/OVRMasterBundle/asset_png2
+- C:/Users/Anspeed/Documents/GitHub/ProjectKonko/OVRAssetBundles/OVRMasterBundle/asset_rendertexture0
+- C:/Users/Anspeed/Documents/GitHub/ProjectKonko/OVRAssetBundles/OVRMasterBundle/asset_shader0
+- C:/Users/Anspeed/Documents/GitHub/ProjectKonko/OVRAssetBundles/OVRMasterBundle/asset_jpg0

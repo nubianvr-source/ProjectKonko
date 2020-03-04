@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 873934938
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 3161f4d11af91c645ed1701c296728b9
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 3f7d0c5e0986ec71841622bcb2f9be1c
+HashAppended: 0
+ClassTypes:
+- Class: 83
+  Script: {instanceID: 0}
+Assets:
+- Assets/SoundAssets/237422__plasterbrain__hover-1.ogg
+Dependencies: []

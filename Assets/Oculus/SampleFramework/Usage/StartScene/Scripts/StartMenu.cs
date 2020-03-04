@@ -15,10 +15,10 @@ public class StartMenu : MonoBehaviour
     {
         DebugUIBuilder.instance.AddLabel("Select Sample Scene");
         
-        int n = UnityEngine.SceneManagement.SceneManager.sceneCountInBuildSettings;
-        for (int i = 0; i < n; ++i)
+        var n = UnityEngine.SceneManagement.SceneManager.sceneCountInBuildSettings;
+        for (var i = 0; i < n; ++i)
         {
-            string path = UnityEngine.SceneManagement.SceneUtility.GetScenePathByBuildIndex(i);
+            var path = UnityEngine.SceneManagement.SceneUtility.GetScenePathByBuildIndex(i);
             var sceneIndex = i;
             DebugUIBuilder.instance.AddButton(Path.GetFileNameWithoutExtension(path), () => LoadScene(sceneIndex));
         }

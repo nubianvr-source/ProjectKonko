@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 1334975278
+CRC: 2682820924
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: b45a3733f4be7142e5dd9bde45d919bb
+    Hash: 9f0fb800f7d48c6dcec34db9b264427d
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 24cbdd621b9a46f7f74cb492839424fb
+    Hash: 6e658daee6549dad5b60e5af24c8cd50
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -27,17 +27,47 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 48
   Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 90
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+- Class: 137
+  Script: {instanceID: 0}
 Assets:
+- Assets/Oculus/SampleFramework/Core/CustomHands/Models/l_hand_skeletal_lowres.fbx
+- Assets/Oculus/SampleFramework/Core/CustomHands/Models/r_hand_skeletal_lowres.fbx
+- Assets/Oculus/SampleFramework/Usage/SharedAssets/Models/ball_billiard_10.fbx
 - Assets/Models/Table_model.fbx
+- Assets/Models/Top_Label.fbx
 - Assets/Models/3DModels/DIODE.fbx
 - Assets/Models/3DModels/light_bulb.fbx
+- Assets/Oculus/SampleFramework/Core/CustomHands/Animations/l_hand_thumbs_up_anim.fbx
+- Assets/Oculus/SampleFramework/Usage/SharedAssets/Models/window_01.fbx
+- Assets/Oculus/SampleFramework/Core/CustomHands/Animations/l_hand_relax_mid_fist_anim.fbx
 - Assets/Models/3DModels/on_body.fbx
+- Assets/Oculus/SampleFramework/Core/CustomHands/Animations/r_hand_point_anim.fbx
+- Assets/Oculus/SampleFramework/Core/CustomHands/Animations/r_hand_hold_generic_anim.fbx
 - Assets/Models/battery_holder_1.5V_small.fbx
+- Assets/Oculus/SampleFramework/Usage/SharedAssets/Models/room_01.fbx
+- Assets/Oculus/SampleFramework/Core/CustomHands/Animations/r_hand_relax_mid_fist_anim.fbx
+- Assets/Oculus/SampleFramework/Usage/SharedAssets/Models/ball_billiard_03.fbx
+- Assets/Oculus/SampleFramework/Usage/SharedAssets/Models/ball_soccer_01.fbx
+- Assets/Oculus/SampleFramework/Usage/SharedAssets/Models/block_wood_01.fbx
+- Assets/Models/VR_Board.fbx
+- Assets/Oculus/SampleFramework/Core/CustomHands/Animations/l_hand_hold_ping_pong_ball_anim.fbx
+- Assets/Oculus/SampleFramework/Core/CustomHands/Animations/r_hand_cap_touch_index_mask_anim.fbx
+- Assets/Oculus/SampleFramework/Core/CustomHands/Animations/l_hand_point_anim.fbx
 - Assets/Oculus/SampleFramework/Usage/SharedAssets/Models/table_01.fbx
+- Assets/Oculus/SampleFramework/Usage/SharedAssets/Models/doorframe_01.fbx
+- Assets/Oculus/SampleFramework/Core/CustomHands/Animations/r_hand_cap_touch_anim.fbx
 - Assets/Models/3DModels/BATTERY.fbx
+- Assets/Oculus/SampleFramework/Usage/SharedAssets/Models/SportsBottle_01.fbx
 - Assets/Models/3DModels/Switch_Body.fbx
 - Assets/Oculus/VR/Meshes/OculusGoController/OculusGoController.fbx
 Dependencies:
 - C:/Users/Anspeed/Documents/GitHub/ProjectKonko/OVRAssetBundles/OVRMasterBundle/asset_png0
 - C:/Users/Anspeed/Documents/GitHub/ProjectKonko/OVRAssetBundles/OVRMasterBundle/asset_png1
 - C:/Users/Anspeed/Documents/GitHub/ProjectKonko/OVRAssetBundles/OVRMasterBundle/asset_mat0
+- C:/Users/Anspeed/Documents/GitHub/ProjectKonko/OVRAssetBundles/OVRMasterBundle/asset_mat1

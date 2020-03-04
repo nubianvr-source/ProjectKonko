@@ -6,6 +6,8 @@ using UnityEngine;
 using UnityEngine.Assertions.Comparers;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 namespace NubianVR.UI
 {
@@ -20,7 +22,9 @@ namespace NubianVR.UI
 
         [Header("Fade Reference")] 
         public OVRScreenFade ScreenFade;
-        
+
+        [Header("OVRCameraRig")] public OVRCameraRig vrRig;
+
 
 
         #region Variables
@@ -33,6 +37,9 @@ namespace NubianVR.UI
         private UI_Screen _previousScreen;
         public UI_Screen previousScreen => _previousScreen;
 
+        [FormerlySerializedAs("sceneNames")] public string[] scenes; 
+            
+        
         #endregion
 
         #region MainMethods
@@ -46,6 +53,16 @@ namespace NubianVR.UI
             if (!m_StartScreen) return;
             SwitchScreens(m_StartScreen);
             print("Screen Initialized");
+            
+            var _sceneCount = SceneManager.sceneCountInBuildSettings;  
+            
+            var scenes = new string[_sceneCount];
+            
+            for( var i = -1; i < _sceneCount; i++ )
+            {
+                var nextBuildIndex = SceneManager.GetActiveScene().buildIndex + i;
+               print(nextBuildIndex); 
+            }
 
 
         }
@@ -108,12 +125,13 @@ namespace NubianVR.UI
 
         public void LoadScene(int sceneIndex)
         {
-            StartCoroutine(WaitForLoadScene(sceneIndex));
+            SceneManager.LoadScene(sceneIndex);
         }
 
         IEnumerator WaitForLoadScene(int sceneIndex)
         {
             yield return null;
+            
         }
 
         void InitializeScreens()

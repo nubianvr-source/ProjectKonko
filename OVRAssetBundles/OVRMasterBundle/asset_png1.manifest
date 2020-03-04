@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 2081026688
+CRC: 116865836
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 40e7b47486c333a05330bd9578b2dcf3
+    Hash: 7d1322000a2439f67fc0e4aec551234f
   TypeTreeHash:
     serializedVersion: 2
     Hash: cb3f6df5cbc4a2990c44c2787bc9553a
@@ -14,7 +14,6 @@ ClassTypes:
 - Class: 213
   Script: {instanceID: 0}
 Assets:
-- Assets/Textures/Controls/Back hover-07.png
 - Assets/Models/3DModels/bulb_off.png
 - Assets/Oculus/SampleFramework/Usage/SharedAssets/Textures/room_atlas_02_msm.png
 - Assets/Textures/Buttons/possible answers two liner click-49.png
@@ -27,6 +26,7 @@ Assets:
 - Assets/Textures/Side panel circuit state interface/element-76.png
 - Assets/Textures/UIAssets/CloseMenuBtn.png
 - Assets/Textures/Controls/Next normal-18.png
+- Assets/Textures/dialogue boxes and containers/wrong answer dialogue box-43-44.png
 - Assets/Textures/Side panel circuit state interface/element-61.png
 - Assets/Textures/Side panel circuit state interface/element-65.png
 - Assets/Textures/UIAssets/LessonsBtn.png

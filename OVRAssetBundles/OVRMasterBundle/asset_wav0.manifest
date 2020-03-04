@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 2285219587
+CRC: 2363540976
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: dd8626abd5eb4dd7b546584af9bcf1b2
+    Hash: c8628db0156504f7c97843acf911c90e
   TypeTreeHash:
     serializedVersion: 2
     Hash: 3f7d0c5e0986ec71841622bcb2f9be1c
@@ -14,5 +14,6 @@ ClassTypes:
 Assets:
 - Assets/SoundAssets/On response correct.wav
 - Assets/SoundAssets/On response incorrect.wav
+- Assets/SoundAssets/263133__pan14__tone-beep.wav
 - Assets/Sounds/SoundEffects/CountdownSFX.wav
 Dependencies: []

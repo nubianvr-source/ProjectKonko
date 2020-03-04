@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using NubianVR.UI;
 using UnityEngine;
 using UnityEngine.Video;
 using UnityEngine.UI;
@@ -11,7 +12,7 @@ public class PlayPauseBtn : MonoBehaviour
     public GameObject LeftVideoPanel;
     public GameObject RightVideoPanel;
     public VideoPlayer videoPlayer;
-    public RawImageVideoStream CylinderVideo2d;
+    public VideoUI_Screen CylinderVideo2d;
     public RawImage rawImageRight;
     public RawImage rawImageLeft;
     public RawImage rawImageCenter;
@@ -69,10 +70,6 @@ public class PlayPauseBtn : MonoBehaviour
     {
         if (!videoPlayer.isPrepared)
         {
-           
-            CylinderVideo2d.startPlayingVideoRefence();
-            LeftVideoPanel.SetActive(true);
-            RightVideoPanel.SetActive(true);
             playPauseIcon.sprite = pauseIcon;
         }
         else 

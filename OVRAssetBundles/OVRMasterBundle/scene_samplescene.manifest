@@ -1,0 +1,102 @@
+ManifestFileVersion: 0
+CRC: 219896218
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: c3f22b50dd48aff7eff9e31ccf537a2a
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 738c3dfeedad6378dc96e2b37dafe480
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 20
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 45
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 64
+  Script: {instanceID: 0}
+- Class: 81
+  Script: {instanceID: 0}
+- Class: 84
+  Script: {instanceID: 0}
+- Class: 89
+  Script: {instanceID: 0}
+- Class: 102
+  Script: {instanceID: 0}
+- Class: 104
+  Script: {instanceID: 0}
+- Class: 108
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: df9f338034892c44ebb62d97894772f1, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 7e933e81d3c20c74ea6fdc708a67e3a5, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 5bd4f714ee695404e80b845547e915b7, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 6edcc814e1d2ed5459dc665b97d2d216, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: cc97ed241f1d5ad469577c063faa3aef, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: c2c0c5844ef26f847aa3095cfa761b57, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 5178bc8574ce2bf4388e787a2e2af326, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 3678f25633dafcb4c97ac7cb0fc44e9d, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: edd9c456fbc51ac40b6068937665f74a, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: db31929728c083147945cd8ec3da572d, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 01dda76ae7b66b54ca560e491c76da37, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 1c4d377bee83b45488cc6a413586ed02, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 52ff5b6c11ad55544aef179624091b19, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: b55edcdda4f1637479c38e642b9fd033, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 5dd3d0ffff2de1e40bab7c6272ad1a5c, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 120
+  Script: {instanceID: 0}
+- Class: 128
+  Script: {instanceID: 0}
+- Class: 135
+  Script: {instanceID: 0}
+- Class: 157
+  Script: {instanceID: 0}
+- Class: 212
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+- Class: 258
+  Script: {instanceID: 0}
+- Class: 328
+  Script: {instanceID: 0}
+Assets:
+- Assets/Scenes/SampleScene.unity
+Dependencies:
+- C:/Users/Anspeed/Documents/GitHub/ProjectKonko/OVRAssetBundles/OVRMasterBundle/asset_png2
+- C:/Users/Anspeed/Documents/GitHub/ProjectKonko/OVRAssetBundles/OVRMasterBundle/asset_mat0
+- C:/Users/Anspeed/Documents/GitHub/ProjectKonko/OVRAssetBundles/OVRMasterBundle/asset_mat1
+- C:/Users/Anspeed/Documents/GitHub/ProjectKonko/OVRAssetBundles/OVRMasterBundle/asset_prefab0
+- C:/Users/Anspeed/Documents/GitHub/ProjectKonko/OVRAssetBundles/OVRMasterBundle/asset_fbx0
+- C:/Users/Anspeed/Documents/GitHub/ProjectKonko/OVRAssetBundles/OVRMasterBundle/asset_rendertexture0

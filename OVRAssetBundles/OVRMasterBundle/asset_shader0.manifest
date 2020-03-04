@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 2773139796
+CRC: 2688381069
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 6171cc445495bc076c5c52fc9e5c970d
+    Hash: d4c683c1c9756a7ed45f0a647146254b
   TypeTreeHash:
     serializedVersion: 2
     Hash: 677a1d6a6e8c5d2da1d9d0fadde392d8
@@ -13,4 +13,7 @@ ClassTypes:
   Script: {instanceID: 0}
 Assets:
 - Assets/Shaders/Fresnel.shader
+- Assets/Oculus/VR/Shaders/Unlit Crosshair.shader
+- Assets/Oculus/SampleFramework/Usage/DistanceGrab/Materials/ToyCubeWithOutline.shader
+- Assets/Oculus/SampleFramework/Usage/DistanceGrab/Materials/CrosshairZCheat.shader
 Dependencies: []

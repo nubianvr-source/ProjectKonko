@@ -2,7 +2,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
 using Konko.SceneManagement;
+using UnityEngine.SceneManagement;
+
 
 namespace Konko.UIManagement
 {
@@ -12,7 +15,7 @@ namespace Konko.UIManagement
         public int initialScreenIndex = 0;
         public int currentScreenIndex = 0;
 
-        public SceneManager sceneManager;
+        //public SceneManager sceneManager;
         public OVRScreenFade screenFade;
 
         public bool allScreensHidden { get; private set; }
@@ -112,9 +115,10 @@ namespace Konko.UIManagement
 
 
 
-        public void LoadNextScene(string sceneName)
+        public void LoadNextScene(int sceneNumber)
         {
-            sceneManager.LoadScene(sceneName);
+            //sceneManager.LoadScene(sceneNumber);
+            UnityEngine.SceneManagement.SceneManager.LoadScene(sceneNumber);
         }
     }
 

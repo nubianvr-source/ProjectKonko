@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 2687708632
+CRC: 1623240789
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 4126a6021345f027184899d1c7940022
+    Hash: 52e579e20850a421bfbbf8ae621a58e2
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 55a19d7bab42d75ddd641e685aececec
+    Hash: cbc149a20598d2988ed642a52d64c544
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -94,17 +94,23 @@ ClassTypes:
 - Class: 114
   Script: {fileID: 11500000, guid: 0a6313f292400c94c9ba8dfbee37be0c, type: 3}
 - Class: 114
+  Script: {fileID: 11500000, guid: 2e17f6f2b61631d4dbabe34ee2770e68, type: 3}
+- Class: 114
   Script: {fileID: 11500000, guid: ac27124318cf8e84aa7350c2ac1cdb80, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 3312d7739989d2b4e91e6319e9a96d76, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: e6559fa4f5413eb4b8c4783ba8f284d9, type: 3}
 - Class: 114
+  Script: {fileID: 11500000, guid: 68f98f050a148304f811d9af55383177, type: 3}
+- Class: 114
   Script: {fileID: 11500000, guid: 4bac952560759894b9f97cf7a50bf10c, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: b87a523570ba1474d9b4ae42b8f4a70a, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 5178bc8574ce2bf4388e787a2e2af326, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: d730d795e4b2afd4ea5ee9f276af9476, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: c98c03068b886634c98b87e2e307ebc6, type: 3}
 - Class: 114
@@ -176,6 +182,8 @@ ClassTypes:
 - Class: 114
   Script: {fileID: 11500000, guid: b9e223723aee9024aa508345c5d8a118, type: 3}
 - Class: 114
+  Script: {fileID: 11500000, guid: 3c570ba09fb54ae4e95cffeb1b4ae0b5, type: 3}
+- Class: 114
   Script: {fileID: 11500000, guid: 1694a763efeeb404a869e1aedabe3242, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 075b40d1dbf145149a1e8d83953e12cc, type: 3}
@@ -193,8 +201,6 @@ ClassTypes:
   Script: {fileID: 11500000, guid: aae26871d312dfa46acd6383ed9a0b29, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 95e148e6aee5c8a4caea02bce04bc00c, type: 3}
-- Class: 114
-  Script: {fileID: 11500000, guid: 3c570ba09fb54ae4e95cffeb1b4ae0b5, type: 3}
 - Class: 115
   Script: {instanceID: 0}
 - Class: 120
@@ -236,8 +242,9 @@ Dependencies:
 - C:/Users/Anspeed/Documents/GitHub/ProjectKonko/OVRAssetBundles/OVRMasterBundle/asset_prefab0
 - C:/Users/Anspeed/Documents/GitHub/ProjectKonko/OVRAssetBundles/OVRMasterBundle/asset_mp30
 - C:/Users/Anspeed/Documents/GitHub/ProjectKonko/OVRAssetBundles/OVRMasterBundle/asset_fbx0
+- C:/Users/Anspeed/Documents/GitHub/ProjectKonko/OVRAssetBundles/OVRMasterBundle/asset_ogg0
+- C:/Users/Anspeed/Documents/GitHub/ProjectKonko/OVRAssetBundles/OVRMasterBundle/asset_rendertexture0
 - C:/Users/Anspeed/Documents/GitHub/ProjectKonko/OVRAssetBundles/OVRMasterBundle/asset_asset0
 - C:/Users/Anspeed/Documents/GitHub/ProjectKonko/OVRAssetBundles/OVRMasterBundle/asset_mp40
 - C:/Users/Anspeed/Documents/GitHub/ProjectKonko/OVRAssetBundles/OVRMasterBundle/asset_controller0
-- C:/Users/Anspeed/Documents/GitHub/ProjectKonko/OVRAssetBundles/OVRMasterBundle/asset_rendertexture0
 - C:/Users/Anspeed/Documents/GitHub/ProjectKonko/OVRAssetBundles/OVRMasterBundle/asset_mixer0

@@ -900,6 +900,7 @@
           </e>
           <e p="SplashUI_Screen.cs" t="Include" />
           <e p="TransformLerpScript.cs" t="Include" />
+          <e p="UI_360Screen.cs" t="Include" />
           <e p="UI_Screen.cs" t="Include" />
           <e p="UI_System.cs" t="Include" />
           <e p="UIManager" t="Include">

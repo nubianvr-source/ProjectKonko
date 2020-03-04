@@ -1,16 +1,21 @@
 ManifestFileVersion: 0
-CRC: 3766564901
+CRC: 3090343316
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 0c96d55256beaa16afb52119bb1a7ae5
+    Hash: 0435a6643ec6212d0ec6ff8982742c9d
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 1e19a299b959f5b712c049d7eedf4f33
+    Hash: 5275c8a661009fa5c49c1181e5cf3763
 HashAppended: 0
 ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
 - Class: 89
   Script: {instanceID: 0}
 Assets:
-- Assets/HDRI/room_2.jpg
+- Assets/HDRI/lapa.jpg
+- Assets/Oculus/SampleFramework/Usage/SharedAssets/Textures/ball_billiard_10_dif.jpg
+- Assets/HDRI/ROOM_update_27th.jpg
+- Assets/Oculus/SampleFramework/Usage/SharedAssets/Textures/ball_billiard_03_dif.jpg
 Dependencies: []

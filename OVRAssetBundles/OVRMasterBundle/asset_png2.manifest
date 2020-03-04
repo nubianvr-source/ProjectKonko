@@ -1,0 +1,47 @@
+ManifestFileVersion: 0
+CRC: 4135409585
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 4c001ba0af3c1abd8ca1552de0f9a523
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: cb3f6df5cbc4a2990c44c2787bc9553a
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/Oculus/SampleFramework/Usage/SharedAssets/Textures/room_atlas_01.png
+- Assets/Oculus/SampleFramework/Usage/SharedAssets/Textures/room_atlas_01_msm.png
+- Assets/Textures/Buttons/possible answers one liner wrong-35.png
+- Assets/Oculus/SampleFramework/Core/DebugUI/Textures/slider_bar.png
+- Assets/Oculus/SampleFramework/Usage/SharedAssets/Textures/block_wood_01_dif.png
+- Assets/Textures/Side_panel_circuit_state_interface/element-60.png
+- Assets/Textures/Buttons/possible answers one liner correct-39.png
+- Assets/Textures/Controls/replay hover-16.png
+- Assets/Textures/Controls/replay click-13.png
+- Assets/Textures/dialogue boxes and containers/dialogue box large-21.png
+- Assets/Textures/Side_panel_circuit_state_interface/element-65.png
+- Assets/Oculus/SampleFramework/Core/DebugUI/Textures/translucent_01.png
+- Assets/Oculus/SampleFramework/Core/DebugUI/Textures/header.png
+- Assets/Oculus/SampleFramework/Usage/SharedAssets/Textures/metal_brushed_01_dif.png
+- Assets/Oculus/SampleFramework/Usage/SharedAssets/Textures/room_atlas_01_nml.png
+- Assets/Textures/Buttons/possible answers one liner hover-37.png
+- Assets/Sprites/reticule_opened.png
+- Assets/Textures/Side_panel_circuit_state_interface/element-63.png
+- Assets/Oculus/SampleFramework/Core/DebugUI/Textures/button.png
+- Assets/Oculus/VR/Textures/gaze_cursor.png
+- Assets/Sprites/reticule_closed.png
+- Assets/Oculus/SampleFramework/Usage/DistanceGrab/Materials/triangles.png
+- Assets/Oculus/SampleFramework/Core/DebugUI/Textures/slider_slider.png
+- Assets/Oculus/SampleFramework/Usage/DistanceGrab/Materials/CubeTex.png
+- Assets/Textures/Buttons/possible answers one liner click-36.png
+- Assets/Textures/Side_panel_circuit_state_interface/element-74.png
+- Assets/Textures/Side_panel_circuit_state_interface/element-68.png
+- Assets/Textures/Side_panel_circuit_state_interface/element-76.png
+- Assets/Textures/Side_panel_circuit_state_interface/element-58.png
+- Assets/Textures/Controls/Replay normal-19.png
+Dependencies: []

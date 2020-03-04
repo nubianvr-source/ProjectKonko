@@ -16,30 +16,18 @@ namespace NubianVR.UI
         [FormerlySerializedAs("splashVideoDisplay")] public RawImage centerVideoDisplay;
         public RawImage leftVideoDisplay;
         public RawImage rightVideoDisplay;
-        public GameObject leftVideoPanel;
-        public GameObject rightVideoPanel;
-        public float delay = 0.3f;
-        public Sprite playIcon;
-        public Sprite pauseIcon;
-        public VideoClip[] lessonVideos;
-        public UnityEvent onLessonVideosFinished = new UnityEvent();
+        [FormerlySerializedAs("splashVideos")] public VideoClip[] lessonVideos;
+        [FormerlySerializedAs("onSplashVideosFinished")] public UnityEvent onLessonVideoFinished = new UnityEvent();
         
-        private VideoPlayer _videoPlayerRef;
-        private readonly Color32 _rawImageHoverExit = new Color32(255, 255, 255, 255);
-        private readonly Color32 _rawImageHoverEnter = new Color32(128, 128, 128, 255);
-        [SerializeField] private int currentIndex;
-        private int _targetIndex;
-        private int _currentIndex;
-        private int _nextIndex;
-        private bool _videoJustWatched = false;
-        
+        private int _currentIndex = 0;
+        private int _nextIndex = 0;
         #endregion
 
         #region MainMethods
 
         void Update()
         {
-            // videoPlayer.loopPointReached += player => { PlayNextVideo();};
+           
         }
 
         #endregion
@@ -48,41 +36,45 @@ namespace NubianVR.UI
         public override void StartScreen()
         {
             base.StartScreen();
+
             videoPlayer.loopPointReached += player =>
             {
-                _videoJustWatched = false;
-                PlayNextVideo();
+                onLessonVideoFinished.Invoke();
             };
         }
 
         public void PlayNextVideo()
         {
-            StopCoroutine(playVideo());
+            
+            StopVideo();
+            videoPlayer.clip = lessonVideos[_currentIndex];
+            StartCoroutine(playVideo());
+        }
 
-            if (_videoJustWatched)
+        public void StopVideo()
+        {
+            videoPlayer.Stop();
+            StopCoroutine(playVideo());
+            centerVideoDisplay.texture = null;
+            leftVideoDisplay.texture = null;
+            rightVideoDisplay.texture = null;
+            
+            if (_nextIndex >= lessonVideos.Length)
             {
-                print("Next Screen");
-                onLessonVideosFinished.Invoke();
+                _nextIndex = 0;
+                _currentIndex = _nextIndex;
+                print("current index" + _currentIndex);
+                print("next index" + _nextIndex);
             }
             else
             {
-                if (_nextIndex >= lessonVideos.Length)
-                { 
-                    _currentIndex = _nextIndex;
-                    _nextIndex++;
-                    videoPlayer.clip = lessonVideos[_currentIndex];
-                    StartCoroutine(playVideo());
-                    
-                }
-                else
-                {
-                    _nextIndex = 0;
-                }
-
-               
+                _currentIndex = _nextIndex;
+                _nextIndex++;
+                print("current index" + _currentIndex);
+                print("next index" + _nextIndex);
             }
         }
-        
+
         IEnumerator playVideo()
         {
             videoPlayer.Prepare();
@@ -91,7 +83,10 @@ namespace NubianVR.UI
                 yield return null;
             }
 
-            centerVideoDisplay.texture = videoPlayer.texture;
+            var videoTexture = videoPlayer.texture;
+            centerVideoDisplay.texture = videoTexture;
+            leftVideoDisplay.texture = videoTexture;
+            rightVideoDisplay.texture = videoTexture;
             videoPlayer.Play();
         }
         
