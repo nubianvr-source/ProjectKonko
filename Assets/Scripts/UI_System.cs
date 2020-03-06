@@ -85,12 +85,12 @@ namespace NubianVR.UI
                 {
                     _currentScreen.CloseScreen();
                     _previousScreen = _currentScreen;
-                    print("Current Screen was true");
+                    print("Current Screen closed = " + _currentScreen.name);
                 }
                 _currentScreen = aScreen; 
                 _currentScreen.gameObject.SetActive(true); 
                 _currentScreen.StartScreen();
-                print("Current Screen was set from Ascreen");
+                print("New Screen = " + _currentScreen.name);
                 onSwitchScreen?.Invoke();
             }
                 

@@ -18,6 +18,9 @@ namespace NubianVR.UI
         public RawImage rightVideoDisplay;
         [FormerlySerializedAs("splashVideos")] public VideoClip[] lessonVideos;
         [FormerlySerializedAs("onSplashVideosFinished")] public UnityEvent onLessonVideoFinished = new UnityEvent();
+        public UI_Screen[] transitionScreens;
+        public UI_System UIManager;
+        
         
         private int _currentIndex = 0;
         private int _nextIndex = 0;
@@ -39,16 +42,25 @@ namespace NubianVR.UI
 
             videoPlayer.loopPointReached += player =>
             {
-                onLessonVideoFinished.Invoke();
+                TransitionToScreen();
             };
         }
 
         public void PlayNextVideo()
         {
-            
-            StopVideo();
+            print(lessonVideos.Length);
+            //StopVideo();
             videoPlayer.clip = lessonVideos[_currentIndex];
             StartCoroutine(playVideo());
+        }
+
+        public void TransitionToScreen()
+        {
+            
+            print("currentIndex value = " + _currentIndex);
+            UIManager.SwitchScreens(transitionScreens[_currentIndex]);
+            StopVideo();
+           
         }
 
         public void StopVideo()
@@ -59,17 +71,17 @@ namespace NubianVR.UI
             leftVideoDisplay.texture = null;
             rightVideoDisplay.texture = null;
             
-            if (_nextIndex >= lessonVideos.Length)
+            if (_nextIndex <= lessonVideos.Length)
             {
-                _nextIndex = 0;
                 _currentIndex = _nextIndex;
-                print("current index" + _currentIndex);
-                print("next index" + _nextIndex);
+                 _nextIndex++;
+                 print("current index" + _currentIndex);
+                 print("next index" + _nextIndex);
             }
             else
             {
+               _nextIndex = 0;
                 _currentIndex = _nextIndex;
-                _nextIndex++;
                 print("current index" + _currentIndex);
                 print("next index" + _nextIndex);
             }
