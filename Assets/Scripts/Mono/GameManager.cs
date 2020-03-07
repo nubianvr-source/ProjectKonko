@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour {
     private             Question[]          _questions              = null;
     public              Question[]          Questions               { get { return _questions; } }
     
-    public UnityEvent questionAnswered = new UnityEvent();
+    public UnityEvent onQuestionsFinished = new UnityEvent();
 
     [SerializeField]    GameEvents          events                  = null;
 
@@ -25,8 +25,6 @@ public class GameManager : MonoBehaviour {
     private             Color               timerDefaultColor       = Color.white;
 
     [SerializeField] CurvedUI.CurvedUISettings curvedUI;
-    [SerializeField] string NextUIView;
-    [SerializeField] Konko.UIManagement.UIManager uiManager;
 
     private             List<AnswerData>    PickedAnswers           = new List<AnswerData>();
     private             List<int>           FinishedQuestions       = new List<int>();
@@ -99,7 +97,7 @@ public class GameManager : MonoBehaviour {
     {
         yield return new WaitForSeconds(time);
 
-        uiManager.ShowOnlyScreenFadeOn(NextUIView);
+        onQuestionsFinished.Invoke();
 
         // Code to execute after the delay
     }
