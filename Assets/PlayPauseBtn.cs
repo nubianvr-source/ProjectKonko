@@ -78,6 +78,7 @@ public class PlayPauseBtn : MonoBehaviour
             {
                 videoPlayer.Pause();
                 playPauseIcon.sprite = playIcon;
+                CylinderVideo2d.onLessonVideoFinished.Invoke();
             }
             else
             {

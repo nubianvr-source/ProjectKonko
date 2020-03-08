@@ -22824,7 +22824,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: RETAKE LESSON
+  m_text: To Next Lesson
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 46c01bc5f85502b4f92d376ecc8360f6, type: 2}
   m_sharedMaterial: {fileID: 1140424966660794608, guid: 46c01bc5f85502b4f92d376ecc8360f6,
@@ -22834,8 +22834,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4282980368
+  m_fontColor: {r: 0.0627451, g: 0.09411766, b: 0.28627452, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -22894,12 +22894,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 815507983}
-    characterCount: 13
+    characterCount: 14
     spriteCount: 0
-    spaceCount: 1
-    wordCount: 2
+    spaceCount: 2
+    wordCount: 3
     linkCount: 0
-    lineCount: 2
+    lineCount: 1
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -37479,8 +37479,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -120, y: 382.78}
-  m_SizeDelta: {x: 519.3, y: 200}
+  m_AnchoredPosition: {x: -251, y: 459.3}
+  m_SizeDelta: {x: 880, y: 150}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1420366254
 MonoBehaviour:
@@ -37495,10 +37495,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DoNotTesselate: 0
-  savedPos: {x: 373.51804, y: 30.83707, z: -396}
+  savedPos: {x: 521.4877, y: 10.443826, z: -395.99997}
   savedUp: {x: 0, y: 1, z: 0}
-  savedRectSize: {x: 519.3, y: 200}
-  savedColor: {r: 1, g: 1, b: 1, a: 1}
+  savedRectSize: {x: 880, y: 150}
+  savedColor: {r: 1, g: 0.84076345, b: 0, a: 1}
   savedTextUV0: {x: 0, y: 0}
   savedFill: 1
 --- !u!114 &1420366255
@@ -37550,7 +37550,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: main_menu
           m_BoolArgument: 0
@@ -37568,12 +37568,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.84076345, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: dc35df6d77ef0914a984a734cd07db5e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6cad309f75d22694c97c051ecccb0154, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -38474,8 +38474,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 64, y: 0}
+  m_SizeDelta: {x: 127.9, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1443222762
 MonoBehaviour:
@@ -38527,7 +38527,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: RETURN TO MENU
+  m_text: To Main Menu
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 46c01bc5f85502b4f92d376ecc8360f6, type: 2}
   m_sharedMaterial: {fileID: 1140424966660794608, guid: 46c01bc5f85502b4f92d376ecc8360f6,
@@ -38537,8 +38537,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4282980368
+  m_fontColor: {r: 0.0627451, g: 0.09411766, b: 0.28627452, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -38597,12 +38597,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1443222764}
-    characterCount: 14
+    characterCount: 12
     spriteCount: 0
     spaceCount: 2
     wordCount: 3
     linkCount: 0
-    lineCount: 2
+    lineCount: 1
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -48474,7 +48474,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1856980445
 RectTransform:
   m_ObjectHideFlags: 0
@@ -48493,8 +48493,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 2.9000244, y: 0}
-  m_SizeDelta: {x: 234.4, y: -153.4}
+  m_AnchoredPosition: {x: -0.001159668, y: -31.69101}
+  m_SizeDelta: {x: 1033.5, y: -40.58}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1856980446
 MonoBehaviour:
@@ -48509,9 +48509,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DoNotTesselate: 0
-  savedPos: {x: 2.9000256, y: -0.00000042047395, z: -396}
+  savedPos: {x: -0.0011826308, y: 0.000000037289738, z: -395.99997}
   savedUp: {x: 0, y: 1, z: 0}
-  savedRectSize: {x: 1559.4, y: 655.78}
+  savedRectSize: {x: 2358.5, y: 768.6}
   savedColor: {r: 1, g: 1, b: 1, a: 1}
   savedTextUV0: {x: 0, y: 0}
   savedFill: 1
@@ -48617,7 +48617,7 @@ GameObject:
   - component: {fileID: 1869579744}
   - component: {fileID: 1869579743}
   m_Layer: 5
-  m_Name: Button_[Retake]
+  m_Name: NextLessonBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48640,8 +48640,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1431, y: -473}
-  m_SizeDelta: {x: 538.7, y: 200}
+  m_AnchoredPosition: {x: -2111, y: -459.3}
+  m_SizeDelta: {x: 880, y: 150}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1869579743
 MonoBehaviour:
@@ -48656,10 +48656,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DoNotTesselate: 0
-  savedPos: {x: -362.9989, y: -81.52247, z: -396}
+  savedPos: {x: -523.4563, y: -73.82584, z: -395.99997}
   savedUp: {x: 0, y: 1, z: 0}
-  savedRectSize: {x: 538.7, y: 200}
-  savedColor: {r: 1, g: 1, b: 1, a: 1}
+  savedRectSize: {x: 880, y: 150}
+  savedColor: {r: 1, g: 0.84313726, b: 0, a: 1}
   savedTextUV0: {x: 0, y: 0}
   savedFill: 1
 --- !u!114 &1869579744
@@ -48711,7 +48711,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: start_adventure
           m_BoolArgument: 0
@@ -48729,12 +48729,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.84313726, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: dc35df6d77ef0914a984a734cd07db5e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6cad309f75d22694c97c051ecccb0154, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -58658,7 +58658,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.0000076293945}
+  m_AnchoredPosition: {x: 0, y: -0.0000076293945}
   m_SizeDelta: {x: 0, y: 100}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &1221013923124842038
@@ -64518,7 +64518,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1221013923487080872}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.86666673
+  m_Size: 0.8666667
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

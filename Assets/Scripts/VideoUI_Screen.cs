@@ -25,11 +25,7 @@ namespace NubianVR.UI
         #endregion
 
         #region MainMethods
-
-        void Update()
-        {
-           
-        }
+        
 
         #endregion
         #region HelperMethods
