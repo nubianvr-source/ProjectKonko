@@ -154,9 +154,9 @@ public class UIManager : MonoBehaviour
     /// <summary>
     /// Function that is used to display resolution screen.
     /// </summary>
-    private void DisplayResolution(ResolutionScreenType type, string score)
+    private void DisplayResolution(ResolutionScreenType type, string interventionText, int score)
     {
-        UpdateResUI(type, score);
+        UpdateResUI(type, interventionText, score);
         uIElements.ResolutionScreenAnimator.SetInteger(resStateParaHash, 2);
         uIElements.MainCanvasGroup.blocksRaycasts = false;
 
@@ -184,7 +184,7 @@ public class UIManager : MonoBehaviour
     ///
     /// 
     /// Rename the variable "score" to something more appropriate
-    private void UpdateResUI(ResolutionScreenType type, string score)
+    private void UpdateResUI(ResolutionScreenType type, string interventionText ,int score)
     {
         var highscore = PlayerPrefs.GetInt(GameUtility.SavePrefKey);
 
@@ -192,13 +192,13 @@ public class UIManager : MonoBehaviour
         {
             case ResolutionScreenType.Correct:
                 uIElements.ResolutionBG.GetComponent<Image>().sprite = parameters.CorrectBGColor;
-                uIElements.ResolutionStateInfoText.text = score;
-                uIElements.ResolutionScoreText.text = "+" + "CORRECT!";
+                uIElements.ResolutionStateInfoText.text = interventionText;
+                uIElements.ResolutionScoreText.text = $"+{score}";
                 break;
             case ResolutionScreenType.Incorrect:
                 uIElements.ResolutionBG.GetComponent<Image>().sprite = parameters.IncorrectBGColor;
-                uIElements.ResolutionStateInfoText.text = score;
-                uIElements.ResolutionScoreText.text = "-" + "WRONG!";
+                uIElements.ResolutionStateInfoText.text = interventionText;
+                uIElements.ResolutionScoreText.text = $"-{score}";
                 break;
             case ResolutionScreenType.Finish:
                 uIElements.ResolutionBG.color = parameters.FinalBGColor;

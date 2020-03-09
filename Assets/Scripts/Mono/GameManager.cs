@@ -189,7 +189,7 @@ public class GameManager : MonoBehaviour {
 
         if (events.DisplayResolutionScreen != null)
         {
-            events.DisplayResolutionScreen(type, Questions[currentQuestion].Answers[answerIndex].interventionText);
+            events.DisplayResolutionScreen(type, Questions[currentQuestion].Answers[answerIndex].interventionText, Questions[currentQuestion].AddScore);
         }
 
         AudioManager.Instance.PlaySound((isCorrect) ? "CorrectSFX" : "IncorrectSFX");

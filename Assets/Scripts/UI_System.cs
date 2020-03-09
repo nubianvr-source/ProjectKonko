@@ -142,6 +142,11 @@ namespace NubianVR.UI
             }
         }
 
+        public void Quit()
+        {
+            UnityEngine.Application.Quit();
+        }
+
         #endregion
        
     }
