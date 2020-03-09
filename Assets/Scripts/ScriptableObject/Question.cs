@@ -45,12 +45,6 @@ public class Question : ScriptableObject {
     [SerializeField] private    int         _addScore       = 20;
     public                      int         AddScore        { get { return _addScore; } }
     
-     [SerializeField]
-     public UnityEvent answeredQuestionCorrect = new UnityEvent();
-     
-     [SerializeField]
-     public UnityEvent answeredQuestionWrong = new UnityEvent();
-    
 
     /// <summary>
     /// Function that is called to collect and return correct answers indexes.
