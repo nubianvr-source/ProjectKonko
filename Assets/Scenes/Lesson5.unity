@@ -22941,7 +22941,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 256.85, y: -201.05002}
+  m_AnchoredPosition: {x: 380.94992, y: -201.05}
   m_SizeDelta: {x: 305.2, y: 89.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &874588115
@@ -23000,7 +23000,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DoNotTesselate: 0
-  savedPos: {x: 256.84998, y: -201.05002, z: 0}
+  savedPos: {x: 380.94992, y: -201.05, z: 0.000017166138}
   savedUp: {x: 0, y: 1, z: 0}
   savedRectSize: {x: 305.2, y: 89.6}
   savedColor: {r: 1, g: 1, b: 1, a: 1}
@@ -42478,8 +42478,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 64, y: 0}
-  m_SizeDelta: {x: 127.9, y: 0}
+  m_AnchoredPosition: {x: 0.025047, y: 0}
+  m_SizeDelta: {x: -0.049927, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1729630422
 MonoBehaviour:
@@ -56474,7 +56474,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.000022888184}
+  m_AnchoredPosition: {x: 0, y: 0.0000076293945}
   m_SizeDelta: {x: 0, y: 100}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &1221013923124842038
