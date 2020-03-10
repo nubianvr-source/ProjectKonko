@@ -52,14 +52,16 @@ public class PlayPauseBtn : MonoBehaviour
     public void onHoverEnterColorChange()
     {
         playPauseIcon.color = new Color32(255, 255, 255, 255);
-       rawImageCenter.GetComponent<RawImage>().color = rawImageHoverEnter;
-       rawImageLeft.GetComponent<RawImage>().color = rawImageHoverEnter;
-       rawImageRight.GetComponent<RawImage>().color = rawImageHoverEnter;
+        stateText.color = new Color32(255, 255, 255, 255);
+        rawImageCenter.GetComponent<RawImage>().color = rawImageHoverEnter;
+        rawImageLeft.GetComponent<RawImage>().color = rawImageHoverEnter;
+        rawImageRight.GetComponent<RawImage>().color = rawImageHoverEnter;
     }
 
     public void onHoverExitColorChange()
     {
         playPauseIcon.color = new Color32(255, 255, 255, 0);
+        stateText.color = new Color32(255, 255, 255, 0);
         rawImageCenter.GetComponent<RawImage>().color = rawImageHoverExit;
         rawImageLeft.GetComponent<RawImage>().color = rawImageHoverExit;
         rawImageRight.GetComponent<RawImage>().color = rawImageHoverExit;
