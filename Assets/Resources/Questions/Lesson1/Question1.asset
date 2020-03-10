@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d984fd91f16d7fd42a4d6bcf26a077af, type: 3}
+  m_Name: Question1
+  m_EditorClassIdentifier: 
+  _info: What is Thomas Edison known for?
+  _answers:
+  - _info: Inventing light.
+    _isCorrect: 0
+    _interventionText: Light has been in existence since the beginning of the universe
+  - _info: Inventing the lantern.
+    _isCorrect: 0
+    _interventionText: Lantern was in existence since before the days of electricity
+      and Thomas Edison.
+  - _info: Inventing fire.
+    _isCorrect: 0
+    _interventionText: Ancient humans started using fire since about 4000 years ago.
+  - _info: Inventing the light bulb.
+    _isCorrect: 1
+    _interventionText: Correct! Despite being contested, Thomas Edision is credited
+      for inventing the light bulb.
+  _useTimer: 0
+  _timer: 0
+  _answerType: 1
+  _addScore: 10
