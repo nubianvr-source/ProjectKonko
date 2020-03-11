@@ -4,7 +4,6 @@ using NubianVR.UI;
 using UnityEngine;
 using UnityEngine.Video;
 using UnityEngine.UI;
-using TMPro;
 using VideoManager.CylinderVideoStreamer;
 
 public class PlayPauseBtn : MonoBehaviour
@@ -20,7 +19,6 @@ public class PlayPauseBtn : MonoBehaviour
     public Sprite playIcon;
     public Sprite pauseIcon;
     public Image playPauseIcon;
-    public TextMeshProUGUI stateText;
 
     
     Color32 rawImageHoverExit = new Color32(255, 255, 255, 255);
@@ -52,16 +50,14 @@ public class PlayPauseBtn : MonoBehaviour
     public void onHoverEnterColorChange()
     {
         playPauseIcon.color = new Color32(255, 255, 255, 255);
-        stateText.color = new Color32(255, 255, 255, 255);
-        rawImageCenter.GetComponent<RawImage>().color = rawImageHoverEnter;
-        rawImageLeft.GetComponent<RawImage>().color = rawImageHoverEnter;
-        rawImageRight.GetComponent<RawImage>().color = rawImageHoverEnter;
+       rawImageCenter.GetComponent<RawImage>().color = rawImageHoverEnter;
+       rawImageLeft.GetComponent<RawImage>().color = rawImageHoverEnter;
+       rawImageRight.GetComponent<RawImage>().color = rawImageHoverEnter;
     }
 
     public void onHoverExitColorChange()
     {
         playPauseIcon.color = new Color32(255, 255, 255, 0);
-        stateText.color = new Color32(255, 255, 255, 0);
         rawImageCenter.GetComponent<RawImage>().color = rawImageHoverExit;
         rawImageLeft.GetComponent<RawImage>().color = rawImageHoverExit;
         rawImageRight.GetComponent<RawImage>().color = rawImageHoverExit;
@@ -75,7 +71,6 @@ public class PlayPauseBtn : MonoBehaviour
         if (!videoPlayer.isPrepared)
         {
             playPauseIcon.sprite = pauseIcon;
-            stateText.text = "Click to Pause";
         }
         else 
         {
@@ -83,14 +78,12 @@ public class PlayPauseBtn : MonoBehaviour
             {
                 videoPlayer.Pause();
                 playPauseIcon.sprite = playIcon;
-                stateText.text = "Click to Play";
                 CylinderVideo2d.onLessonVideoFinished.Invoke();
             }
             else
             {
                 videoPlayer.Play();
                 playPauseIcon.sprite = pauseIcon;
-                stateText.text = "Click to Pause";
             }
         }
     }
