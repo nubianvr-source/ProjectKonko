@@ -50,7 +50,7 @@ public class WireScript : MonoBehaviour
     {
         isBatteryInTrigger = batteryTrigger.isInTrigger;
         isLightBulbInTrigger = lightBulbTrigger.isInTrigger;
-        isDiodePositiveBias = diodeObject.isPositiveBias;
+       // isDiodePositiveBias = diodeObject.isPositiveBias;
         
     }
 
