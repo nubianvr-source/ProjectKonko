@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d984fd91f16d7fd42a4d6bcf26a077af, type: 3}
+  m_Name: DiodeActivity1
+  m_EditorClassIdentifier: 
+  _info: "In the diode activity\u2026 Why was the light still off when you turned
+    on the switch?\r\n"
+  _answers:
+  - _info: Because the switch was not connected to the diode
+    _isCorrect: 0
+    _interventionText: That's false
+  - _info: Because the sign at the pole of the diode was identical to the sign at
+      the terminal of the battery
+    _isCorrect: 0
+    _interventionText: That's false
+  - _info: Because the terminals of the diode caused the light bulb to heat up
+    _isCorrect: 0
+    _interventionText: That's false
+  - _info: Because the sign at the pole of the diode was not identical to the sign
+      at the terminal of the battery
+    _isCorrect: 1
+    _interventionText: That's true
+  _useTimer: 0
+  _timer: 0
+  _answerType: 1
+  _addScore: 10

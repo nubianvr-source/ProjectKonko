@@ -43,6 +43,7 @@ namespace NubianVR.UI
         public void PlayNextVideo()
         {
             StopVideo();
+            AudioManager.Instance.PlaySound("Theme");
             if (_nextIndex >= lessonVideos.Length)
             {
                 print("Next Screen");
@@ -55,6 +56,7 @@ namespace NubianVR.UI
                 _nextIndex++;
                 videoPlayer.clip = lessonVideos[_currentIndex];
                 StartCoroutine(playVideo());
+                AudioManager.Instance.StopSound("Theme");
             }
         }
 

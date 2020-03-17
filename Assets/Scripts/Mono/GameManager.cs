@@ -295,12 +295,48 @@ public class GameManager : MonoBehaviour {
     /// </summary>
     void LoadQuestions()
     {
-        Object[] objs = Resources.LoadAll("Questions", typeof(Question));
-        _questions = new Question[objs.Length];
-        for (int i = 0; i < objs.Length; i++)
+        Scene currentScene = SceneManager.GetActiveScene();
+        int buildIndex = currentScene.buildIndex;
+        switch (buildIndex)
         {
-            _questions[i] = (Question)objs[i];
+            case 2:
+                Object[] objs2 = Resources.LoadAll("Questions/Lesson1", typeof(Question));
+                _questions = new Question[objs2.Length];
+                for (int i = 0; i < objs2.Length; i++)
+                {
+                    _questions[i] = (Question)objs2[i];
+                }
+                break;
+            case 3:
+                Object[] objs3 = Resources.LoadAll("Questions/Lesson2", typeof(Question));
+                _questions = new Question[objs3.Length];
+                for (int i = 0; i < objs3.Length; i++)
+                {
+                    _questions[i] = (Question)objs3[i];
+                }
+                break;
+           
+            case 5:
+                Object[] objs5 = Resources.LoadAll("Questions/Lesson4", typeof(Question));
+                _questions = new Question[objs5.Length];
+                for (int i = 0; i < objs5.Length; i++)
+                {
+                    _questions[i] = (Question)objs5[i];
+                }
+                break;
+            case 7:
+                Object[] objs7 = Resources.LoadAll("Questions/Lesson6", typeof(Question));
+                _questions = new Question[objs7.Length];
+                for (int i = 0; i < objs7.Length; i++)
+                {
+                    _questions[i] = (Question)objs7[i];
+                }
+                break;
+
+            default:
+                break;
         }
+     
     }
 
     /// <summary>

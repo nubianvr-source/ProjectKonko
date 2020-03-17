@@ -2532,6 +2532,7 @@ MonoBehaviour:
   playIcon: {fileID: 21300000, guid: a42b0e51b8ef5d44da84722b007bf0e4, type: 3}
   pauseIcon: {fileID: 21300000, guid: c2d6072eefa86f243a92af1c588a4323, type: 3}
   playPauseIcon: {fileID: 2021687300}
+  stateText: {fileID: 0}
 --- !u!114 &97331175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8487,6 +8488,8 @@ MonoBehaviour:
   isInTrigger: 0
   defaultTransform: {fileID: 1445964759}
   DiodeIcon: {fileID: 0}
+  flipButton: {fileID: 0}
+  diodeDescription: {fileID: 0}
 --- !u!135 &309460003
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -9828,6 +9831,7 @@ MonoBehaviour:
   playIcon: {fileID: 21300000, guid: a42b0e51b8ef5d44da84722b007bf0e4, type: 3}
   pauseIcon: {fileID: 21300000, guid: c2d6072eefa86f243a92af1c588a4323, type: 3}
   playPauseIcon: {fileID: 1052105569}
+  stateText: {fileID: 0}
 --- !u!114 &352735058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13283,12 +13287,13 @@ MonoBehaviour:
   wireIcon: {fileID: 175232127}
   batteryTrigger: {fileID: 2116840076}
   lightBulbTrigger: {fileID: 1810238014}
-  switchIcon: {fileID: 1841062777}
   diodeObject: {fileID: 0}
   diodeTrigger: {fileID: 0}
+  switchIcon: {fileID: 1841062777}
+  infoTextBox: {fileID: 0}
+  switchComponentRef: {fileID: 0}
   bulbComponent: {fileID: 203732273}
   continueBtn: {fileID: 1993833448}
-  infoTextBox: {fileID: 74843836}
   isCurrentRunning: 0
 --- !u!120 &515249442
 LineRenderer:
@@ -16919,6 +16924,7 @@ MonoBehaviour:
   playIcon: {fileID: 21300000, guid: a42b0e51b8ef5d44da84722b007bf0e4, type: 3}
   pauseIcon: {fileID: 21300000, guid: c2d6072eefa86f243a92af1c588a4323, type: 3}
   playPauseIcon: {fileID: 1649542023}
+  stateText: {fileID: 0}
 --- !u!114 &629304646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18325,6 +18331,7 @@ MonoBehaviour:
   playIcon: {fileID: 21300000, guid: a42b0e51b8ef5d44da84722b007bf0e4, type: 3}
   pauseIcon: {fileID: 21300000, guid: c2d6072eefa86f243a92af1c588a4323, type: 3}
   playPauseIcon: {fileID: 665861536}
+  stateText: {fileID: 0}
 --- !u!114 &662357850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33819,6 +33826,7 @@ MonoBehaviour:
   playIcon: {fileID: 21300000, guid: a42b0e51b8ef5d44da84722b007bf0e4, type: 3}
   pauseIcon: {fileID: 21300000, guid: c2d6072eefa86f243a92af1c588a4323, type: 3}
   playPauseIcon: {fileID: 1642680282}
+  stateText: {fileID: 0}
 --- !u!114 &1239376605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40009,7 +40017,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Version: 0.3.3'
+  m_text: Demo
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 46c01bc5f85502b4f92d376ecc8360f6, type: 2}
   m_sharedMaterial: {fileID: 1140424966660794608, guid: 46c01bc5f85502b4f92d376ecc8360f6,
@@ -40079,10 +40087,10 @@ MonoBehaviour:
   m_margin: {x: -3.085221, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1498573315}
-    characterCount: 14
+    characterCount: 4
     spriteCount: 0
-    spaceCount: 1
-    wordCount: 4
+    spaceCount: 0
+    wordCount: 1
     linkCount: 0
     lineCount: 1
     pageCount: 1
@@ -42086,7 +42094,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Welcome, Andy
+  m_text: 'Welcome
+
 
 
 '
@@ -42135,7 +42144,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 9
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -42159,12 +42168,12 @@ MonoBehaviour:
   m_margin: {x: -0.47316724, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1596711462}
-    characterCount: 15
+    characterCount: 10
     spriteCount: 0
     spaceCount: 3
-    wordCount: 2
+    wordCount: 1
     linkCount: 0
-    lineCount: 2
+    lineCount: 3
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -44040,6 +44049,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4403379707006494931, guid: f25b050dd8853ec41952c387c3e00760,
+        type: 3}
+      propertyPath: m_Interactable
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4403379707006494929, guid: f25b050dd8853ec41952c387c3e00760,
         type: 3}
@@ -49062,9 +49076,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 785831645}
-        m_MethodName: ShowOnlyScreenFadeOn
-        m_Mode: 5
+      - m_Target: {fileID: 1931060728}
+        m_MethodName: GoToPreviousScreen
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -57704,6 +57718,7 @@ MonoBehaviour:
   playIcon: {fileID: 21300000, guid: a42b0e51b8ef5d44da84722b007bf0e4, type: 3}
   pauseIcon: {fileID: 21300000, guid: c2d6072eefa86f243a92af1c588a4323, type: 3}
   playPauseIcon: {fileID: 182317646}
+  stateText: {fileID: 0}
 --- !u!114 &2129558917
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59005,7 +59020,7 @@ MonoBehaviour:
       spatial3DAudioBlend: 0
     Source: {fileID: 0}
   - name: Theme
-    clip: {fileID: 8300000, guid: 46ba7a1bba385ac40bd8ac7d61667e53, type: 3}
+    clip: {fileID: 8300000, guid: 5ba0972a977d9cb488558ef4965968cf, type: 3}
     parameters:
       Volume: 0.202
       Pitch: 1
