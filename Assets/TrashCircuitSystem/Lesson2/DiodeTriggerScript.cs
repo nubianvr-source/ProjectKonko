@@ -48,6 +48,8 @@ public class DiodeTriggerScript : MonoBehaviour
         defaultLerpPosition = defaultTransform.position;
         rigidbodyPhysics.constraints = RigidbodyConstraints.FreezeAll;
         flipButton.gameObject.SetActive(false);
+       // isInTrigger = true;
+       // DiodeTransfrom();
     }
 
     // Update is called once per frame
@@ -96,8 +98,8 @@ public class DiodeTriggerScript : MonoBehaviour
             rigidbodyPhysics.angularVelocity = Vector3.zero;
             rigidbodyPhysics.constraints = RigidbodyConstraints.FreezeAll;
             this.gameObject.SetActive(false);
-            //flipButton.gameObject.SetActive(true);
-            //diodeDescription.gameObject.SetActive(false);
+            flipButton.gameObject.SetActive(true);
+            diodeDescription.gameObject.SetActive(false);
         }
 
         else

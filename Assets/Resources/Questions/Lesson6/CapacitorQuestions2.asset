@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d984fd91f16d7fd42a4d6bcf26a077af, type: 3}
+  m_Name: CapacitorQuestions2
+  m_EditorClassIdentifier: 
+  _info: Which of these are true of a capacitor connected in series?
+  _answers:
+  - _info: 'Battery is connected end to end with a resistors '
+    _isCorrect: 0
+    _interventionText: This is a resistor connected in series
+  - _info: Battery is connected end to end with other capacitors
+    _isCorrect: 1
+    _interventionText: Yes this is correct because the electic current would move
+      from the battery into the capacitor to charge it as soon as the circuit is turned
+      on
+  - _info: Battery is connected side by side with other resistors
+    _isCorrect: 0
+    _interventionText: This is a resistor connected in parallel
+  - _info: 'A Diode and a switch must be present '
+    _isCorrect: 0
+    _interventionText: A diode only redirtects electric current not store it.
+  _useTimer: 0
+  _timer: 0
+  _answerType: 0
+  _addScore: 20

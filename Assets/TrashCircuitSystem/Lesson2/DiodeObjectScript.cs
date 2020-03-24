@@ -13,6 +13,8 @@ public class DiodeObjectScript : MonoBehaviour
     public Sprite positiveBiasIcon;
 
     public Sprite negativeBiasIcon;
+    public Image imageFlip;
+
 
     public GameObject diodeObject;
     public Sprite positiveFlip;
@@ -24,7 +26,7 @@ public class DiodeObjectScript : MonoBehaviour
     void Start()
     {
         diodeIcon.diodeActive = positiveBiasIcon;
-        isPositiveBias = true;
+        isPositiveBias = false;
 
         
     }
@@ -37,29 +39,37 @@ public class DiodeObjectScript : MonoBehaviour
 
     public void flipSwitchUI()
     {
+        wireScript.setCircuitInactive();
+        print("Button has been clicked"); 
+        isPositiveBias = !isPositiveBias;
         if (isPositiveBias)
 
         {
-            this.GetComponent<Image>().sprite = positiveFlip;
-
-
+            imageFlip.GetComponent<Image>().sprite = positiveFlip;
+            diodeIcon.diodeActive = positiveBiasIcon;
+            diodeObject.transform.localEulerAngles = new Vector3(0, 0, -90);
+           // 
+            wireScript.setCircuitActive();
 
         }
 
         else 
         {
-            this.GetComponent<Image>().sprite = negativeFlip;
+            imageFlip.GetComponent<Image>().sprite = negativeFlip;
+            diodeIcon.diodeActive = negativeBiasIcon;
+            diodeObject.transform.localEulerAngles = new Vector3(0, 0, 90);
+           // wireScript.setCircuitInactive();
+            wireScript.setCircuitActive();
         }
     }
 
     public void OnToggleChanged()
     {
-        isPositiveBias = !isPositiveBias;
+       
         if (isPositiveBias)
         {
                
-         diodeIcon.diodeActive = positiveBiasIcon;
-         diodeObject.transform.Rotate(0, 0, 0);
+        
 
 
 
@@ -67,8 +77,7 @@ public class DiodeObjectScript : MonoBehaviour
         else
         {
                
-         diodeIcon.diodeActive = negativeBiasIcon;
-         diodeObject.transform.Rotate(0,180,0);
+        
            
         }
     

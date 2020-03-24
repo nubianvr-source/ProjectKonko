@@ -32453,26 +32453,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 4904329517732547201, guid: 815e9fdc87436324eba3bb6f0c849cfc,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 1221013922792814404}
-    - target: {fileID: 4904329517732547201, guid: 815e9fdc87436324eba3bb6f0c849cfc,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: PauseSound
-      objectReference: {fileID: 0}
-    - target: {fileID: 4904329517732547201, guid: 815e9fdc87436324eba3bb6f0c849cfc,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 706524149}
-    - target: {fileID: 4904329517732547201, guid: 815e9fdc87436324eba3bb6f0c849cfc,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: preparePlayPauseVideo
-      objectReference: {fileID: 0}
     - target: {fileID: 4904329517732547207, guid: 815e9fdc87436324eba3bb6f0c849cfc,
         type: 3}
       propertyPath: CylinderVideo2d
@@ -32508,6 +32488,26 @@ PrefabInstance:
       propertyPath: rawImageLeft
       value: 
       objectReference: {fileID: 1646072352}
+    - target: {fileID: 4904329517732547201, guid: 815e9fdc87436324eba3bb6f0c849cfc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1221013922792814404}
+    - target: {fileID: 4904329517732547201, guid: 815e9fdc87436324eba3bb6f0c849cfc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PauseSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 4904329517732547201, guid: 815e9fdc87436324eba3bb6f0c849cfc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 706524149}
+    - target: {fileID: 4904329517732547201, guid: 815e9fdc87436324eba3bb6f0c849cfc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: preparePlayPauseVideo
+      objectReference: {fileID: 0}
     - target: {fileID: 4904329517732547200, guid: 815e9fdc87436324eba3bb6f0c849cfc,
         type: 3}
       propertyPath: m_Color.a
@@ -57877,7 +57877,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DoNotTesselate: 0
-  savedPos: {x: 203.5881, y: -164.99997, z: 0.000030517578}
+  savedPos: {x: 144.3882, y: -164.99997, z: 0.000030517578}
   savedUp: {x: 0, y: 1, z: 0}
   savedRectSize: {x: 30, y: 750}
   savedColor: {r: 0, g: 0, b: 0, a: 0.050980393}
@@ -59276,9 +59276,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DoNotTesselate: 0
-  savedPos: {x: -798.23816, y: 209.99998, z: 0}
+  savedPos: {x: -798.13806, y: 209.99998, z: 0.000030517578}
   savedUp: {x: 0, y: 1, z: 0}
-  savedRectSize: {x: 971.7763, y: 750}
+  savedRectSize: {x: 912.5763, y: 750}
   savedColor: {r: 0, g: 0, b: 0, a: 0}
   savedTextUV0: {x: 0, y: 0}
   savedFill: 1
@@ -61457,7 +61457,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DoNotTesselate: 0
-  savedPos: {x: 188.58813, y: -164.99997, z: 0.000030517578}
+  savedPos: {x: 129.38814, y: -164.99997, z: 0.000030517578}
   savedUp: {x: 0, y: 1, z: 0}
   savedRectSize: {x: 30, y: 652.6667}
   savedColor: {r: 1, g: 1, b: 1, a: 1}
@@ -63266,8 +63266,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -297.3, y: -165.00002}
-  m_SizeDelta: {x: 87.2, y: -330}
+  m_AnchoredPosition: {x: -326.9, y: -165.00002}
+  m_SizeDelta: {x: 28, y: -330}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1221013923897228935
 MonoBehaviour:
@@ -63923,7 +63923,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.000015258789}
+  m_AnchoredPosition: {x: 0, y: -0.0000076293945}
   m_SizeDelta: {x: 0, y: 100}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &1221013923987190397
@@ -67131,7 +67131,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5470109442130264708}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14.606754, y: -21.348314, z: -395.99997}
+  m_LocalPosition: {x: 14.606754, y: -21.348314, z: -236}
   m_LocalScale: {x: 56.179775, y: 56.179775, z: 50}
   m_Children:
   - {fileID: 1221013922750856483}
@@ -67257,21 +67257,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 4904329517732547201, guid: 815e9fdc87436324eba3bb6f0c849cfc,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 1221013922792814404}
-    - target: {fileID: 4904329517732547201, guid: 815e9fdc87436324eba3bb6f0c849cfc,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 730692922}
-    - target: {fileID: 4904329517732547201, guid: 815e9fdc87436324eba3bb6f0c849cfc,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: preparePlayPauseVideo
-      objectReference: {fileID: 0}
     - target: {fileID: 4904329517732547207, guid: 815e9fdc87436324eba3bb6f0c849cfc,
         type: 3}
       propertyPath: LeftVideoPanel
@@ -67307,6 +67292,21 @@ PrefabInstance:
       propertyPath: rawImageCenter
       value: 
       objectReference: {fileID: 182477272}
+    - target: {fileID: 4904329517732547201, guid: 815e9fdc87436324eba3bb6f0c849cfc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1221013922792814404}
+    - target: {fileID: 4904329517732547201, guid: 815e9fdc87436324eba3bb6f0c849cfc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 730692922}
+    - target: {fileID: 4904329517732547201, guid: 815e9fdc87436324eba3bb6f0c849cfc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: preparePlayPauseVideo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 815e9fdc87436324eba3bb6f0c849cfc, type: 3}
 --- !u!1 &5072355784709284616

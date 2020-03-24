@@ -17377,16 +17377,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 4904329517732547201, guid: 815e9fdc87436324eba3bb6f0c849cfc,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 1221013922792814404}
-    - target: {fileID: 4904329517732547201, guid: 815e9fdc87436324eba3bb6f0c849cfc,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: PauseSound
-      objectReference: {fileID: 0}
     - target: {fileID: 4904329517732547207, guid: 815e9fdc87436324eba3bb6f0c849cfc,
         type: 3}
       propertyPath: LeftVideoPanel
@@ -17422,6 +17412,16 @@ PrefabInstance:
       propertyPath: rawImageCenter
       value: 
       objectReference: {fileID: 796008891}
+    - target: {fileID: 4904329517732547201, guid: 815e9fdc87436324eba3bb6f0c849cfc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1221013922792814404}
+    - target: {fileID: 4904329517732547201, guid: 815e9fdc87436324eba3bb6f0c849cfc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PauseSound
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 815e9fdc87436324eba3bb6f0c849cfc, type: 3}
 --- !u!1 &426189725
@@ -42508,16 +42508,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 4904329517732547201, guid: 815e9fdc87436324eba3bb6f0c849cfc,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 1221013922792814404}
-    - target: {fileID: 4904329517732547201, guid: 815e9fdc87436324eba3bb6f0c849cfc,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: PauseSound
-      objectReference: {fileID: 0}
     - target: {fileID: 4904329517732547207, guid: 815e9fdc87436324eba3bb6f0c849cfc,
         type: 3}
       propertyPath: LeftVideoPanel
@@ -42553,6 +42543,16 @@ PrefabInstance:
       propertyPath: rawImageCenter
       value: 
       objectReference: {fileID: 182477272}
+    - target: {fileID: 4904329517732547201, guid: 815e9fdc87436324eba3bb6f0c849cfc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1221013922792814404}
+    - target: {fileID: 4904329517732547201, guid: 815e9fdc87436324eba3bb6f0c849cfc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PauseSound
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 815e9fdc87436324eba3bb6f0c849cfc, type: 3}
 --- !u!1 &974362537
@@ -55723,16 +55723,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 4904329517732547201, guid: 815e9fdc87436324eba3bb6f0c849cfc,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 1221013922792814404}
-    - target: {fileID: 4904329517732547201, guid: 815e9fdc87436324eba3bb6f0c849cfc,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: PauseSound
-      objectReference: {fileID: 0}
     - target: {fileID: 4904329517732547207, guid: 815e9fdc87436324eba3bb6f0c849cfc,
         type: 3}
       propertyPath: LeftVideoPanel
@@ -55768,6 +55758,16 @@ PrefabInstance:
       propertyPath: rawImageCenter
       value: 
       objectReference: {fileID: 803771185}
+    - target: {fileID: 4904329517732547201, guid: 815e9fdc87436324eba3bb6f0c849cfc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1221013922792814404}
+    - target: {fileID: 4904329517732547201, guid: 815e9fdc87436324eba3bb6f0c849cfc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PauseSound
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 815e9fdc87436324eba3bb6f0c849cfc, type: 3}
 --- !u!1 &1299231879
@@ -61086,16 +61086,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 4904329517732547201, guid: 815e9fdc87436324eba3bb6f0c849cfc,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 1221013922792814404}
-    - target: {fileID: 4904329517732547201, guid: 815e9fdc87436324eba3bb6f0c849cfc,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: PauseSound
-      objectReference: {fileID: 0}
     - target: {fileID: 4904329517732547207, guid: 815e9fdc87436324eba3bb6f0c849cfc,
         type: 3}
       propertyPath: LeftVideoPanel
@@ -61131,6 +61121,16 @@ PrefabInstance:
       propertyPath: rawImageCenter
       value: 
       objectReference: {fileID: 1363752651}
+    - target: {fileID: 4904329517732547201, guid: 815e9fdc87436324eba3bb6f0c849cfc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1221013922792814404}
+    - target: {fileID: 4904329517732547201, guid: 815e9fdc87436324eba3bb6f0c849cfc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PauseSound
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 815e9fdc87436324eba3bb6f0c849cfc, type: 3}
 --- !u!1 &1398640607
@@ -75956,16 +75956,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 4904329517732547201, guid: 815e9fdc87436324eba3bb6f0c849cfc,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 1221013922792814404}
-    - target: {fileID: 4904329517732547201, guid: 815e9fdc87436324eba3bb6f0c849cfc,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: PauseSound
-      objectReference: {fileID: 0}
     - target: {fileID: 4904329517732547207, guid: 815e9fdc87436324eba3bb6f0c849cfc,
         type: 3}
       propertyPath: LeftVideoPanel
@@ -76001,6 +75991,16 @@ PrefabInstance:
       propertyPath: rawImageCenter
       value: 
       objectReference: {fileID: 786431363}
+    - target: {fileID: 4904329517732547201, guid: 815e9fdc87436324eba3bb6f0c849cfc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1221013922792814404}
+    - target: {fileID: 4904329517732547201, guid: 815e9fdc87436324eba3bb6f0c849cfc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PauseSound
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 815e9fdc87436324eba3bb6f0c849cfc, type: 3}
 --- !u!1 &1782308324
@@ -86395,16 +86395,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 4904329517732547201, guid: 815e9fdc87436324eba3bb6f0c849cfc,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 1221013922792814404}
-    - target: {fileID: 4904329517732547201, guid: 815e9fdc87436324eba3bb6f0c849cfc,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: PauseSound
-      objectReference: {fileID: 0}
     - target: {fileID: 4904329517732547207, guid: 815e9fdc87436324eba3bb6f0c849cfc,
         type: 3}
       propertyPath: LeftVideoPanel
@@ -86440,6 +86430,16 @@ PrefabInstance:
       propertyPath: rawImageCenter
       value: 
       objectReference: {fileID: 1601482974}
+    - target: {fileID: 4904329517732547201, guid: 815e9fdc87436324eba3bb6f0c849cfc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1221013922792814404}
+    - target: {fileID: 4904329517732547201, guid: 815e9fdc87436324eba3bb6f0c849cfc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PauseSound
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 815e9fdc87436324eba3bb6f0c849cfc, type: 3}
 --- !u!1 &2028883107

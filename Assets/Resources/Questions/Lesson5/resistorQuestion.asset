@@ -23,8 +23,7 @@ MonoBehaviour:
   - _info: A resistor holds the electromotive force in a circuit
     _isCorrect: 0
     _interventionText: An EMF and a resistor are two different electric components
-  - _info: A resistor prevents too much current from flowing in a circuit so that
-      the current does not damage the electronic device
+  - _info: A resistor prevents too much current from flowing in a circuit
     _isCorrect: 1
     _interventionText: Controlling the current within the circuit helps protect the
       electric devices connected to it.
