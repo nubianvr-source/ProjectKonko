@@ -33,7 +33,7 @@ public class BatteryTriggerScript : MonoBehaviour
     private Vector3 defaultLerpPosition;
 
     public BatteryIconScript batteryIcon;
-
+    public GameObject batteryText;
 
 
     // Start is called before the first frame update
@@ -42,6 +42,7 @@ public class BatteryTriggerScript : MonoBehaviour
         endLerpPosition = BatteryTransform.position;
         defaultLerpPosition = defaultTransform.position;
         rigidbodyPhysics.constraints = RigidbodyConstraints.FreezeAll;
+        this.gameObject.SetActive(false);
         //isInTrigger = true;
         //BatteryBulbTransform();
     }
@@ -57,6 +58,11 @@ public class BatteryTriggerScript : MonoBehaviour
     {
         rigidbodyPhysics.constraints = RigidbodyConstraints.None;
 
+    }
+
+    public void SetTriggerActive()
+    {
+        this.gameObject.SetActive(true);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -92,6 +98,7 @@ public class BatteryTriggerScript : MonoBehaviour
             rigidbodyPhysics.velocity = Vector3.zero;
             rigidbodyPhysics.angularVelocity = Vector3.zero;
             rigidbodyPhysics.constraints = RigidbodyConstraints.FreezeAll;
+            batteryText.SetActive(false);
             this.gameObject.SetActive(false);
         }
 
@@ -102,6 +109,7 @@ public class BatteryTriggerScript : MonoBehaviour
             rigidbodyPhysics.velocity = Vector3.zero;
             rigidbodyPhysics.angularVelocity = Vector3.zero;
             rigidbodyPhysics.constraints = RigidbodyConstraints.FreezeAll;
+            this.gameObject.SetActive(false);
         }
     }
 }

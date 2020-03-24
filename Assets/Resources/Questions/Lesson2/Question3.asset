@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d984fd91f16d7fd42a4d6bcf26a077af, type: 3}
   m_Name: Question3
   m_EditorClassIdentifier: 
-  _info: "\u2026 So it is your job to let it know its superpowers by selecting the
-    right answers to assure the battery. "
+  _info: 'Select all that is true about a battery '
   _answers:
   - _info: The battery has the power to reduce the amount of current flowing in a
       circuit.

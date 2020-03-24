@@ -13,8 +13,8 @@ public class Lesson3WireScriptBatteryinParallel : MonoBehaviour
     public WireIconScript wireIcon;
 
     [Header("Baterry Properties")]
-    public BatteryTriggerScript batteryTrigger1;
-    public BatteryTriggerScript batteryTrigger2;
+    public BatteryTriggerLesson3 batteryTrigger1;
+    public BatteryTriggerLesson3 batteryTrigger2;
     public BatteryTriggerScript batteryTrigger3;
     private bool isBatteryInTrigger;
 

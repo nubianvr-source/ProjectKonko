@@ -78,6 +78,7 @@ public class Lesson3WireScriptBatteryinSeries : MonoBehaviour
             bulbcolor.b = coloNumberConversion(77);
             bulbcolor.a = coloNumberConversion(255);
             bulbComponent1.LightOnMat.color = bulbcolor;
+            infoTextBox.text = "Nice, Let's Try adding one more battery cell and observe what happens. Turn off the circuit to continue";
             LightBulbOn();
          
             if (batteryTrigger2.isInTrigger)
@@ -88,6 +89,7 @@ public class Lesson3WireScriptBatteryinSeries : MonoBehaviour
                 bulbcolor.b = coloNumberConversion(125);
                 bulbcolor.a = coloNumberConversion(255);
                 bulbComponent1.LightOnMat.color = bulbcolor;
+                infoTextBox.text = "Add one more battery cell to see the light bulb at full brightness";
                 LightBulbOn();
                 if (batteryTrigger3.isInTrigger)
                 {
@@ -98,7 +100,7 @@ public class Lesson3WireScriptBatteryinSeries : MonoBehaviour
                     bulbComponent1.LightOnMat.color = bulbcolor;
                     LightBulbOn();
                     continueBtn.SetActive(true);
-                    infoTextBox.text = "Great, Lets Continue";
+                    infoTextBox.text = "Great, Click Finish to continue";
                 }
             }
         }
@@ -106,7 +108,7 @@ public class Lesson3WireScriptBatteryinSeries : MonoBehaviour
         else 
         {
             //Play a sound prompt or indicate error for no Light Bulb here
-            infoTextBox.text = "Please place a battery in the circuit";
+            infoTextBox.text = "There is no power source in circuit right now, please place the battery on your left side into the circuit";
 
         }
 
@@ -119,7 +121,7 @@ public class Lesson3WireScriptBatteryinSeries : MonoBehaviour
         {
 
             isCurrentRunning = true;
-            infoTextBox.text = "Great!";
+           
             GetComponent<LineRenderer>().material = LiveWire;
             lightBulbTrigger1.lightBulbIcon.LightBulbIconOn();
             batteryTrigger1.batteryIcon.BatteryPowerActive();

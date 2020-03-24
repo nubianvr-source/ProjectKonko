@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Question5
   m_EditorClassIdentifier: 
   _info: What happens when there is no conductor in a circuit. Choose all answers
-    that apply so the police can bring out the suspects.
+    that apply
   _answers:
   - _info: Electrons remain stored in battery.
     _isCorrect: 1

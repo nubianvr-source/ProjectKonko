@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d984fd91f16d7fd42a4d6bcf26a077af, type: 3}
   m_Name: Question7
   m_EditorClassIdentifier: 
-  _info: "\u2026 remind the other components why the switch is important; to do so
-    select from the list of reasons, all the reasons a switch is important."
+  _info: "A switch is important in a circuit:\r\n"
   _answers:
   - _info: Because it helps conserve energy in a circuit.
     _isCorrect: 1

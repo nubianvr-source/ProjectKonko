@@ -54,6 +54,7 @@ public class Lesson3WireScriptBulbinSeries : MonoBehaviour
     void Start()
     {
         setCircuitInactive();
+        infoTextBox.text = "Select the electric component you would like to use";
         continueBtn.SetActive(false);
     }
 
@@ -73,23 +74,26 @@ public class Lesson3WireScriptBulbinSeries : MonoBehaviour
             if (lightBulbTrigger1.isInTrigger)
             {
 
-                isCurrentRunning = true;
-                infoTextBox.text = "Great!";
-                GetComponent<LineRenderer>().material = LiveWire;
-                lightBulbTrigger1.lightBulbIcon.LightBulbIconOn();
-                batteryTrigger1.batteryIcon.BatteryPowerActive();
-                wireIcon.WireActiveFunc();
-                bulbComponent1.lightOn();
-               
+                infoTextBox.text = "Hmmm, it seems we need one more light bulb to complete the circuit";
+
                 switchIcon.SwitchOn();
 
                 if (lightBulbTrigger2.isInTrigger)
                 {
-                    bulbComponent2.lightOn();
+                    infoTextBox.text = "The circuit is still not complete, we will need to add one more light bulb";
 
 
                     if (lightBulbTrigger3.isInTrigger)
-                    {
+                    { 
+                        isCurrentRunning = true;
+                        infoTextBox.text = "Great!, click the finish button to continue";
+                        GetComponent<LineRenderer>().material = LiveWire;
+                        lightBulbTrigger1.lightBulbIcon.LightBulbIconOn();
+                        batteryTrigger1.batteryIcon.BatteryPowerActive();
+                        wireIcon.WireActiveFunc();
+                        bulbComponent1.lightOn();
+
+                        bulbComponent2.lightOn();
                         bulbComponent3.lightOn(); 
                         continueBtn.SetActive(true);
                     }
@@ -114,7 +118,7 @@ public class Lesson3WireScriptBulbinSeries : MonoBehaviour
             else
             {
                 //Play a sound prompt or indicate error for no Light Bulb here
-                infoTextBox.text = "Please place a LightBulb in the circuit"; 
+                infoTextBox.text = "There appear to be no light bulbs in the circuit"; 
                 GetComponent<LineRenderer>().material = LiveWire;
                 bulbComponent1.lightOff();
                 bulbComponent2.lightOff();
@@ -125,7 +129,7 @@ public class Lesson3WireScriptBulbinSeries : MonoBehaviour
         else
         {
             //Play a sound prompt or indicate error for no battery in circuit here
-            infoTextBox.text = "Please place the battery in the circuit to continue";
+            infoTextBox.text = "There is no power source in circuit right now, please place the battery on your left side into the circuit";
            
 
         }
@@ -136,7 +140,7 @@ public class Lesson3WireScriptBulbinSeries : MonoBehaviour
     public void setCircuitInactive()
     {
         isCurrentRunning = false;
-        infoTextBox.text = "Circuit is Off";
+        infoTextBox.text = "Circuit is Off right now, Turn it on by clicking on the big red Off button on your right to turn it on";
         GetComponent<LineRenderer>().material = wireInactive;
         lightBulbTrigger1.lightBulbIcon.LightBulbIconOff();
         batteryTrigger1.batteryIcon.BatteryPowerInactive();

@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d984fd91f16d7fd42a4d6bcf26a077af, type: 3}
+  m_Name: resistorQuestion
+  m_EditorClassIdentifier: 
+  _info: "What does a resistor do?\r\n"
+  _answers:
+  - _info: A resistor allows current to flow in one direction
+    _isCorrect: 0
+    _interventionText: 'No, a resistor limits the flow of current '
+  - _info: A resistor limits / controls / reduces the current that flows in a circuit
+    _isCorrect: 1
+    _interventionText: Yes a resistor controls or limits current flow within a circuit
+  - _info: A resistor holds the electromotive force in a circuit
+    _isCorrect: 0
+    _interventionText: An EMF and a resistor are two different electric components
+  - _info: A resistor prevents too much current from flowing in a circuit so that
+      the current does not damage the electronic device
+    _isCorrect: 1
+    _interventionText: Controlling the current within the circuit helps protect the
+      electric devices connected to it.
+  - _info: A resistor produces the electrical current needed to flow in a circuit
+    _isCorrect: 0
+    _interventionText: 'No, a resistor does not produce electric current '
+  _useTimer: 0
+  _timer: 0
+  _answerType: 0
+  _addScore: 20

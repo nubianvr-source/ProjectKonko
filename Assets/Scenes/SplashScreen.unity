@@ -3477,6 +3477,7 @@ MonoBehaviour:
   playIcon: {fileID: 21300000, guid: a42b0e51b8ef5d44da84722b007bf0e4, type: 3}
   pauseIcon: {fileID: 21300000, guid: c2d6072eefa86f243a92af1c588a4323, type: 3}
   playPauseIcon: {fileID: 2021687300}
+  stateText: {fileID: 0}
 --- !u!114 &97331175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9564,6 +9565,8 @@ MonoBehaviour:
   isInTrigger: 0
   defaultTransform: {fileID: 1445964759}
   DiodeIcon: {fileID: 0}
+  flipButton: {fileID: 0}
+  diodeDescription: {fileID: 0}
 --- !u!135 &309460003
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -11121,6 +11124,7 @@ MonoBehaviour:
   playIcon: {fileID: 21300000, guid: a42b0e51b8ef5d44da84722b007bf0e4, type: 3}
   pauseIcon: {fileID: 21300000, guid: c2d6072eefa86f243a92af1c588a4323, type: 3}
   playPauseIcon: {fileID: 1052105569}
+  stateText: {fileID: 0}
 --- !u!114 &352735058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14576,12 +14580,13 @@ MonoBehaviour:
   wireIcon: {fileID: 175232127}
   batteryTrigger: {fileID: 2116840076}
   lightBulbTrigger: {fileID: 1810238014}
-  switchIcon: {fileID: 1841062777}
   diodeObject: {fileID: 0}
   diodeTrigger: {fileID: 0}
+  switchIcon: {fileID: 1841062777}
+  infoTextBox: {fileID: 0}
+  switchComponentRef: {fileID: 0}
   bulbComponent: {fileID: 203732273}
   continueBtn: {fileID: 1993833448}
-  infoTextBox: {fileID: 74843836}
   isCurrentRunning: 0
 --- !u!120 &515249442
 LineRenderer:
@@ -18212,6 +18217,7 @@ MonoBehaviour:
   playIcon: {fileID: 21300000, guid: a42b0e51b8ef5d44da84722b007bf0e4, type: 3}
   pauseIcon: {fileID: 21300000, guid: c2d6072eefa86f243a92af1c588a4323, type: 3}
   playPauseIcon: {fileID: 1649542023}
+  stateText: {fileID: 0}
 --- !u!114 &629304646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19618,6 +19624,7 @@ MonoBehaviour:
   playIcon: {fileID: 21300000, guid: a42b0e51b8ef5d44da84722b007bf0e4, type: 3}
   pauseIcon: {fileID: 21300000, guid: c2d6072eefa86f243a92af1c588a4323, type: 3}
   playPauseIcon: {fileID: 665861536}
+  stateText: {fileID: 0}
 --- !u!114 &662357850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31087,14 +31094,14 @@ PrefabInstance:
       propertyPath: _trackingOriginType
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2037080, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
+      propertyPath: far clip plane
+      value: 1500
+      objectReference: {fileID: 0}
     - target: {fileID: 20000010189485334, guid: 126d619cf4daa52469682f85c1378b4a,
         type: 3}
       propertyPath: m_ClearFlags
       value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2037080, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
-      propertyPath: far clip plane
-      value: 1500
       objectReference: {fileID: 0}
     - target: {fileID: 20000012175207052, guid: 126d619cf4daa52469682f85c1378b4a,
         type: 3}
@@ -36222,6 +36229,7 @@ MonoBehaviour:
   playIcon: {fileID: 21300000, guid: a42b0e51b8ef5d44da84722b007bf0e4, type: 3}
   pauseIcon: {fileID: 21300000, guid: c2d6072eefa86f243a92af1c588a4323, type: 3}
   playPauseIcon: {fileID: 1642680282}
+  stateText: {fileID: 0}
 --- !u!114 &1239376605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60706,6 +60714,7 @@ MonoBehaviour:
   playIcon: {fileID: 21300000, guid: a42b0e51b8ef5d44da84722b007bf0e4, type: 3}
   pauseIcon: {fileID: 21300000, guid: c2d6072eefa86f243a92af1c588a4323, type: 3}
   playPauseIcon: {fileID: 182317646}
+  stateText: {fileID: 0}
 --- !u!114 &2129558917
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62007,7 +62016,7 @@ MonoBehaviour:
       spatial3DAudioBlend: 0
     Source: {fileID: 0}
   - name: Theme
-    clip: {fileID: 8300000, guid: 46ba7a1bba385ac40bd8ac7d61667e53, type: 3}
+    clip: {fileID: 8300000, guid: 5ba0972a977d9cb488558ef4965968cf, type: 3}
     parameters:
       Volume: 0.202
       Pitch: 1
@@ -62033,7 +62042,7 @@ MonoBehaviour:
   - name: Hover
     clip: {fileID: 8300000, guid: ef7fcbc1b7535c84684746081604150a, type: 3}
     parameters:
-      Volume: 0.424
+      Volume: 0.649
       Pitch: 1
       Loop: 0
       spatial3DAudioBlend: 0
@@ -62041,7 +62050,7 @@ MonoBehaviour:
   - name: Click
     clip: {fileID: 8300000, guid: 2ffdd96bbc2d790458bd78e7d1514302, type: 3}
     parameters:
-      Volume: 0.556
+      Volume: 0.646
       Pitch: 1
       Loop: 0
       spatial3DAudioBlend: 0

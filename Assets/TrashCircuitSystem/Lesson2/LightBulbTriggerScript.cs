@@ -42,7 +42,7 @@ public class LightBulbTriggerScript : MonoBehaviour
         endLerpPosition = lightBulbTransform.position;
         defaultLerpPosition = defaultTransform.position;
         rigidbodyPhysics.constraints = RigidbodyConstraints.FreezeAll;
-
+        this.gameObject.SetActive(false);
        
     }
 
@@ -56,6 +56,11 @@ public class LightBulbTriggerScript : MonoBehaviour
     {
         rigidbodyPhysics.constraints = RigidbodyConstraints.None;
     
+    }
+
+    public void SetTriggerActive()
+    {
+        this.gameObject.SetActive(true);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -104,6 +109,7 @@ public class LightBulbTriggerScript : MonoBehaviour
             rigidbodyPhysics.velocity = Vector3.zero;
             rigidbodyPhysics.angularVelocity = Vector3.zero;
             rigidbodyPhysics.constraints = RigidbodyConstraints.FreezeAll;
+            this.gameObject.SetActive(false);
         }
     }
 }

@@ -33,7 +33,7 @@ public class BatteryTriggerInitialized : MonoBehaviour
     private Vector3 defaultLerpPosition;
 
     public BatteryIconScript batteryIcon;
-
+    public GameObject batteryText;
 
 
     // Start is called before the first frame update
@@ -93,6 +93,7 @@ public class BatteryTriggerInitialized : MonoBehaviour
             rigidbodyPhysics.angularVelocity = Vector3.zero;
             rigidbodyPhysics.constraints = RigidbodyConstraints.FreezeAll;
             this.gameObject.SetActive(false);
+            batteryText.SetActive(false);
         }
 
         else

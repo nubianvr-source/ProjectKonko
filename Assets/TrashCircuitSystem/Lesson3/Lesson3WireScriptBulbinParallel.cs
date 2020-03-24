@@ -71,18 +71,19 @@ public class Lesson3WireScriptBulbinParallel : MonoBehaviour
             {
 
                 isCurrentRunning = true;
-                infoTextBox.text = "Great!";
+                infoTextBox.text = "Great, now try adding another light bulb";
                 GetComponent<LineRenderer>().material = LiveWire;
                 lightBulbTrigger1.lightBulbIcon.LightBulbIconOn();
                 batteryTrigger1.batteryIcon.BatteryPowerActive();
                 wireIcon.WireActiveFunc();
                 bulbComponent1.lightOn();
-                continueBtn.SetActive(true);
+                //continueBtn.SetActive(true);
                 switchIcon.SwitchOn();
 
                 if (lightBulbTrigger2.isInTrigger)
                 {
                     bulbComponent2.lightOn();
+                    infoTextBox.text = "Awesome both light bulbs came on";
                     continueBtn.SetActive(true);
 
                     if (lightBulbTrigger3.isInTrigger)
@@ -125,12 +126,12 @@ public class Lesson3WireScriptBulbinParallel : MonoBehaviour
                 //infoTextBox.text = "Please place a LightBulb in the circuit";
                 GetComponent<LineRenderer>().material = LiveWire;
                 bulbComponent1.lightOff();
-
+               
                 if (lightBulbTrigger2.isInTrigger)
                 {
                     bulbComponent2.lightOn();
                     continueBtn.SetActive(true);
-
+                    infoTextBox.text = "First light bulb isnt in the circuit, but the second one is and has current flowing through it";
                     if (lightBulbTrigger3.isInTrigger)
                     {
                         bulbComponent3.lightOn();
@@ -146,6 +147,7 @@ public class Lesson3WireScriptBulbinParallel : MonoBehaviour
                 else
                 {
                        bulbComponent2.lightOff();
+                    infoTextBox.text = "There is no light bulb in the circuit";
                     if (lightBulbTrigger3.isInTrigger)
                     {
                         bulbComponent3.lightOn();

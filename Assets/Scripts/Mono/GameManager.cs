@@ -324,6 +324,16 @@ public class GameManager : MonoBehaviour {
                     _questions[i] = (Question)objs5[i];
                 }
                 break;
+
+            case 6:
+                Object[] objs6 = Resources.LoadAll("Questions/Lesson5", typeof(Question));
+                _questions = new Question[objs6.Length];
+                for (int i = 0; i < objs6.Length; i++)
+                {
+                    _questions[i] = (Question)objs6[i];
+                }
+                break;
+
             case 7:
                 Object[] objs7 = Resources.LoadAll("Questions/Lesson6", typeof(Question));
                 _questions = new Question[objs7.Length];

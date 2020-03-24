@@ -44053,7 +44053,7 @@ PrefabInstance:
     - target: {fileID: 4403379707006494931, guid: f25b050dd8853ec41952c387c3e00760,
         type: 3}
       propertyPath: m_Interactable
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4403379707006494929, guid: f25b050dd8853ec41952c387c3e00760,
         type: 3}
@@ -57239,6 +57239,7 @@ MonoBehaviour:
   isInTrigger: 0
   defaultTransform: {fileID: 266064080}
   batteryIcon: {fileID: 2060852365}
+  batteryText: {fileID: 0}
 --- !u!135 &2116840077
 SphereCollider:
   m_ObjectHideFlags: 0
