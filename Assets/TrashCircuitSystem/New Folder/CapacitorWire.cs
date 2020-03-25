@@ -92,7 +92,7 @@ public class CapacitorWire : MonoBehaviour
                     wireIcon.WireActiveFunc();
                     //continueBtn.SetActive(true);
                     switchIcon.SwitchOn();
-                    bulbComponent.lightOn();
+                    //bulbComponent.lightOn();
 
                 }
 

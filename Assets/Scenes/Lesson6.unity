@@ -14571,7 +14571,7 @@ MonoBehaviour:
   isInTrigger: 0
   defaultTransform: {fileID: 896156751}
   batteryIcon: {fileID: 1314829409}
-  batteryText: {fileID: 0}
+  batteryText: {fileID: 152363627}
 --- !u!135 &580324311
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -38226,7 +38226,7 @@ GameObject:
   - component: {fileID: 1559056730}
   m_Layer: 0
   m_Name: Capacitor
-  m_TagString: Diode
+  m_TagString: Battery
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -56548,7 +56548,7 @@ MonoBehaviour:
   DoNotTesselate: 0
   savedPos: {x: 78.28827, y: -164.99997, z: 0.000030517578}
   savedUp: {x: 0, y: 1, z: 0}
-  savedRectSize: {x: 30, y: 652.6667}
+  savedRectSize: {x: 30, y: 750}
   savedColor: {r: 1, g: 1, b: 1, a: 1}
   savedTextUV0: {x: 0, y: 0}
   savedFill: 1
@@ -60180,7 +60180,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1221013923487080872}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.86666673
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
