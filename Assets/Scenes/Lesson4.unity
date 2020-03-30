@@ -35024,8 +35024,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0dc0bd53128a374891518cfb75e1641, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wireInactive: {fileID: 2100000, guid: c0e4db90e021d724ea23c4a2b1b6dc55, type: 2}
-  LiveWire: {fileID: 2100000, guid: cfc7389a5ecc7714ca9963615c1a330c, type: 2}
+  wireInactive: {fileID: 2100000, guid: c778c5921bc5cc9438ca0bf13670b68c, type: 2}
+  LiveWire: {fileID: 2100000, guid: cdf60d77fa29c5a4b9abedb32f393f5e, type: 2}
+  wireModel: {fileID: 7926900479030346180}
   wireIcon: {fileID: 1701687809}
   batteryTrigger: {fileID: 654794577}
   lightBulbTrigger: {fileID: 2066747157}
@@ -38431,11 +38432,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Finish
-
-'
+  m_text: Click to continue
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 46c01bc5f85502b4f92d376ecc8360f6, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -38443,7 +38442,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_fontColor: {r: 0.050980397, g: 0.078431375, b: 0.2392157, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -38513,7 +38512,7 @@ MonoBehaviour:
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_subTextObjects:
   - {fileID: 0}
   - {fileID: 0}
@@ -39647,8 +39646,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -263}
-  m_SizeDelta: {x: 352, y: 256.1}
+  m_AnchoredPosition: {x: 0, y: -213}
+  m_SizeDelta: {x: 368, y: 131}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1658836386
 MonoBehaviour:
@@ -45921,7 +45920,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 24.1, y: 0}
-  m_SizeDelta: {x: 370.1, y: 127.6}
+  m_SizeDelta: {x: 370.1, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1929277054
 MonoBehaviour:
@@ -46004,7 +46003,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 42.05
+  m_fontSize: 39.55
   m_fontSizeBase: 35
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -53906,7 +53905,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0.000030517578}
   m_SizeDelta: {x: 0, y: 100}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &1221013923124842038
@@ -59766,7 +59765,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1221013923487080872}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.8666667
+  m_Size: 0.86666673
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

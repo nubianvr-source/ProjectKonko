@@ -10,6 +10,9 @@ public class CapacitorWire : MonoBehaviour
 
     public Material LiveWire;
 
+    public GameObject wireModel;
+
+
     public WireIconScript wireIcon;
 
     [Header("Baterry Properties")]
@@ -72,7 +75,7 @@ public class CapacitorWire : MonoBehaviour
 
                     isCurrentRunning = true;
                     infoTextBox.text = "Wait for it";
-                    GetComponent<LineRenderer>().material = LiveWire;
+                    wireModel.GetComponent<MeshRenderer>().material = LiveWire;
                     lightBulbTrigger.lightBulbIcon.LightBulbIconOn();
                     batteryTrigger.batteryIcon.BatteryPowerActive();
                     wireIcon.WireActiveFunc();
@@ -86,13 +89,13 @@ public class CapacitorWire : MonoBehaviour
                 {
                     isCurrentRunning = true;
                     infoTextBox.text = "Try placing the capacitor into the circuit";
-                    GetComponent<LineRenderer>().material = LiveWire;
+                    wireModel.GetComponent<MeshRenderer>().material = LiveWire;
                     lightBulbTrigger.lightBulbIcon.LightBulbIconOn();
                     batteryTrigger.batteryIcon.BatteryPowerActive();
                     wireIcon.WireActiveFunc();
                     //continueBtn.SetActive(true);
                     switchIcon.SwitchOn();
-                    //bulbComponent.lightOn();
+                    bulbComponent.lightOn();
 
                 }
 
@@ -128,7 +131,7 @@ public class CapacitorWire : MonoBehaviour
     {
         yield return new WaitForSeconds(3F);
         bulbComponent.lightOff();
-        GetComponent<LineRenderer>().material = wireInactive;
+        wireModel.GetComponent<MeshRenderer>().material = wireInactive;
         wireIcon.WireInactiveFunc();
         lightBulbTrigger.lightBulbIcon.LightBulbIconOff();
 
@@ -139,11 +142,18 @@ public class CapacitorWire : MonoBehaviour
         isCurrentRunning = false;
        
         batteryTrigger.batteryIcon.BatteryPowerInactive();
-       
-        switchIcon.SwitchOff();
-        StartCoroutine(CapacitorTurnOffWait());
-
-
+        if (capacitor.isInTrigger)
+        {
+            switchIcon.SwitchOff();
+            StartCoroutine(CapacitorTurnOffWait());
+        }
+        else 
+        {
+            bulbComponent.lightOff();
+            wireModel.GetComponent<MeshRenderer>().material = wireInactive;
+            wireIcon.WireInactiveFunc();
+            lightBulbTrigger.lightBulbIcon.LightBulbIconOff();
+        }
 
 
     }

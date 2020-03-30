@@ -106,7 +106,7 @@ public class BatteryTriggerLesson3 : MonoBehaviour
         else
         {
             circuitComp.transform.position = Vector3.Lerp(startLerpPosition, defaultLerpPosition, lerpTime);
-            circuitComp.transform.localEulerAngles = new Vector3(0, 0, 0);
+            circuitComp.transform.localEulerAngles = new Vector3(0, -158, 0);
             rigidbodyPhysics.velocity = Vector3.zero;
             rigidbodyPhysics.angularVelocity = Vector3.zero;
             rigidbodyPhysics.constraints = RigidbodyConstraints.FreezeAll;

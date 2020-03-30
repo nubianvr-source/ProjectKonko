@@ -26,7 +26,7 @@ namespace CurvedUI
         {
 
             //get direction of the controller
-            Ray myRay = new Ray(this.transform.position, this.transform.forward);
+            Ray myRay = new Ray(transform.position, transform.forward);
 
 
             //make laser beam hit stuff it points at.
@@ -35,7 +35,7 @@ namespace CurvedUI
                 float length = 1000000;
 
 
-                //create layerMaskwe're going to use for raycasting
+                //create layerMask we're going to use for raycasting
                 int myLayerMask = -1;
                 if (CollideWithMyLayerOnly)
                 {

@@ -10,7 +10,7 @@ public class Lesson1WireScript : MonoBehaviour
     public Material wireInactive;
 
     public Material LiveWire;
-
+    public GameObject wireModel;
     public WireIconScript wireIcon;
 
     [Header("Baterry Properties")]
@@ -70,7 +70,7 @@ public class Lesson1WireScript : MonoBehaviour
 
                 isCurrentRunning = true;
                 infoTextBox.text = "Great Light Bulb came on";
-                GetComponent<LineRenderer>().material = LiveWire;
+                wireModel.GetComponent<MeshRenderer>().material = LiveWire;
                 lightBulbTrigger.lightBulbIcon.LightBulbIconOn();
                 batteryTrigger.batteryIcon.BatteryPowerActive();
                 wireIcon.WireActiveFunc();
@@ -102,7 +102,7 @@ public class Lesson1WireScript : MonoBehaviour
     {
         isCurrentRunning = false;
         infoTextBox.text = "Circuit is Off";
-        GetComponent<LineRenderer>().material = wireInactive;
+        wireModel.GetComponent<MeshRenderer>().material = wireInactive;
         lightBulbTrigger.lightBulbIcon.LightBulbIconOff();
         batteryTrigger.batteryIcon.BatteryPowerInactive();
         wireIcon.WireInactiveFunc();

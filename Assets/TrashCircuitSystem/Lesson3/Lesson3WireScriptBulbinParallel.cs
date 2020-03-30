@@ -10,6 +10,8 @@ public class Lesson3WireScriptBulbinParallel : MonoBehaviour
 
     public Material LiveWire;
 
+    public GameObject wireModel;
+
     public WireIconScript wireIcon;
 
     [Header("Baterry Properties")]
@@ -72,7 +74,7 @@ public class Lesson3WireScriptBulbinParallel : MonoBehaviour
 
                 isCurrentRunning = true;
                 infoTextBox.text = "Great, now try adding another light bulb";
-                GetComponent<LineRenderer>().material = LiveWire;
+                wireModel.GetComponent<MeshRenderer>().material = LiveWire;
                 lightBulbTrigger1.lightBulbIcon.LightBulbIconOn();
                 batteryTrigger1.batteryIcon.BatteryPowerActive();
                 wireIcon.WireActiveFunc();
@@ -124,7 +126,7 @@ public class Lesson3WireScriptBulbinParallel : MonoBehaviour
             {
                 //Play a sound prompt or indicate error for no Light Bulb here
                 //infoTextBox.text = "Please place a LightBulb in the circuit";
-                GetComponent<LineRenderer>().material = LiveWire;
+                wireModel.GetComponent<MeshRenderer>().material = LiveWire;
                 bulbComponent1.lightOff();
                
                 if (lightBulbTrigger2.isInTrigger)
@@ -180,7 +182,7 @@ public class Lesson3WireScriptBulbinParallel : MonoBehaviour
     {
         isCurrentRunning = false;
         infoTextBox.text = "Circuit is Off";
-        GetComponent<LineRenderer>().material = wireInactive;
+        wireModel.GetComponent<MeshRenderer>().material = wireInactive;
         lightBulbTrigger1.lightBulbIcon.LightBulbIconOff();
         batteryTrigger1.batteryIcon.BatteryPowerInactive();
         wireIcon.WireInactiveFunc();

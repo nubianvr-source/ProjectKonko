@@ -622,12 +622,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DoNotTesselate: 0
-  savedPos: {x: 0, y: 0, z: 0}
-  savedUp: {x: 0, y: 0, z: 0}
-  savedRectSize: {x: 0, y: 0}
-  savedColor: {r: 0, g: 0, b: 0, a: 0}
+  savedPos: {x: -165.30037, y: -58, z: 0.000017166138}
+  savedUp: {x: 0, y: 1, z: 0}
+  savedRectSize: {x: 100, y: 100}
+  savedColor: {r: 1, g: 1, b: 1, a: 1}
   savedTextUV0: {x: 0, y: 0}
-  savedFill: 0
+  savedFill: 1
 --- !u!1 &39285998
 GameObject:
   m_ObjectHideFlags: 0
@@ -3475,12 +3475,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DoNotTesselate: 0
-  savedPos: {x: 0, y: 0, z: 0}
-  savedUp: {x: 0, y: 0, z: 0}
-  savedRectSize: {x: 0, y: 0}
-  savedColor: {r: 0, g: 0, b: 0, a: 0}
+  savedPos: {x: 174.69957, y: -58, z: 0.000017166138}
+  savedUp: {x: 0, y: 1, z: 0}
+  savedRectSize: {x: 150, y: 150}
+  savedColor: {r: 1, g: 1, b: 1, a: 1}
   savedTextUV0: {x: 0, y: 0}
-  savedFill: 0
+  savedFill: 1
 --- !u!1 &147856744
 GameObject:
   m_ObjectHideFlags: 0
@@ -7541,7 +7541,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 5
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: start_adventure
           m_BoolArgument: 0
@@ -11791,8 +11791,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fb5487681a9cef48bbb42588a521d5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wireInactive: {fileID: 2100000, guid: c0e4db90e021d724ea23c4a2b1b6dc55, type: 2}
-  LiveWire: {fileID: 2100000, guid: cfc7389a5ecc7714ca9963615c1a330c, type: 2}
+  wireInactive: {fileID: 2100000, guid: c778c5921bc5cc9438ca0bf13670b68c, type: 2}
+  LiveWire: {fileID: 2100000, guid: cdf60d77fa29c5a4b9abedb32f393f5e, type: 2}
+  wireModel: {fileID: 7059938221624470512}
   wireIcon: {fileID: 211745102}
   batteryTrigger: {fileID: 2116840076}
   lightBulbTrigger: {fileID: 1810238014}
@@ -12801,7 +12802,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &530301404
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12819,8 +12820,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -263}
-  m_SizeDelta: {x: 352, y: 256.1}
+  m_AnchoredPosition: {x: -0.00000074204, y: -213}
+  m_SizeDelta: {x: 368, y: 131}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &530301405
 MonoBehaviour:
@@ -12936,9 +12937,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DoNotTesselate: 0
-  savedPos: {x: 0, y: 0, z: 0}
+  savedPos: {x: -0.0000039321385, y: -94, z: 0.000017166138}
   savedUp: {x: 0, y: 1, z: 0}
-  savedRectSize: {x: 352, y: 256.1}
+  savedRectSize: {x: 368, y: 131}
   savedColor: {r: 1, g: 1, b: 1, a: 1}
   savedTextUV0: {x: 0, y: 0}
   savedFill: 1
@@ -32669,12 +32670,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DoNotTesselate: 0
-  savedPos: {x: 0, y: 0, z: 0}
-  savedUp: {x: 0, y: 0, z: 0}
-  savedRectSize: {x: 0, y: 0}
-  savedColor: {r: 0, g: 0, b: 0, a: 0}
+  savedPos: {x: -165.30037, y: -58, z: 0.000017166138}
+  savedUp: {x: 0, y: 1, z: 0}
+  savedRectSize: {x: 150, y: 150}
+  savedColor: {r: 1, g: 1, b: 1, a: 1}
   savedTextUV0: {x: 0, y: 0}
-  savedFill: 0
+  savedFill: 1
 --- !u!1 &1355686062
 GameObject:
   m_ObjectHideFlags: 0
@@ -39632,12 +39633,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DoNotTesselate: 0
-  savedPos: {x: 0, y: 0, z: 0}
-  savedUp: {x: 0, y: 0, z: 0}
-  savedRectSize: {x: 0, y: 0}
-  savedColor: {r: 0, g: 0, b: 0, a: 0}
+  savedPos: {x: 174.69957, y: -58, z: 0.000017166138}
+  savedUp: {x: 0, y: 1, z: 0}
+  savedRectSize: {x: 100, y: 100}
+  savedColor: {r: 1, g: 1, b: 1, a: 1}
   savedTextUV0: {x: 0, y: 0}
-  savedFill: 0
+  savedFill: 1
 --- !u!1 &1673176086
 GameObject:
   m_ObjectHideFlags: 0
@@ -41685,12 +41686,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DoNotTesselate: 0
-  savedPos: {x: 0, y: 0, z: 0}
-  savedUp: {x: 0, y: 0, z: 0}
-  savedRectSize: {x: 0, y: 0}
-  savedColor: {r: 0, g: 0, b: 0, a: 0}
+  savedPos: {x: 4.6995745, y: -58, z: 0.000017166138}
+  savedUp: {x: 0, y: 1, z: 0}
+  savedRectSize: {x: 150, y: 150}
+  savedColor: {r: 1, g: 1, b: 1, a: 1}
   savedTextUV0: {x: 0, y: 0}
-  savedFill: 0
+  savedFill: 1
 --- !u!1 &1765753256
 GameObject:
   m_ObjectHideFlags: 0
@@ -45686,12 +45687,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DoNotTesselate: 0
-  savedPos: {x: 0, y: 0, z: 0}
-  savedUp: {x: 0, y: 0, z: 0}
-  savedRectSize: {x: 0, y: 0}
-  savedColor: {r: 0, g: 0, b: 0, a: 0}
+  savedPos: {x: 4.700003, y: 94.93999, z: 0.000017166138}
+  savedUp: {x: 0, y: 1, z: 0}
+  savedRectSize: {x: 746.2, y: 155.9}
+  savedColor: {r: 1, g: 1, b: 1, a: 1}
   savedTextUV0: {x: 0, y: 0}
-  savedFill: 0
+  savedFill: 1
 --- !u!1 &1912792036
 GameObject:
   m_ObjectHideFlags: 0
@@ -46161,7 +46162,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 24.1, y: 0}
-  m_SizeDelta: {x: 370.1, y: 127.6}
+  m_SizeDelta: {x: 370.1, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1929277054
 MonoBehaviour:
@@ -46244,14 +46245,14 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 42.05
+  m_fontSize: 39.55
   m_fontSizeBase: 35
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_textAlignment: 257
+  m_textAlignment: 513
   m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
@@ -48390,19 +48391,20 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Finish
+  m_text: 'Click to continue
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 46c01bc5f85502b4f92d376ecc8360f6, type: 2}
+  m_sharedMaterial: {fileID: 1140424966660794608, guid: 46c01bc5f85502b4f92d376ecc8360f6,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4281536779
+  m_fontColor: {r: 0.043137256, g: 0.06666667, b: 0.20000002, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -48461,9 +48463,9 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 2011962940}
-    characterCount: 19
+    characterCount: 18
     spriteCount: 0
-    spaceCount: 2
+    spaceCount: 3
     wordCount: 3
     linkCount: 0
     lineCount: 2
@@ -49620,12 +49622,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DoNotTesselate: 0
-  savedPos: {x: 0, y: 0, z: 0}
-  savedUp: {x: 0, y: 0, z: 0}
-  savedRectSize: {x: 0, y: 0}
-  savedColor: {r: 0, g: 0, b: 0, a: 0}
+  savedPos: {x: 4.6995745, y: -58, z: 0.000017166138}
+  savedUp: {x: 0, y: 1, z: 0}
+  savedRectSize: {x: 100, y: 100}
+  savedColor: {r: 1, g: 1, b: 1, a: 1}
   savedTextUV0: {x: 0, y: 0}
-  savedFill: 0
+  savedFill: 1
 --- !u!1 &2065613967
 GameObject:
   m_ObjectHideFlags: 0

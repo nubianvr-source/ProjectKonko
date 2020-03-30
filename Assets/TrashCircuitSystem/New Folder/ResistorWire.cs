@@ -10,6 +10,8 @@ public class ResistorWire : MonoBehaviour
 
     public Material LiveWire;
 
+    public GameObject wireModel;
+
     public WireIconScript wireIcon;
 
     [Header("Baterry Properties")]
@@ -81,7 +83,7 @@ public class ResistorWire : MonoBehaviour
                     bulbComponent.LightOnMat.color = bulbcolor;
                     isCurrentRunning = true;
                     infoTextBox.text = "Nice, the resistor within the circuit has an ohm rating of 1000 ohms, can you see the difference?";
-                    GetComponent<LineRenderer>().material = LiveWire;
+                    wireModel.GetComponent<MeshRenderer>().material = LiveWire;
                     lightBulbTrigger.lightBulbIcon.LightBulbIconOn();
                     batteryTrigger.batteryIcon.BatteryPowerActive();
                     wireIcon.WireActiveFunc();
@@ -95,7 +97,7 @@ public class ResistorWire : MonoBehaviour
                 {
                     isCurrentRunning = true;
                     infoTextBox.text = "Try placing the resistor into the circuit";
-                    GetComponent<LineRenderer>().material = LiveWire;
+                    wireModel.GetComponent<MeshRenderer>().material = LiveWire;
                     lightBulbTrigger.lightBulbIcon.LightBulbIconOn();
                     batteryTrigger.batteryIcon.BatteryPowerActive();
                     wireIcon.WireActiveFunc();
@@ -130,7 +132,7 @@ public class ResistorWire : MonoBehaviour
 
         batteryTrigger.batteryIcon.BatteryPowerInactive();
         bulbComponent.lightOff();
-        GetComponent<LineRenderer>().material = wireInactive;
+        wireModel.GetComponent<MeshRenderer>().material = wireInactive;
         wireIcon.WireInactiveFunc();
         lightBulbTrigger.lightBulbIcon.LightBulbIconOff();
 

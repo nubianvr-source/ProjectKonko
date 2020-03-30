@@ -10,6 +10,8 @@ public class Lesson4WireScriptWithDiodeSupport : MonoBehaviour
 
     public Material LiveWire;
 
+    public GameObject wireModel;
+
     public WireIconScript wireIcon;
 
     [Header("Baterry Properties")]
@@ -70,7 +72,7 @@ public class Lesson4WireScriptWithDiodeSupport : MonoBehaviour
                 {
                     isCurrentRunning = true;
                     infoTextBox.text = "Great, The Light Bulb came on. Now turn the circuit off and flip the diode to see what what happens";
-                    GetComponent<LineRenderer>().material = LiveWire;
+                    wireModel.GetComponent<MeshRenderer>().material = LiveWire;
                     lightBulbTrigger.lightBulbIcon.LightBulbIconOn();
                     batteryTrigger.batteryIcon.BatteryPowerActive();
                     wireIcon.WireActiveFunc();
@@ -110,7 +112,7 @@ public class Lesson4WireScriptWithDiodeSupport : MonoBehaviour
     {
         isCurrentRunning = false;
         infoTextBox.text = "Circuit is Off";
-        GetComponent<LineRenderer>().material = wireInactive;
+        wireModel.GetComponent<MeshRenderer>().material = wireInactive;
         lightBulbTrigger.lightBulbIcon.LightBulbIconOff();
         batteryTrigger.batteryIcon.BatteryPowerInactive();
         wireIcon.WireInactiveFunc();

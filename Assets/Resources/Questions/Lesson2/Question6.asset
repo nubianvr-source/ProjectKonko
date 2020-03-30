@@ -28,6 +28,6 @@ MonoBehaviour:
     _isCorrect: 1
     _interventionText: Correct!  It's a great conductor of electricity.
   _useTimer: 0
-  _timer: 0
+  _timer: 1
   _answerType: 1
   _addScore: 10
