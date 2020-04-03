@@ -9719,6 +9719,7 @@ MonoBehaviour:
   centerVideoDisplay: {fileID: 1363752651}
   leftVideoDisplay: {fileID: 1646072352}
   rightVideoDisplay: {fileID: 436034933}
+  videoProgressBar: {fileID: 0}
   lessonVideos:
   - {fileID: 32900000, guid: 9fc06b4df61e9254c8a16e748d8a5b95, type: 3}
   onLessonVideoFinished:
@@ -11902,6 +11903,7 @@ MonoBehaviour:
   centerVideoDisplay: {fileID: 786431363}
   leftVideoDisplay: {fileID: 1646072352}
   rightVideoDisplay: {fileID: 436034933}
+  videoProgressBar: {fileID: 0}
   lessonVideos:
   - {fileID: 32900000, guid: d384dea8b7f579049a5dc2e348f76d58, type: 3}
   onLessonVideoFinished:
@@ -19043,6 +19045,7 @@ MonoBehaviour:
   centerVideoDisplay: {fileID: 1601482974}
   leftVideoDisplay: {fileID: 1646072352}
   rightVideoDisplay: {fileID: 436034933}
+  videoProgressBar: {fileID: 0}
   lessonVideos:
   - {fileID: 32900000, guid: dc1b76288e135494b8c60327e8efd262, type: 3}
   onLessonVideoFinished:
@@ -26368,6 +26371,7 @@ MonoBehaviour:
   centerVideoDisplay: {fileID: 182477272}
   leftVideoDisplay: {fileID: 1646072352}
   rightVideoDisplay: {fileID: 436034933}
+  videoProgressBar: {fileID: 0}
   lessonVideos:
   - {fileID: 32900000, guid: 99bbb91162d2e5f4da344ecfdedfe5b2, type: 3}
   onLessonVideoFinished:
@@ -32796,6 +32800,7 @@ MonoBehaviour:
   centerVideoDisplay: {fileID: 796008891}
   leftVideoDisplay: {fileID: 1646072352}
   rightVideoDisplay: {fileID: 436034933}
+  videoProgressBar: {fileID: 0}
   lessonVideos:
   - {fileID: 32900000, guid: cc91ff3d1fdf48a4ba6962ad60635a24, type: 3}
   onLessonVideoFinished:
@@ -35075,6 +35080,7 @@ RectTransform:
   - {fileID: 803771188}
   - {fileID: 943434002}
   - {fileID: 696635687}
+  - {fileID: 1573619111}
   m_Father: {fileID: 915200982}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -35174,6 +35180,7 @@ MonoBehaviour:
   centerVideoDisplay: {fileID: 803771185}
   leftVideoDisplay: {fileID: 1646072352}
   rightVideoDisplay: {fileID: 436034933}
+  videoProgressBar: {fileID: 0}
   lessonVideos:
   - {fileID: 32900000, guid: 7bf0b21ac0292ed45a5601c9d28dace9, type: 3}
   onLessonVideoFinished:
@@ -38176,6 +38183,114 @@ RectTransform:
   m_AnchoredPosition: {x: 645, y: -100}
   m_SizeDelta: {x: 180, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1573619110
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1573619111}
+  - component: {fileID: 1573619115}
+  - component: {fileID: 1573619114}
+  - component: {fileID: 1573619113}
+  - component: {fileID: 1573619112}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1573619111
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1573619110}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.000047683716}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1428588834}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 0.00030517578, y: 16.155396}
+  m_SizeDelta: {x: 0, y: 37.29}
+  m_Pivot: {x: 0.5, y: 0.49999997}
+--- !u!114 &1573619112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1573619110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: babb526a0c99bbc49a57597e4f7d179e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  videoPlayer: {fileID: 696635690}
+  Maincam: {fileID: 1457139003}
+--- !u!114 &1573619113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1573619110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e62188adca544cf1b96ccf1630f15f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DoNotTesselate: 0
+  savedPos: {x: 0.0003175311, y: -388.4346, z: -0.000030517578}
+  savedUp: {x: 0, y: 1, z: 0}
+  savedRectSize: {x: 1325, y: 37.29}
+  savedColor: {r: 1, g: 0.80518246, b: 0, a: 1}
+  savedTextUV0: {x: 0, y: 0}
+  savedFill: 0
+--- !u!114 &1573619114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1573619110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0.80518246, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 1a92979a856b2334e9c7ad29e6131afd, type: 3}
+  m_Type: 3
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 0
+  m_FillAmount: 0
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1573619115
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1573619110}
+  m_CullTransparentMesh: 0
 --- !u!1 &1581015326
 GameObject:
   m_ObjectHideFlags: 0
@@ -53905,7 +54020,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.000030517578}
+  m_AnchoredPosition: {x: 0, y: -0.0000076293945}
   m_SizeDelta: {x: 0, y: 100}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &1221013923124842038
@@ -59765,7 +59880,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1221013923487080872}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.86666673
+  m_Size: 0.8666667
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

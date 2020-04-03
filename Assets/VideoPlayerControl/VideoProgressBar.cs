@@ -9,19 +9,15 @@ public class VideoProgressBar : MonoBehaviour, IDragHandler, IPointerDownHandler
     private VideoPlayer videoPlayer;
 
     private Image progress;
+    public Camera Maincam;
+
     
     private void Awake()
     {
         progress = GetComponent<Image>();
     }
 
-    private void Start()
-    {
-        videoPlayer.loopPointReached += player =>
-        {
-            print("LoopPoint Reached");
-        };
-    }
+  
 
     private void Update()
     {
@@ -42,7 +38,7 @@ public class VideoProgressBar : MonoBehaviour, IDragHandler, IPointerDownHandler
     private void TrySkip(PointerEventData eventData)
     {
         if (RectTransformUtility.ScreenPointToLocalPointInRectangle(
-            progress.rectTransform, eventData.position, null, out Vector2 localPoint))
+            progress.rectTransform, eventData.position, Maincam, out Vector2 localPoint))
         {
             float pct = Mathf.InverseLerp(progress.rectTransform.rect.xMin, progress.rectTransform.rect.xMax, localPoint.x);
             SkipToPercent(pct);
