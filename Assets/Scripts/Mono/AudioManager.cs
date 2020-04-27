@@ -14,7 +14,7 @@ public struct SoundParameters
    
 }
 [System.Serializable()]
-public class Sound
+public class SoundAsset
 {
     #region Variables
 
@@ -59,7 +59,7 @@ public class AudioManager : MonoBehaviour {
 
     public static       AudioManager    Instance        = null;
 
-    [SerializeField] private Sound[]         sounds          = null;
+    [SerializeField] private SoundAsset[]         sounds          = null;
     [SerializeField] private AudioSource     sourcePrefab    = null;
 
     //[SerializeField]    String          startupTrack    = String.Empty;
@@ -80,13 +80,14 @@ public class AudioManager : MonoBehaviour {
             Instance = this;
             DontDestroyOnLoad(gameObject);
         }
-        InitSounds();
+        
     }
     /// <summary>
     /// Function that is called when the script instance is being loaded.
     /// </summary>
     private void Start()
     {
+       InitSounds();
        PlaySound("Theme");
         
     }
@@ -155,7 +156,7 @@ public class AudioManager : MonoBehaviour {
 
     #region Getters
 
-    private Sound GetSound(string name)
+    private SoundAsset GetSound(string name)
     {
         foreach (var sound in sounds)
         {

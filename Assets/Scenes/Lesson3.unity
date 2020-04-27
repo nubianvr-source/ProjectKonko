@@ -4720,7 +4720,7 @@ MonoBehaviour:
           m_StringArgument: intro
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1221013922792814404}
+      - m_Target: {fileID: 0}
         m_MethodName: PauseSound
         m_Mode: 5
         m_Arguments:
@@ -10483,7 +10483,7 @@ Transform:
   - {fileID: 77734910}
   - {fileID: 1332336044}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &224047109
 GameObject:
@@ -17417,7 +17417,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1221013922792814404}
+      objectReference: {fileID: 0}
     - target: {fileID: 4904329517732547201, guid: 815e9fdc87436324eba3bb6f0c849cfc,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -28751,7 +28751,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1221013922792814404}
+      - m_Target: {fileID: 0}
         m_MethodName: PauseSound
         m_Mode: 5
         m_Arguments:
@@ -29322,7 +29322,7 @@ PrefabInstance:
     - target: {fileID: 3400465822511821358, guid: 4b5af9d98308ad4489888788d37eaae3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3400465822511821358, guid: 4b5af9d98308ad4489888788d37eaae3,
         type: 3}
@@ -29517,7 +29517,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 48.375004, y: -10.784, z: 14.604001}
 --- !u!114 &675721453
 MonoBehaviour:
@@ -36448,7 +36448,7 @@ Transform:
   - {fileID: 1455104067}
   - {fileID: 1234671634}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &847255522
 GameObject:
@@ -37651,7 +37651,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1221013922792814404}
+        - m_Target: {fileID: 0}
           m_MethodName: PlaySound
           m_Mode: 5
           m_Arguments:
@@ -37666,7 +37666,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1221013922792814404}
+        - m_Target: {fileID: 0}
           m_MethodName: PlaySound
           m_Mode: 5
           m_Arguments:
@@ -38982,7 +38982,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1221013922792814404}
+        - m_Target: {fileID: 0}
           m_MethodName: PlaySound
           m_Mode: 5
           m_Arguments:
@@ -38997,7 +38997,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1221013922792814404}
+        - m_Target: {fileID: 0}
           m_MethodName: PlaySound
           m_Mode: 5
           m_Arguments:
@@ -40799,7 +40799,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1221013922792814404}
+        - m_Target: {fileID: 0}
           m_MethodName: PlaySound
           m_Mode: 5
           m_Arguments:
@@ -40814,7 +40814,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1221013922792814404}
+        - m_Target: {fileID: 0}
           m_MethodName: PlaySound
           m_Mode: 5
           m_Arguments:
@@ -42660,7 +42660,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1221013922792814404}
+      objectReference: {fileID: 0}
     - target: {fileID: 4904329517732547201, guid: 815e9fdc87436324eba3bb6f0c849cfc,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -47547,7 +47547,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -55985,7 +55985,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1221013922792814404}
+      objectReference: {fileID: 0}
     - target: {fileID: 4904329517732547201, guid: 815e9fdc87436324eba3bb6f0c849cfc,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -58561,7 +58561,7 @@ Transform:
   - {fileID: 1614754992}
   - {fileID: 723015083}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1342676142
 GameObject:
@@ -60699,6 +60699,78 @@ Transform:
   m_Father: {fileID: 1400242239}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1383982134
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1383982136}
+  - component: {fileID: 1383982135}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1383982135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1383982134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8eab723d541e90449b8cc060cf7a310, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixerGroup: {fileID: 0}
+  sounds:
+  - name: Theme
+    clip: {fileID: 8300000, guid: 5ba0972a977d9cb488558ef4965968cf, type: 3}
+    volume: 0.6
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 1
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: Hover
+    clip: {fileID: 8300000, guid: ef7fcbc1b7535c84684746081604150a, type: 3}
+    volume: 0.6
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: Click
+    clip: {fileID: 8300000, guid: 2ffdd96bbc2d790458bd78e7d1514302, type: 3}
+    volume: 0.6
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+--- !u!4 &1383982136
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1383982134}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1385033203
 GameObject:
   m_ObjectHideFlags: 0
@@ -61350,7 +61422,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1221013922792814404}
+      objectReference: {fileID: 0}
     - target: {fileID: 4904329517732547201, guid: 815e9fdc87436324eba3bb6f0c849cfc,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -63559,7 +63631,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1221013922792814404}
+        - m_Target: {fileID: 0}
           m_MethodName: PlaySound
           m_Mode: 5
           m_Arguments:
@@ -63574,7 +63646,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1221013922792814404}
+        - m_Target: {fileID: 0}
           m_MethodName: PlaySound
           m_Mode: 5
           m_Arguments:
@@ -67522,7 +67594,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1221013922792814404}
+        - m_Target: {fileID: 0}
           m_MethodName: PlaySound
           m_Mode: 5
           m_Arguments:
@@ -67537,7 +67609,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1221013922792814404}
+        - m_Target: {fileID: 0}
           m_MethodName: PlaySound
           m_Mode: 5
           m_Arguments:
@@ -70747,7 +70819,7 @@ Transform:
   - {fileID: 1456040810}
   - {fileID: 4856132126504512707}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1633520963
 GameObject:
@@ -73174,7 +73246,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4669569845911490, guid: bcd9d94a56f575340a261fb992072904, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4669569845911490, guid: bcd9d94a56f575340a261fb992072904, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -74290,7 +74362,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1221013922792814404}
+        - m_Target: {fileID: 0}
           m_MethodName: PlaySound
           m_Mode: 5
           m_Arguments:
@@ -74305,7 +74377,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1221013922792814404}
+        - m_Target: {fileID: 0}
           m_MethodName: PlaySound
           m_Mode: 5
           m_Arguments:
@@ -74611,7 +74683,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1754543954
 GameObject:
@@ -76232,7 +76304,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1221013922792814404}
+      objectReference: {fileID: 0}
     - target: {fileID: 4904329517732547201, guid: 815e9fdc87436324eba3bb6f0c849cfc,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -76299,7 +76371,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1221013922792814404}
+        - m_Target: {fileID: 0}
           m_MethodName: PlaySound
           m_Mode: 5
           m_Arguments:
@@ -76314,7 +76386,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1221013922792814404}
+        - m_Target: {fileID: 0}
           m_MethodName: PlaySound
           m_Mode: 5
           m_Arguments:
@@ -79210,7 +79282,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1221013922792814404}
+        - m_Target: {fileID: 0}
           m_MethodName: PlaySound
           m_Mode: 5
           m_Arguments:
@@ -79225,7 +79297,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1221013922792814404}
+        - m_Target: {fileID: 0}
           m_MethodName: PlaySound
           m_Mode: 5
           m_Arguments:
@@ -80954,7 +81026,7 @@ Transform:
   - {fileID: 1929803226}
   - {fileID: 473395992}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1909637583
 GameObject:
@@ -82226,7 +82298,7 @@ Transform:
   - {fileID: 1076478407}
   - {fileID: 1905665537}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1931060728
 MonoBehaviour:
@@ -82305,7 +82377,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1221013922792814404}
+        - m_Target: {fileID: 0}
           m_MethodName: PlaySound
           m_Mode: 5
           m_Arguments:
@@ -82320,7 +82392,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1221013922792814404}
+        - m_Target: {fileID: 0}
           m_MethodName: PlaySound
           m_Mode: 5
           m_Arguments:
@@ -85002,7 +85074,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1221013922792814404}
+        - m_Target: {fileID: 0}
           m_MethodName: PlaySound
           m_Mode: 5
           m_Arguments:
@@ -85017,7 +85089,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1221013922792814404}
+        - m_Target: {fileID: 0}
           m_MethodName: PlaySound
           m_Mode: 5
           m_Arguments:
@@ -86781,7 +86853,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1221013922792814404}
+      objectReference: {fileID: 0}
     - target: {fileID: 4904329517732547201, guid: 815e9fdc87436324eba3bb6f0c849cfc,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -91162,7 +91234,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1221013922792814404}
+      - m_Target: {fileID: 0}
         m_MethodName: PauseSound
         m_Mode: 5
         m_Arguments:
@@ -93432,108 +93504,6 @@ GameObject:
   - component: {fileID: 1221013922750856481}
   m_Layer: 5
   m_Name: MainCanvas
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1221013922792814404
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1221013922792814410}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68af4b2e49734654091d6c21ebdc4ae5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sounds:
-  - name: CorrectSFX
-    clip: {fileID: 8300000, guid: fe1d973078556f5458e90e2ae9aa72ee, type: 3}
-    parameters:
-      Volume: 0.4
-      Pitch: 1
-      Loop: 0
-      spatial3DAudioBlend: 0
-    Source: {fileID: 0}
-  - name: IncorrectSFX
-    clip: {fileID: 8300000, guid: 79ac8ec9c3ae5db4f9372e888a6a402a, type: 3}
-    parameters:
-      Volume: 0.4
-      Pitch: 1
-      Loop: 0
-      spatial3DAudioBlend: 0
-    Source: {fileID: 0}
-  - name: Theme
-    clip: {fileID: 8300000, guid: 5ba0972a977d9cb488558ef4965968cf, type: 3}
-    parameters:
-      Volume: 0.202
-      Pitch: 1
-      Loop: 1
-      spatial3DAudioBlend: 0.64
-    Source: {fileID: 0}
-  - name: CountdownSFX
-    clip: {fileID: 8300000, guid: b7db056c8b782ea4882d0bf1eeabc31d, type: 3}
-    parameters:
-      Volume: 0
-      Pitch: 0
-      Loop: 0
-      spatial3DAudioBlend: 0
-    Source: {fileID: 0}
-  - name: Typing
-    clip: {fileID: 8300000, guid: 9e2f0c81439456045a60c755c5b5959d, type: 3}
-    parameters:
-      Volume: 0.456
-      Pitch: 1
-      Loop: 0
-      spatial3DAudioBlend: 0
-    Source: {fileID: 0}
-  - name: Hover
-    clip: {fileID: 8300000, guid: ef7fcbc1b7535c84684746081604150a, type: 3}
-    parameters:
-      Volume: 0.424
-      Pitch: 1
-      Loop: 0
-      spatial3DAudioBlend: 0
-    Source: {fileID: 0}
-  - name: Click
-    clip: {fileID: 8300000, guid: 2ffdd96bbc2d790458bd78e7d1514302, type: 3}
-    parameters:
-      Volume: 0.556
-      Pitch: 1
-      Loop: 0
-      spatial3DAudioBlend: 0
-    Source: {fileID: 0}
-  sourcePrefab: {fileID: 82509203759054478, guid: dcc7efd96db1e144886b20c567f3de01,
-    type: 3}
---- !u!4 &1221013922792814405
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1221013922792814410}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1221013922792814410
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1221013922792814405}
-  - component: {fileID: 1221013922792814404}
-  m_Layer: 0
-  m_Name: AudioManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -102770,7 +102740,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1221013924489781357
 GameObject:

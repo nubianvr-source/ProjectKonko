@@ -42,7 +42,7 @@ public class BatteryTriggerScript : MonoBehaviour
         endLerpPosition = BatteryTransform.position;
         defaultLerpPosition = defaultTransform.position;
         rigidbodyPhysics.constraints = RigidbodyConstraints.FreezeAll;
-        this.gameObject.SetActive(false);
+       
         //isInTrigger = true;
         //BatteryBulbTransform();
     }
@@ -69,9 +69,11 @@ public class BatteryTriggerScript : MonoBehaviour
     {
         if (other.gameObject.tag == "Battery")
         {
-           FindObjectOfType<AudioManager>().PlaySound("SuccessTrigger");
-
-            isInTrigger = true;
+           FindObjectOfType<SoundManager>().Play("SuccessTrigger");
+            var battery = other.GetComponent<BatteryComponent>();
+            battery.batteryTriggerReference = this;
+            battery.BatteryTransform = BatteryTransform;
+            battery.isInTrigger = true;
 
         }
 
@@ -81,8 +83,10 @@ public class BatteryTriggerScript : MonoBehaviour
     {
         if (other.gameObject.tag == "Battery")
         {
-            FindObjectOfType<AudioManager>().PlaySound("");
-            isInTrigger = false;
+            FindObjectOfType<SoundManager>().Play("");
+            var battery = other.GetComponent<BatteryComponent>();
+            battery.batteryTriggerReference = this;
+            battery.isInTrigger = false;
 
         }
     }

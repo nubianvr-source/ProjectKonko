@@ -42,7 +42,7 @@ public class LightBulbTriggerScript : MonoBehaviour
         endLerpPosition = lightBulbTransform.position;
         defaultLerpPosition = defaultTransform.position;
         rigidbodyPhysics.constraints = RigidbodyConstraints.FreezeAll;
-        this.gameObject.SetActive(false);
+        //this.gameObject.SetActive(false);
        
     }
 
@@ -67,9 +67,12 @@ public class LightBulbTriggerScript : MonoBehaviour
     {
         if (other.gameObject.tag == "LightBulb")
         {
-          FindObjectOfType<AudioManager>().PlaySound("SuccessTrigger");
+            FindObjectOfType<SoundManager>().Play("SuccessTrigger");
 
-            isInTrigger = true;
+            var lightBulb = other.GetComponent<LightBulbComponent>();
+            lightBulb.lightBulbTriggerReference = this;
+            lightBulb.lightBulbTransform = lightBulbTransform;
+            lightBulb.isInTrigger = true;
 
         }
 
@@ -79,9 +82,10 @@ public class LightBulbTriggerScript : MonoBehaviour
     {
         if (other.gameObject.tag == "LightBulb")
         {
-            FindObjectOfType<AudioManager>().PlaySound("");
-            isInTrigger = false;
-            
+            var lightBulb = other.GetComponent<LightBulbComponent>();
+            lightBulb.lightBulbTriggerReference = this;
+            lightBulb.isInTrigger = false;
+
         }
     }
 
@@ -97,7 +101,7 @@ public class LightBulbTriggerScript : MonoBehaviour
             rigidbodyPhysics.angularVelocity = Vector3.zero;
             rigidbodyPhysics.constraints = RigidbodyConstraints.FreezeAll;
             //lightBulbIcon.LightBulbIconOn();
-            this.gameObject.SetActive(false);
+            
             
             
            
