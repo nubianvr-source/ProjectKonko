@@ -2,9 +2,9 @@
 
 ### Thanks for coming around!
 
->First off, thank you for considering contributing to Basic Electronics tutoring in VR. It's people like you that make Basic Electronics in VR such a great tool.
+>First off, thank you for considering contributing to Basic Electronics tutoring in VR. It's people like you that make Project Konko  such a great tool.
 
-[source: [Nubian VR](https://github.com/nubianvr-source/BasicElectronics)] 
+[source: [Nubian VR](https://github.com/nubianvr-source/ProjectKonko)] 
 
 ### Why the guidelines
 
