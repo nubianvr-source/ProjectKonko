@@ -57,7 +57,7 @@ using UnityEngine.Video;
             foreach (char letter in sentence.ToCharArray())
             {
                 dialogueText.text += letter;
-                AudioManager.Instance.PlaySound("Typing");
+                //AudioManager.Instance.PlaySound("Typing");
                 yield return null;
             }
         }

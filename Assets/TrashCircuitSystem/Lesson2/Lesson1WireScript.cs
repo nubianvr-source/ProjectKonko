@@ -86,7 +86,7 @@ public class Lesson1WireScript : MonoBehaviour
         {
             if (lightBulbItem.isInTrigger == true)
             {
-                if (batteryCircuitCount >= 2)
+                if (batteryCircuitCount >= 1)
                 {
                     lightBulbItem.lightOn();
                     isCurrentRunning = true;

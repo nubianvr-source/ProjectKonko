@@ -18170,8 +18170,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lightBulbComp: {fileID: 1149161415}
+  lightBulbMesh: {fileID: 0}
   LightOffMat: {fileID: 2100000, guid: c64ff6a4e14eec7468c3615493d5a518, type: 2}
   LightOnMat: {fileID: 2100000, guid: edc6f6f0ff6bea14f8accfaff8ba2186, type: 2}
+  GrabbedComp: 0
+  vrgGrabbableScript: {fileID: 0}
+  defaultTransform: {fileID: 0}
+  lerpTime: 1
+  lightBulbIcon: {fileID: 0}
+  lightBulbTriggerReference: {fileID: 0}
+  rigidbodyPhysics: {fileID: 0}
+  lightBulbTransform: {fileID: 0}
+  isInTrigger: 0
 --- !u!114 &659098748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36238,8 +36248,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lightBulbComp: {fileID: 2106681857}
+  lightBulbMesh: {fileID: 0}
   LightOffMat: {fileID: 2100000, guid: c64ff6a4e14eec7468c3615493d5a518, type: 2}
   LightOnMat: {fileID: 2100000, guid: edc6f6f0ff6bea14f8accfaff8ba2186, type: 2}
+  GrabbedComp: 0
+  vrgGrabbableScript: {fileID: 0}
+  defaultTransform: {fileID: 0}
+  lerpTime: 1
+  lightBulbIcon: {fileID: 0}
+  lightBulbTriggerReference: {fileID: 0}
+  rigidbodyPhysics: {fileID: 0}
+  lightBulbTransform: {fileID: 0}
+  isInTrigger: 0
 --- !u!114 &1155355648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47302,8 +47322,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lightBulbComp: {fileID: 1899813212}
+  lightBulbMesh: {fileID: 0}
   LightOffMat: {fileID: 2100000, guid: c64ff6a4e14eec7468c3615493d5a518, type: 2}
   LightOnMat: {fileID: 2100000, guid: edc6f6f0ff6bea14f8accfaff8ba2186, type: 2}
+  GrabbedComp: 0
+  vrgGrabbableScript: {fileID: 0}
+  defaultTransform: {fileID: 0}
+  lerpTime: 1
+  lightBulbIcon: {fileID: 0}
+  lightBulbTriggerReference: {fileID: 0}
+  rigidbodyPhysics: {fileID: 0}
+  lightBulbTransform: {fileID: 0}
+  isInTrigger: 0
 --- !u!114 &1579817407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54412,7 +54442,7 @@ MonoBehaviour:
         m_CallState: 2
   videoPlayer: {fileID: 1085258592}
   videoExperiences:
-  - {fileID: 32900000, guid: 499a0c66e38de4041a8eb5b5852af9aa, type: 3}
+  - {fileID: 32900000, guid: b2da0b0706cec704fb8fc596eb015a78, type: 3}
   onVideoExperienceVideoFinished:
     m_PersistentCalls:
       m_Calls:
@@ -56595,8 +56625,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lightBulbComp: {fileID: 979295651}
+  lightBulbMesh: {fileID: 0}
   LightOffMat: {fileID: 2100000, guid: c64ff6a4e14eec7468c3615493d5a518, type: 2}
   LightOnMat: {fileID: 2100000, guid: edc6f6f0ff6bea14f8accfaff8ba2186, type: 2}
+  GrabbedComp: 0
+  vrgGrabbableScript: {fileID: 0}
+  defaultTransform: {fileID: 0}
+  lerpTime: 1
+  lightBulbIcon: {fileID: 0}
+  lightBulbTriggerReference: {fileID: 0}
+  rigidbodyPhysics: {fileID: 0}
+  lightBulbTransform: {fileID: 0}
+  isInTrigger: 0
 --- !u!4 &1870627009
 Transform:
   m_ObjectHideFlags: 0
@@ -67743,7 +67783,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.000015258789}
+  m_AnchoredPosition: {x: 0, y: 0.000038146973}
   m_SizeDelta: {x: 0, y: 100}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &1221013923124842038

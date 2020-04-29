@@ -79,7 +79,13 @@ public class LightBulbComponent : MonoBehaviour
 
         startLerpPosition = lightBulbComp.transform.position;
 
-         if (GrabbedComp == true)
+        //InEditorVR();
+         
+    }
+
+    public void InEditorVR()
+    { 
+        if (GrabbedComp == true)
          {
              if (vrgGrabbableScript.onGrabbed != null) 
              {
@@ -94,12 +100,15 @@ public class LightBulbComponent : MonoBehaviour
                  vrgGrabbableScript.onReleased.Invoke();
              }
          }
-         
     }
 
     public void unlockLightBulbConstraints()
     {
         rigidbodyPhysics.constraints = RigidbodyConstraints.None;
+        if (lightBulbTriggerReference != null)
+        {
+            lightBulbTriggerReference.gameObject.SetActive(true);
+        }
 
     }
 

@@ -82,6 +82,7 @@ public class BatteryComponent : MonoBehaviour
     {
         startLerpPosition = batteryComp.transform.position;
         float lerp = Mathf.PingPong(Time.time, batteryMatAnimLerpTime) / batteryMatAnimLerpTime;
+
         if (batteryOverheating)
         {
             batteryModel.GetComponent<MeshRenderer>().material.Lerp(normalBatteryMat, overheatingBatteryMat, lerp);
@@ -90,9 +91,16 @@ public class BatteryComponent : MonoBehaviour
         {
             batteryModel.GetComponent<MeshRenderer>().material = normalBatteryMat;
         }
-      
 
+       // InEditorVR();
+
+        
+    }
+
+    public void InEditorVR()
+    {
         //This if statement block is meant for debugging withing the editor 
+
         if (OnGrabbed == true)
         {
             if (vrgGrabbableScript.onGrabbed != null)
@@ -113,6 +121,10 @@ public class BatteryComponent : MonoBehaviour
     public void unlockBatteryConstraints()
     {
         rigidbodyPhysics.constraints = RigidbodyConstraints.None;
+        if (batteryTriggerReference != null)
+        {
+            batteryTriggerReference.gameObject.SetActive(true);
+        }
 
     }
 
@@ -152,7 +164,7 @@ public class BatteryComponent : MonoBehaviour
         batteryText.SetActive(false);
         if (batteryTriggerReference != null)
         {
-            batteryTriggerReference.gameObject.SetActive(true);
+            batteryTriggerReference.gameObject.SetActive(false);
         }
     }
 
@@ -165,7 +177,7 @@ public class BatteryComponent : MonoBehaviour
         rigidbodyPhysics.constraints = RigidbodyConstraints.FreezeAll;
         if (batteryTriggerReference != null)
         {
-            batteryTriggerReference.gameObject.SetActive(false);
+            batteryTriggerReference.gameObject.SetActive(true);
         }
     }
 }
