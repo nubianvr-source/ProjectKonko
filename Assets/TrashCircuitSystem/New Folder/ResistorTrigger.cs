@@ -63,7 +63,7 @@ public class ResistorTrigger : MonoBehaviour
     {
         if (other.gameObject.tag == "Battery")
         {
-            FindObjectOfType<AudioManager>().PlaySound("SuccessTrigger");
+            //FindObjectOfType<AudioManager>().PlaySound("SuccessTrigger");
 
             isInTrigger = true;
 
@@ -75,7 +75,7 @@ public class ResistorTrigger : MonoBehaviour
     {
         if (other.gameObject.tag == "Battery")
         {
-            FindObjectOfType<AudioManager>().PlaySound("");
+            //FindObjectOfType<AudioManager>().PlaySound("");
             isInTrigger = false;
 
         }
