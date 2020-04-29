@@ -41298,8 +41298,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lightBulbComp: {fileID: 2076243905}
+  lightBulbMesh: {fileID: 0}
   LightOffMat: {fileID: 2100000, guid: c64ff6a4e14eec7468c3615493d5a518, type: 2}
   LightOnMat: {fileID: 2100000, guid: edc6f6f0ff6bea14f8accfaff8ba2186, type: 2}
+  GrabbedComp: 0
+  vrgGrabbableScript: {fileID: 0}
+  defaultTransform: {fileID: 0}
+  lerpTime: 1
+  lightBulbIcon: {fileID: 0}
+  lightBulbTriggerReference: {fileID: 0}
+  rigidbodyPhysics: {fileID: 0}
+  lightBulbTransform: {fileID: 0}
+  isInTrigger: 0
 --- !u!114 &1734233415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48702,8 +48712,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mixerGroup: {fileID: 0}
   sounds:
-  - name: Theme
-    clip: {fileID: 8300000, guid: 5ba0972a977d9cb488558ef4965968cf, type: 3}
+  - name: InGameTheme
+    clip: {fileID: 8300000, guid: d2ce1e348b9266645ae346f18ed08ea2, type: 3}
     volume: 0.6
     volumeVariance: 0
     pitch: 1
@@ -53990,7 +54000,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.000015258789}
+  m_AnchoredPosition: {x: 0, y: 0.000038146973}
   m_SizeDelta: {x: 0, y: 100}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &1221013923124842038

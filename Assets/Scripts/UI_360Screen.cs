@@ -31,7 +31,7 @@ namespace NubianVR.UI
                     base.StartScreen();
                     videoPlayer.loopPointReached += player =>
                     {
-                        AudioManager.Instance.PlaySound("Theme");
+                        SoundManager.instance.Play("InGameTheme");
                         onVideoExperienceVideoFinished.Invoke();
                     };
                 }
@@ -39,7 +39,7 @@ namespace NubianVR.UI
          public void PlayNextVideo()
          {
              StopVideo();
-            AudioManager.Instance.StopSound("Theme");
+            SoundManager.instance.Stop("InGameTheme");
             videoPlayer.clip = videoExperiences[_currentIndex];
              StartCoroutine(PlayVideo());
          }

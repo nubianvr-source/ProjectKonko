@@ -18035,8 +18035,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mixerGroup: {fileID: 0}
   sounds:
-  - name: Theme
-    clip: {fileID: 8300000, guid: 5ba0972a977d9cb488558ef4965968cf, type: 3}
+  - name: InGameTheme
+    clip: {fileID: 8300000, guid: 34b4450c7bd9e8246ab2c07644ecf656, type: 3}
     volume: 0.6
     volumeVariance: 0
     pitch: 1
