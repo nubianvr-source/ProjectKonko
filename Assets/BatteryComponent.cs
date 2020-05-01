@@ -61,7 +61,7 @@ public class BatteryComponent : MonoBehaviour
     public Transform BatteryTransform;
 
     //Is Trigger Bool, public but hidden in inspector
-    [HideInInspector]
+    
     public bool isInTrigger = false;
 
 
@@ -92,7 +92,8 @@ public class BatteryComponent : MonoBehaviour
             batteryModel.GetComponent<MeshRenderer>().material = normalBatteryMat;
         }
 
-       // InEditorVR();
+        // InEditorVR();
+        IsBatteryInTrigger();
 
         
     }

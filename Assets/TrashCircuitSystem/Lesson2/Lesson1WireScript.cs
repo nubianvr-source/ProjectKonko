@@ -21,6 +21,12 @@ public class Lesson1WireScript : MonoBehaviour
     public LightBulbComponent[] lightBulbs;
     private int lightBulbsInTriggers;
 
+    [Header("Resistor's Array")]
+    public ResistorComponent[] resistors;
+    private int resistorsInTriggers;
+    private float totalCircuitResistance;
+
+
     [Header("Diode Properties")]
     public DiodeObjectScript diodeObject;
     public DiodeTriggerScript diodeTrigger;
@@ -54,8 +60,8 @@ public class Lesson1WireScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        
+
+        toggleChanged();
     }
 
     public void setCircuitActive()
@@ -74,7 +80,17 @@ public class Lesson1WireScript : MonoBehaviour
                         lightBulbsInTriggers += 1;
                     }
                 }
-                if (lightBulbsInTriggers <= 0)
+
+                for (int i = 0; i < resistors.Length; i++)
+                {
+                    if (resistors[i].isInTrigger == true)
+                    {
+                        totalCircuitResistance = totalCircuitResistance + resistors[i].resistanceFloat;
+                        resistorsInTriggers += 1;
+                    }
+                }
+
+                if (lightBulbsInTriggers <= 0 && resistorsInTriggers <= 0)
                 {
                     //Casue the battery to explode 
                     batteryItem.batteryOverheating = true;
@@ -88,6 +104,31 @@ public class Lesson1WireScript : MonoBehaviour
             {
                 if (batteryCircuitCount >= 1)
                 {
+                    if (resistorsInTriggers >= 1)
+                    {
+                        if (totalCircuitResistance >= 3000)
+                        {
+                            lightBulbItem.lightOff();
+                            isCurrentRunning = true;
+                            infoTextBox.text = "Great, there is current in the circuit but the resistor is preventing the light bulb from lightening up due to its resistance in the circuit";
+                            wireModel.GetComponent<MeshRenderer>().material = LiveWire;
+                            wireIcon.WireActiveFunc();
+                            //bulbComponent.lightOn();
+                            //continueBtn.SetActive(true);
+                            // switchIcon.SwitchOn();
+                        }
+                        else 
+                        {
+                            lightBulbItem.lightOn();
+                            isCurrentRunning = true;
+                            infoTextBox.text = "Great, there is current in the circuit but the resistor is preventing the light bulb from lightening up due to its resistance in the circuit";
+                            wireModel.GetComponent<MeshRenderer>().material = LiveWire;
+                            wireIcon.WireActiveFunc();
+                        }
+                    }
+
+                    else
+                    { 
                     lightBulbItem.lightOn();
                     isCurrentRunning = true;
                     infoTextBox.text = "Great Light Bulb came on";
@@ -96,6 +137,8 @@ public class Lesson1WireScript : MonoBehaviour
                     //bulbComponent.lightOn();
                     continueBtn.SetActive(true); 
                     // switchIcon.SwitchOn();
+                    }
+                    
                 }
                 else
                 {
@@ -151,6 +194,8 @@ public class Lesson1WireScript : MonoBehaviour
         wireModel.GetComponent<MeshRenderer>().material = wireInactive;
         wireIcon.WireInactiveFunc();
         batteryCircuitCount = 0;
+        resistorsInTriggers = 0;
+        lightBulbsInTriggers = 0;
         //bulbComponent.lightOff();
         //switchIcon.SwitchOff();
 

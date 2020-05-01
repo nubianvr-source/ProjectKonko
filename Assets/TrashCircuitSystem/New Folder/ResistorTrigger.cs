@@ -14,7 +14,7 @@ public class ResistorTrigger : MonoBehaviour
     private Vector3 endLerpPosition;
 
     //Light bulb transform reference
-    public Transform BatteryTransform;
+    public Transform resistorTransform;
 
     //Animation Lerp time 
     public float lerpTime = 1f;
@@ -39,7 +39,7 @@ public class ResistorTrigger : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        endLerpPosition = BatteryTransform.position;
+        endLerpPosition = resistorTransform.position;
         defaultLerpPosition = defaultTransform.position;
         rigidbodyPhysics.constraints = RigidbodyConstraints.FreezeAll;
         //isInTrigger = true;
@@ -61,11 +61,14 @@ public class ResistorTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Battery")
+        if (other.gameObject.tag == "Resistor")
         {
-            //FindObjectOfType<AudioManager>().PlaySound("SuccessTrigger");
+            //FindObjectOfType<AudioManager>().P0.laySound("SuccessTrigger");
 
-            isInTrigger = true;
+            var resistor = other.GetComponent<ResistorComponent>();
+            resistor.resistorTriggerReference = this;
+            resistor.resistorTransform = resistorTransform;
+            resistor.isInTrigger = true;
 
         }
 
@@ -73,10 +76,12 @@ public class ResistorTrigger : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "Battery")
+        if (other.gameObject.tag == "Resistor")
         {
             //FindObjectOfType<AudioManager>().PlaySound("");
-            isInTrigger = false;
+            var resistor = other.GetComponent<ResistorComponent>();
+            resistor.resistorTriggerReference = this;
+            resistor.isInTrigger = false;
 
         }
     }

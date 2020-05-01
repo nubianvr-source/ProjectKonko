@@ -54,7 +54,7 @@ public class LightBulbComponent : MonoBehaviour
     [HideInInspector]
     public Transform lightBulbTransform;
 
-    [HideInInspector]
+  
     public bool isInTrigger = false;
 
 
@@ -79,7 +79,8 @@ public class LightBulbComponent : MonoBehaviour
 
         startLerpPosition = lightBulbComp.transform.position;
 
-        //InEditorVR();
+        // InEditorVR();
+        IsLightBulbInTrigger();
          
     }
 
