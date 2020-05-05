@@ -58600,7 +58600,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1341204834
 Transform:
   m_ObjectHideFlags: 0
@@ -61542,6 +61542,7 @@ GameObject:
   - component: {fileID: 1400242238}
   - component: {fileID: 1400242237}
   - component: {fileID: 1400242236}
+  - component: {fileID: 1400242240}
   m_Layer: 0
   m_Name: Battery
   m_TagString: Battery
@@ -61567,19 +61568,8 @@ MonoBehaviour:
   onGrabbed:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 95263480}
+      - m_Target: {fileID: 1400242240}
         m_MethodName: unlockBatteryConstraints
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 95263480}
-        m_MethodName: SetTriggerActive
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -61592,8 +61582,8 @@ MonoBehaviour:
   onReleased:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 95263480}
-        m_MethodName: BatteryBulbTransform
+      - m_Target: {fileID: 1400242240}
+        m_MethodName: OnBatteryDropped
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -61654,6 +61644,35 @@ Transform:
   m_Father: {fileID: 1341204834}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -159.61101, z: 0}
+--- !u!114 &1400242240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400242235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26051ad6bd8f85045903d781ad34c874, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  batteryComp: {fileID: 1400242235}
+  batteryModel: {fileID: 74145178}
+  normalBatteryMat: {fileID: 2100000, guid: 5ff4ec43b2336d7418c7a5924853385e, type: 2}
+  overheatingBatteryMat: {fileID: 2100000, guid: ace41c44d76146e4599e913324b47a4c,
+    type: 2}
+  defaultTransform: {fileID: 1400242239}
+  lerpTime: 1
+  batteryMatAnimLerpTime: 2
+  batteryIcon: {fileID: 2009771525}
+  batteryText: {fileID: 1548819637}
+  OnGrabbed: 0
+  batteryOverheating: 0
+  vrgGrabbableScript: {fileID: 1400242236}
+  rigidbodyPhysics: {fileID: 0}
+  batteryTriggerReference: {fileID: 0}
+  BatteryTransform: {fileID: 0}
+  isInTrigger: 0
 --- !u!1 &1402824867
 GameObject:
   m_ObjectHideFlags: 0
@@ -74606,19 +74625,8 @@ MonoBehaviour:
   onGrabbed:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 500230398}
+      - m_Target: {fileID: 1749807299}
         m_MethodName: unlockLightBulbConstraints
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 500230398}
-        m_MethodName: SetTriggerActive
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -74631,8 +74639,8 @@ MonoBehaviour:
   onReleased:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 500230398}
-        m_MethodName: LightBulbTransform
+      - m_Target: {fileID: 1749807299}
+        m_MethodName: OnLlightBulbDropped
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -74689,15 +74697,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75a4e5ee7b6b0954bb065813d5b2e0a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightBulbComp: {fileID: 1627951749}
-  lightBulbMesh: {fileID: 0}
+  lightBulbComp: {fileID: 1749807295}
+  lightBulbMesh: {fileID: 1627951749}
   LightOffMat: {fileID: 2100000, guid: c64ff6a4e14eec7468c3615493d5a518, type: 2}
   LightOnMat: {fileID: 2100000, guid: edc6f6f0ff6bea14f8accfaff8ba2186, type: 2}
   GrabbedComp: 0
-  vrgGrabbableScript: {fileID: 0}
-  defaultTransform: {fileID: 0}
+  vrgGrabbableScript: {fileID: 1749807296}
+  defaultTransform: {fileID: 1749807300}
   lerpTime: 1
-  lightBulbIcon: {fileID: 0}
+  lightBulbIcon: {fileID: 300108180}
   lightBulbTriggerReference: {fileID: 0}
   rigidbodyPhysics: {fileID: 0}
   lightBulbTransform: {fileID: 0}

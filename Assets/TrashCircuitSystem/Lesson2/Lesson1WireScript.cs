@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Lesson1WireScript : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class Lesson1WireScript : MonoBehaviour
     [Header("Baterry's Array")]
     public BatteryComponent[] batteries;
     private int batteryCircuitCount;
+    public int minBatteryCount = 1;
 
     [Header("Light Bulb's Array")]
     public LightBulbComponent[] lightBulbs;
@@ -27,11 +29,10 @@ public class Lesson1WireScript : MonoBehaviour
     private float totalCircuitResistance;
 
 
-    [Header("Diode Properties")]
-    public DiodeObjectScript diodeObject;
-    public DiodeTriggerScript diodeTrigger;
-    private bool isDiodePositiveBias;
+    [Header("Diode's Array")]
+    public DiodeComponent diode;
 
+   
     [Header("Switch Properties")]
     public SwitchIconScript switchIcon;
     public TextMeshProUGUI infoTextBox;
@@ -63,7 +64,10 @@ public class Lesson1WireScript : MonoBehaviour
 
         toggleChanged();
     }
-
+    private float coloNumberConversion(float num)
+    {
+        return (num / 255.0f);
+    }
     public void setCircuitActive()
     {
      
@@ -90,10 +94,25 @@ public class Lesson1WireScript : MonoBehaviour
                     }
                 }
 
+
                 if (lightBulbsInTriggers <= 0 && resistorsInTriggers <= 0)
                 {
-                    //Casue the battery to explode 
-                    batteryItem.batteryOverheating = true;
+                    var scene = SceneManager.GetActiveScene();
+                    int buildindex = scene.buildIndex;
+                    if (buildindex == 3)
+                    {
+                        //Casue the battery to explode 
+                        batteryItem.batteryOverheating = true;
+                        infoTextBox.text = "As you can see the battery is overheating, this is because there is no load in the circuit.";
+                        continueBtn.SetActive(true);
+
+                    }
+                    else {
+
+                        batteryItem.batteryOverheating = true;
+                        infoTextBox.text = "There is no load in the circuit";
+                    }
+                   
                 }
             }
         }
@@ -102,47 +121,153 @@ public class Lesson1WireScript : MonoBehaviour
         {
             if (lightBulbItem.isInTrigger == true)
             {
-                if (batteryCircuitCount >= 1)
+                if (batteryCircuitCount >= minBatteryCount)
                 {
-                    if (resistorsInTriggers >= 1)
+                    if (!diode.isInTrigger)
                     {
-                        if (totalCircuitResistance >= 3000)
+
+                        if (resistorsInTriggers >= 1)
+                        {
+                            
+                            switch (totalCircuitResistance)
+                            {
+                              
+                                case 750:
+                                    Color bulbcolor = lightBulbItem.LightOnMat.color;
+                                    bulbcolor.r = coloNumberConversion(200);
+                                    bulbcolor.g = coloNumberConversion(200);
+                                    bulbcolor.b = coloNumberConversion(200);
+                                    bulbcolor.a = coloNumberConversion(255);
+                                    lightBulbItem.LightOnMat.color = bulbcolor;
+                                    lightBulbItem.lightOn();
+                                    isCurrentRunning = true;
+                                    infoTextBox.text = "Great, now try swapping the resistor and observe what happens";
+                                    wireModel.GetComponent<MeshRenderer>().material = LiveWire;
+                                    wireIcon.WireActiveFunc();
+                                    break;
+                                case 1500:
+                                    bulbcolor = lightBulbItem.LightOnMat.color;
+                                    bulbcolor.r = coloNumberConversion(150);
+                                    bulbcolor.g = coloNumberConversion(150);
+                                    bulbcolor.b = coloNumberConversion(150);
+                                    bulbcolor.a = coloNumberConversion(150);
+                                    lightBulbItem.LightOnMat.color = bulbcolor;
+                                    lightBulbItem.lightOn();
+                                    isCurrentRunning = true;
+                                    infoTextBox.text = "Great, now try swapping the resistor and observe what happens";
+                                    wireModel.GetComponent<MeshRenderer>().material = LiveWire;
+                                    wireIcon.WireActiveFunc();
+                                    continueBtn.SetActive(true);
+                                    break;
+
+                                case 3000:
+                                    bulbcolor = lightBulbItem.LightOnMat.color;
+                                    bulbcolor.r = coloNumberConversion(100);
+                                    bulbcolor.g = coloNumberConversion(100);
+                                    bulbcolor.b = coloNumberConversion(100);
+                                    bulbcolor.a = coloNumberConversion(100);
+                                    lightBulbItem.LightOnMat.color = bulbcolor;
+                                    lightBulbItem.lightOn();
+                                    isCurrentRunning = true;
+                                    infoTextBox.text = "Great, now try swapping the resistor and observe what happens";
+                                    wireModel.GetComponent<MeshRenderer>().material = LiveWire;
+                                    wireIcon.WireActiveFunc();
+                                    continueBtn.SetActive(true);
+                                    break;
+
+                                default:
+                                lightBulbItem.lightOff();
+                                isCurrentRunning = true;
+                                infoTextBox.text = "Great, there is current in the circuit but the resistor is preventing the light bulb from lightening up due to its resistance in the circuit";
+                                wireModel.GetComponent<MeshRenderer>().material = LiveWire;
+                                wireIcon.WireActiveFunc();
+                                    break;
+                            }
+                           
+                        }
+
+                        else
+                        {
+                            lightBulbItem.lightOn();
+                            isCurrentRunning = true;
+                            infoTextBox.text = "Great Light Bulb came on";
+                            wireModel.GetComponent<MeshRenderer>().material = LiveWire;
+                            wireIcon.WireActiveFunc();
+                            //bulbComponent.lightOn();
+                            continueBtn.SetActive(true);
+                            // switchIcon.SwitchOn();
+                        }
+                    }
+                    else
+                    {
+                        if (diode.isPositiveBias)
+                        {
+                            if (resistorsInTriggers >= 1)
+                            {
+                                if (totalCircuitResistance >= 3000)
+                                {
+                                    lightBulbItem.lightOff();
+                                    isCurrentRunning = true;
+                                    infoTextBox.text = "Great, there is current in the circuit but the resistor is preventing the light bulb from lightening up due to its resistance in the circuit";
+                                    wireModel.GetComponent<MeshRenderer>().material = LiveWire;
+                                    wireIcon.WireActiveFunc();
+                                    //bulbComponent.lightOn();
+                                    //continueBtn.SetActive(true);
+                                    // switchIcon.SwitchOn();
+                                }
+                                else
+                                {
+                                    lightBulbItem.lightOn();
+                                    isCurrentRunning = true;
+                                    infoTextBox.text = "Great Light Bulb came on";
+                                    wireModel.GetComponent<MeshRenderer>().material = LiveWire;
+                                    wireIcon.WireActiveFunc();
+                                }
+                            }
+
+                            else
+                            {
+                                lightBulbItem.lightOn();
+                                isCurrentRunning = true;
+                                infoTextBox.text = "Great Light Bulb came on, the diode is set to reverse bias, flip the diode a few more times and observe what happens before you continue";
+                                wireModel.GetComponent<MeshRenderer>().material = LiveWire;
+                                wireIcon.WireActiveFunc();
+                                //bulbComponent.lightOn();
+                                continueBtn.SetActive(true);
+                                // switchIcon.SwitchOn();
+                            }
+                        }
+                        else
                         {
                             lightBulbItem.lightOff();
                             isCurrentRunning = true;
-                            infoTextBox.text = "Great, there is current in the circuit but the resistor is preventing the light bulb from lightening up due to its resistance in the circuit";
+                            infoTextBox.text = "The diode is set to reverse bias, now flip and observe waht happens";
                             wireModel.GetComponent<MeshRenderer>().material = LiveWire;
                             wireIcon.WireActiveFunc();
                             //bulbComponent.lightOn();
                             //continueBtn.SetActive(true);
                             // switchIcon.SwitchOn();
-                        }
-                        else 
-                        {
-                            lightBulbItem.lightOn();
-                            isCurrentRunning = true;
-                            infoTextBox.text = "Great, there is current in the circuit but the resistor is preventing the light bulb from lightening up due to its resistance in the circuit";
-                            wireModel.GetComponent<MeshRenderer>().material = LiveWire;
-                            wireIcon.WireActiveFunc();
-                        }
-                    }
 
-                    else
-                    { 
-                    lightBulbItem.lightOn();
-                    isCurrentRunning = true;
-                    infoTextBox.text = "Great Light Bulb came on";
-                    wireModel.GetComponent<MeshRenderer>().material = LiveWire;
-                    wireIcon.WireActiveFunc();
-                    //bulbComponent.lightOn();
-                    continueBtn.SetActive(true); 
-                    // switchIcon.SwitchOn();
+                        }
                     }
+                   
                     
                 }
                 else
                 {
-                    infoTextBox.text = "Please place the battery in the circuit to continue";
+
+                    var scene = SceneManager.GetActiveScene();
+                    int buildindex = scene.buildIndex;
+                    if (buildindex == 3)
+                    {
+                        infoTextBox.text = "The battery voltage is not enough to power the lightbulb, we might need to add one more battery";
+                        continueBtn.SetActive(true);
+                    }
+                    else
+                    { 
+                        infoTextBox.text = "Please place the battery in the circuit to continue";
+                    }
+                        
                 }
                 
             }

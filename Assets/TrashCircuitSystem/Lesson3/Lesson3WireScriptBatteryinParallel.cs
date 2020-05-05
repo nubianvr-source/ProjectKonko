@@ -25,7 +25,7 @@ public class Lesson3WireScriptBatteryinParallel : MonoBehaviour
     private bool isLightBulbInTrigger;
 
     [Header("Diode Properties")]
-    public DiodeObjectScript diodeObject;
+    public DiodeComponent diodeObject;
     public DiodeTriggerScript diodeTrigger;
 
 

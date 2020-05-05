@@ -23,7 +23,7 @@ public class Lesson4WireScriptWithDiodeSupport : MonoBehaviour
     private bool isLightBulbInTrigger;
 
     [Header("Diode Properties")]
-    public DiodeObjectScript diodeObject;
+    public DiodeComponent diodeObject;
     public DiodeTriggerScript diodeTrigger;
     private bool isDiodePositiveBias;
 

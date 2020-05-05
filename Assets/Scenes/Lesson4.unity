@@ -4067,7 +4067,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1425139920}
+      - m_Target: {fileID: 0}
         m_MethodName: toggleChanged
         m_Mode: 1
         m_Arguments:
@@ -8779,7 +8779,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!54 &387603596
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8808,15 +8808,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7b6e2b5154685147adb05a85cd4ca20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPositiveBias: 0
   diodeIcon: {fileID: 1945419497}
   positiveBiasIcon: {fileID: 21300000, guid: c73e46ff930ae8245a207e3def7f1a82, type: 3}
   negativeBiasIcon: {fileID: 21300000, guid: 35a5bdbfb23c6e141a2e1bf30d3b1710, type: 3}
   imageFlip: {fileID: 1048584770}
-  diodeObject: {fileID: 1729793968}
+  diodeMesh: {fileID: 1729793968}
+  diodeComp: {fileID: 387603595}
   positiveFlip: {fileID: 21300000, guid: 4748691adb0506646a11e51bd6ef2a36, type: 3}
   negativeFlip: {fileID: 21300000, guid: b7899995c190e394d9ac6f31e097124c, type: 3}
-  wireScript: {fileID: 1425139920}
+  defaultTransform: {fileID: 387603600}
+  lerpTime: 1
+  OnGrabbed: 0
+  vrgGrabbableScript: {fileID: 387603598}
+  DiodeIcon: {fileID: 1945419497}
+  flipButton: {fileID: 1048584769}
+  diodeDescription: {fileID: 1047989703}
+  isPositiveBias: 0
+  rigidbodyPhysics: {fileID: 0}
+  diodeTriggerReference: {fileID: 0}
+  diodeTransform: {fileID: 0}
+  isInTrigger: 0
 --- !u!114 &387603598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8835,8 +8846,8 @@ MonoBehaviour:
   onGrabbed:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1267557567}
-        m_MethodName: unlockDiodeConstraints
+      - m_Target: {fileID: 387603597}
+        m_MethodName: UnlockDiodeConstraints
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8849,8 +8860,8 @@ MonoBehaviour:
   onReleased:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1267557567}
-        m_MethodName: DiodeTransfrom
+      - m_Target: {fileID: 387603597}
+        m_MethodName: OnDiodeDropped
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -15477,7 +15488,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 654794576}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8dfca9c9d89838b4aad53ecbb15abe69, type: 3}
+  m_Script: {fileID: 11500000, guid: 94dca5a2483247d42b1a0cc50fe3b9cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   circuitComp: {fileID: 1504610736}
@@ -26766,7 +26777,6 @@ GameObject:
   - component: {fileID: 1048584770}
   - component: {fileID: 1048584769}
   - component: {fileID: 1048584768}
-  - component: {fileID: 1048584772}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -26856,7 +26866,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 387603597}
-        m_MethodName: flipSwitchUI
+        m_MethodName: FlipPositiveBias
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -26902,18 +26912,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1048584766}
   m_CullTransparentMesh: 0
---- !u!114 &1048584772
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1048584766}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25817f7c2a986214a92360aa1446c868, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1049484616
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34887,7 +34885,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1425139917}
   - component: {fileID: 1425139919}
-  - component: {fileID: 1425139920}
+  - component: {fileID: 1425139918}
   m_Layer: 0
   m_Name: Wire
   m_TagString: Untagged
@@ -34909,6 +34907,35 @@ Transform:
   m_Father: {fileID: 1165598390}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1425139918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1425139916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fb5487681a9cef48bbb42588a521d5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wireInactive: {fileID: 2100000, guid: c778c5921bc5cc9438ca0bf13670b68c, type: 2}
+  LiveWire: {fileID: 2100000, guid: cdf60d77fa29c5a4b9abedb32f393f5e, type: 2}
+  wireModel: {fileID: 7926900479030346180}
+  wireIcon: {fileID: 1701687809}
+  batteries:
+  - {fileID: 1504610741}
+  minBatteryCount: 1
+  lightBulbs:
+  - {fileID: 1734233414}
+  resistors: []
+  diode: {fileID: 387603597}
+  switchIcon: {fileID: 819488480}
+  infoTextBox: {fileID: 387836647}
+  switchComponentRef: {fileID: 166596535}
+  bulbComponent: {fileID: 0}
+  continueBtn: {fileID: 1658836384}
+  isCurrentRunning: 0
 --- !u!120 &1425139919
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -35017,32 +35044,6 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 0
   m_Loop: 0
---- !u!114 &1425139920
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1425139916}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0dc0bd53128a374891518cfb75e1641, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  wireInactive: {fileID: 2100000, guid: c778c5921bc5cc9438ca0bf13670b68c, type: 2}
-  LiveWire: {fileID: 2100000, guid: cdf60d77fa29c5a4b9abedb32f393f5e, type: 2}
-  wireModel: {fileID: 7926900479030346180}
-  wireIcon: {fileID: 1701687809}
-  batteryTrigger: {fileID: 654794577}
-  lightBulbTrigger: {fileID: 2066747157}
-  diodeObject: {fileID: 387603597}
-  diodeTrigger: {fileID: 1267557567}
-  switchIcon: {fileID: 819488480}
-  infoTextBox: {fileID: 387836647}
-  switchComponentRef: {fileID: 166596535}
-  bulbComponent: {fileID: 1734233414}
-  continueBtn: {fileID: 1658836384}
-  isCurrentRunning: 0
 --- !u!1 &1428588833
 GameObject:
   m_ObjectHideFlags: 0
@@ -36790,6 +36791,7 @@ GameObject:
   - component: {fileID: 1504610739}
   - component: {fileID: 1504610738}
   - component: {fileID: 1504610737}
+  - component: {fileID: 1504610741}
   m_Layer: 0
   m_Name: Battery
   m_TagString: Battery
@@ -36815,7 +36817,7 @@ MonoBehaviour:
   onGrabbed:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 654794577}
+      - m_Target: {fileID: 1504610741}
         m_MethodName: unlockBatteryConstraints
         m_Mode: 1
         m_Arguments:
@@ -36829,8 +36831,8 @@ MonoBehaviour:
   onReleased:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 654794577}
-        m_MethodName: BatteryBulbTransform
+      - m_Target: {fileID: 1504610741}
+        m_MethodName: OnBatteryDropped
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -36883,7 +36885,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1504610736}
   m_LocalRotation: {x: -0, y: -0.9842125, z: -0, w: 0.17699088}
-  m_LocalPosition: {x: -2.01, y: -1.69, z: -7.7}
+  m_LocalPosition: {x: -0.53, y: -1.69, z: -6.361}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 840017142}
@@ -36891,6 +36893,35 @@ Transform:
   m_Father: {fileID: 1165598390}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -159.61101, z: 0}
+--- !u!114 &1504610741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1504610736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26051ad6bd8f85045903d781ad34c874, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  batteryComp: {fileID: 1504610736}
+  batteryModel: {fileID: 1356033724}
+  normalBatteryMat: {fileID: 2100000, guid: 5ff4ec43b2336d7418c7a5924853385e, type: 2}
+  overheatingBatteryMat: {fileID: 2100000, guid: ace41c44d76146e4599e913324b47a4c,
+    type: 2}
+  defaultTransform: {fileID: 1504610740}
+  lerpTime: 1
+  batteryMatAnimLerpTime: 2
+  batteryIcon: {fileID: 1570300031}
+  batteryText: {fileID: 1181421288}
+  OnGrabbed: 0
+  batteryOverheating: 0
+  vrgGrabbableScript: {fileID: 1504610737}
+  rigidbodyPhysics: {fileID: 0}
+  batteryTriggerReference: {fileID: 0}
+  BatteryTransform: {fileID: 0}
+  isInTrigger: 0
 --- !u!1 &1505117080
 GameObject:
   m_ObjectHideFlags: 0
@@ -41297,15 +41328,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75a4e5ee7b6b0954bb065813d5b2e0a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightBulbComp: {fileID: 2076243905}
-  lightBulbMesh: {fileID: 0}
+  lightBulbComp: {fileID: 1734233413}
+  lightBulbMesh: {fileID: 2076243905}
   LightOffMat: {fileID: 2100000, guid: c64ff6a4e14eec7468c3615493d5a518, type: 2}
   LightOnMat: {fileID: 2100000, guid: edc6f6f0ff6bea14f8accfaff8ba2186, type: 2}
   GrabbedComp: 0
-  vrgGrabbableScript: {fileID: 0}
-  defaultTransform: {fileID: 0}
+  vrgGrabbableScript: {fileID: 1734233415}
+  defaultTransform: {fileID: 1734233418}
   lerpTime: 1
-  lightBulbIcon: {fileID: 0}
+  lightBulbIcon: {fileID: 205966531}
   lightBulbTriggerReference: {fileID: 0}
   rigidbodyPhysics: {fileID: 0}
   lightBulbTransform: {fileID: 0}
@@ -41328,7 +41359,7 @@ MonoBehaviour:
   onGrabbed:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2066747157}
+      - m_Target: {fileID: 0}
         m_MethodName: unlockLightBulbConstraints
         m_Mode: 1
         m_Arguments:
@@ -41342,7 +41373,7 @@ MonoBehaviour:
   onReleased:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2066747157}
+      - m_Target: {fileID: 0}
         m_MethodName: LightBulbTransform
         m_Mode: 1
         m_Arguments:
@@ -41396,7 +41427,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1734233413}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.569, y: -1.887, z: -7.106}
+  m_LocalPosition: {x: -1.568, y: -1.887, z: -7.106}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 1200587369}
@@ -49641,7 +49672,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2066747156}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebcde6b053b76a448a58e5c51eb2c78f, type: 3}
+  m_Script: {fileID: 11500000, guid: 0a6313f292400c94c9ba8dfbee37be0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   circuitComp: {fileID: 1734233413}
@@ -54000,7 +54031,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.000038146973}
+  m_AnchoredPosition: {x: 0, y: -0.000015258789}
   m_SizeDelta: {x: 0, y: 100}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &1221013923124842038
@@ -59860,7 +59891,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1221013923487080872}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.86666673
+  m_Size: 0.8666667
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

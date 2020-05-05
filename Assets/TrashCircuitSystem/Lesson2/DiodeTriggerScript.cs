@@ -68,9 +68,11 @@ public class DiodeTriggerScript : MonoBehaviour
     {
         if (other.gameObject.tag == "Diode")
         {
-            FindObjectOfType<AudioManager>().PlaySound("SuccessTrigger");
-
-            isInTrigger = true;
+            FindObjectOfType<SoundManager>().Play("SuccessTrigger");
+            var diode = other.GetComponent<DiodeComponent>();
+            diode.diodeTriggerReference = this;
+            diode.diodeTransform = DiodeTransform;
+            diode.isInTrigger = true;
 
         }
 
@@ -80,8 +82,10 @@ public class DiodeTriggerScript : MonoBehaviour
     {
         if (other.gameObject.tag == "Diode")
         {
-            FindObjectOfType<AudioManager>().PlaySound("");
-            isInTrigger = false;
+            FindObjectOfType<SoundManager>().Play("");
+            var diode = other.GetComponent<DiodeComponent>();
+            diode.diodeTriggerReference = this;
+            diode.isInTrigger = true;
 
         }
     }
