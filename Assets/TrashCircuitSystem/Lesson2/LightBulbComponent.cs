@@ -26,7 +26,9 @@ public class LightBulbComponent : MonoBehaviour
     //Animation Lerp time 
     public float lerpTime = 1f;    
 
-    public LightBulbIcon lightBulbIcon;   
+    public LightBulbIcon lightBulbIcon;
+
+    public bool isInSeries;
 
 
 

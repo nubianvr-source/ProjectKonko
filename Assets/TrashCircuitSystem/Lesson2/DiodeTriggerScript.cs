@@ -15,7 +15,7 @@ public class DiodeTriggerScript : MonoBehaviour
     //End Lerp Position of LightBulb Component
     private Vector3 endLerpPosition;
 
-    //Light bulb transform reference
+  
     public Transform DiodeTransform;
 
     //Animation Lerp time 
@@ -47,7 +47,7 @@ public class DiodeTriggerScript : MonoBehaviour
         endLerpPosition = DiodeTransform.position;
         defaultLerpPosition = defaultTransform.position;
         rigidbodyPhysics.constraints = RigidbodyConstraints.FreezeAll;
-        flipButton.gameObject.SetActive(false);
+        //flipButton.gameObject.SetActive(false);
        // isInTrigger = true;
        // DiodeTransfrom();
     }
@@ -85,7 +85,7 @@ public class DiodeTriggerScript : MonoBehaviour
             FindObjectOfType<SoundManager>().Play("");
             var diode = other.GetComponent<DiodeComponent>();
             diode.diodeTriggerReference = this;
-            diode.isInTrigger = true;
+            diode.isInTrigger = false;
 
         }
     }

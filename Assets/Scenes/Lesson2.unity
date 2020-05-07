@@ -983,6 +983,7 @@ MonoBehaviour:
   OnGrabbed: 0
   batteryOverheating: 0
   vrgGrabbableScript: {fileID: 37294758}
+  turn90: 0
   rigidbodyPhysics: {fileID: 0}
   batteryTriggerReference: {fileID: 0}
   BatteryTransform: {fileID: 1397608679}
@@ -2983,6 +2984,7 @@ MonoBehaviour:
   defaultTransform: {fileID: 97964336}
   lerpTime: 1
   lightBulbIcon: {fileID: 1169134459}
+  isInSeries: 0
   lightBulbTriggerReference: {fileID: 0}
   rigidbodyPhysics: {fileID: 0}
   lightBulbTransform: {fileID: 296017304}
@@ -3406,6 +3408,7 @@ MonoBehaviour:
   OnGrabbed: 0
   batteryOverheating: 0
   vrgGrabbableScript: {fileID: 112947201}
+  turn90: 0
   rigidbodyPhysics: {fileID: 0}
   batteryTriggerReference: {fileID: 0}
   BatteryTransform: {fileID: 1270162139}
@@ -3480,7 +3483,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 112947198}
   m_LocalRotation: {x: 0, y: -0.98322314, z: 0, w: 0.1824073}
-  m_LocalPosition: {x: -1.397, y: -1.69, z: -7.731}
+  m_LocalPosition: {x: -1.46, y: -1.69, z: -7.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 714067111}
@@ -5087,16 +5090,18 @@ MonoBehaviour:
   wireIcon: {fileID: 211745102}
   batteries:
   - {fileID: 1481639104}
+  - {fileID: 37294757}
   minBatteryCount: 2
   lightBulbs:
   - {fileID: 97964333}
   resistors: []
   diode: {fileID: 0}
-  switchIcon: {fileID: 601046890}
-  infoTextBox: {fileID: 607640341}
+  LEDComp: {fileID: 0}
+  switchIcon: {fileID: 1043024905}
+  infoTextBox: {fileID: 203382622}
   switchComponentRef: {fileID: 1391786010}
   bulbComponent: {fileID: 97964333}
-  continueBtn: {fileID: 530301403}
+  continueBtn: {fileID: 1659989192}
   isCurrentRunning: 0
 --- !u!120 &148115771
 LineRenderer:
@@ -5762,10 +5767,10 @@ RectTransform:
   m_Father: {fileID: 186810814}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 830, y: -100}
+  m_SizeDelta: {x: 180, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &164902153
 MonoBehaviour:
@@ -7453,6 +7458,7 @@ MonoBehaviour:
   defaultTransform: {fileID: 203732272}
   lerpTime: 1
   lightBulbIcon: {fileID: 1169134459}
+  isInSeries: 0
   lightBulbTriggerReference: {fileID: 0}
   rigidbodyPhysics: {fileID: 0}
   lightBulbTransform: {fileID: 2000704989}
@@ -8314,7 +8320,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &228214819
 Transform:
   m_ObjectHideFlags: 0
@@ -9298,6 +9304,7 @@ MonoBehaviour:
   OnGrabbed: 0
   batteryOverheating: 0
   vrgGrabbableScript: {fileID: 266064081}
+  turn90: 0
   rigidbodyPhysics: {fileID: 0}
   batteryTriggerReference: {fileID: 0}
   BatteryTransform: {fileID: 9374060}
@@ -9359,6 +9366,7 @@ MonoBehaviour:
   defaultTransform: {fileID: 268519003}
   lerpTime: 1
   lightBulbIcon: {fileID: 1169134459}
+  isInSeries: 0
   lightBulbTriggerReference: {fileID: 0}
   rigidbodyPhysics: {fileID: 0}
   lightBulbTransform: {fileID: 1181970132}
@@ -9433,7 +9441,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 268518998}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.51, y: -1.903, z: -7.03}
+  m_LocalPosition: {x: -0.217, y: -1.903, z: -7.03}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 1798031584}
@@ -12562,10 +12570,10 @@ RectTransform:
   m_Father: {fileID: 186810814}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 90, y: -100}
+  m_SizeDelta: {x: 180, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &350239791
 MonoBehaviour:
@@ -13345,7 +13353,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &370918836
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18022,7 +18030,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 203732271}
+      - m_Target: {fileID: 268518998}
         m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
@@ -18591,6 +18599,7 @@ MonoBehaviour:
   - {fileID: 203732273}
   resistors: []
   diode: {fileID: 0}
+  LEDComp: {fileID: 0}
   switchIcon: {fileID: 601046890}
   infoTextBox: {fileID: 607640341}
   switchComponentRef: {fileID: 1113529537}
@@ -18899,10 +18908,10 @@ RectTransform:
   m_Father: {fileID: 186810814}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 275, y: -100}
+  m_SizeDelta: {x: 180, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &522268880
 MonoBehaviour:
@@ -24951,6 +24960,7 @@ MonoBehaviour:
   OnGrabbed: 0
   batteryOverheating: 0
   vrgGrabbableScript: {fileID: 666830122}
+  turn90: 0
   rigidbodyPhysics: {fileID: 0}
   batteryTriggerReference: {fileID: 0}
   BatteryTransform: {fileID: 1270162139}
@@ -25041,7 +25051,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 666830120}
   m_LocalRotation: {x: 0, y: -0.98322314, z: 0, w: 0.1824073}
-  m_LocalPosition: {x: -1.397, y: -1.69, z: -7.731}
+  m_LocalPosition: {x: -1.341, y: -1.69, z: -7.847}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 413970539}
@@ -30362,8 +30372,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_MethodName: PlaySound
+        - m_Target: {fileID: 48011988}
+          m_MethodName: Play
           m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -30377,8 +30387,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_MethodName: PlaySound
+        - m_Target: {fileID: 48011988}
+          m_MethodName: Play
           m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -31106,7 +31116,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 203732271}
+      - m_Target: {fileID: 268518998}
         m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
@@ -31426,8 +31436,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_MethodName: PlaySound
+        - m_Target: {fileID: 48011988}
+          m_MethodName: Play
           m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -31441,8 +31451,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_MethodName: PlaySound
+        - m_Target: {fileID: 48011988}
+          m_MethodName: Play
           m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -34542,10 +34552,10 @@ RectTransform:
   m_Father: {fileID: 186810814}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 645, y: -100}
+  m_SizeDelta: {x: 180, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &983769829
 MonoBehaviour:
@@ -37146,10 +37156,10 @@ RectTransform:
   m_Father: {fileID: 186810814}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 460, y: -100}
+  m_SizeDelta: {x: 180, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1043024905
 MonoBehaviour:
@@ -38863,7 +38873,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 266064079}
+      - m_Target: {fileID: 112947198}
         m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
@@ -41526,7 +41536,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 266064079}
+      - m_Target: {fileID: 112947198}
         m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
@@ -45086,10 +45096,10 @@ RectTransform:
   m_Father: {fileID: 186810814}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 1200, y: -100}
+  m_SizeDelta: {x: 180, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1290349465
 MonoBehaviour:
@@ -51288,8 +51298,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_MethodName: PlaySound
+        - m_Target: {fileID: 48011988}
+          m_MethodName: Play
           m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -51303,8 +51313,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_MethodName: PlaySound
+        - m_Target: {fileID: 48011988}
+          m_MethodName: Play
           m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -52229,10 +52239,10 @@ RectTransform:
   m_Father: {fileID: 186810814}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 1015, y: -100}
+  m_SizeDelta: {x: 180, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1470098633
 MonoBehaviour:
@@ -52852,6 +52862,7 @@ MonoBehaviour:
   OnGrabbed: 0
   batteryOverheating: 0
   vrgGrabbableScript: {fileID: 1481639105}
+  turn90: 0
   rigidbodyPhysics: {fileID: 0}
   batteryTriggerReference: {fileID: 0}
   BatteryTransform: {fileID: 1397608679}
@@ -53944,11 +53955,12 @@ MonoBehaviour:
   - {fileID: 268519000}
   resistors: []
   diode: {fileID: 0}
+  LEDComp: {fileID: 0}
   switchIcon: {fileID: 601046890}
-  infoTextBox: {fileID: 607640341}
+  infoTextBox: {fileID: 169477042}
   switchComponentRef: {fileID: 1297556044}
   bulbComponent: {fileID: 268519000}
-  continueBtn: {fileID: 530301403}
+  continueBtn: {fileID: 880356393}
   isCurrentRunning: 0
 --- !u!120 &1520682603
 LineRenderer:
@@ -57295,10 +57307,10 @@ RectTransform:
   m_Father: {fileID: 686415880}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 373.1, y: -75}
+  m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1655372794
 MonoBehaviour:

@@ -6517,8 +6517,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lightBulbComp: {fileID: 5725337332952316704}
+  lightBulbMesh: {fileID: 0}
   LightOffMat: {fileID: 2100000, guid: 706edf3761eabd44d9033289cb86b484, type: 2}
   LightOnMat: {fileID: 2100000, guid: 8556a53875a50d246b9b51429298edf8, type: 2}
+  GrabbedComp: 0
+  vrgGrabbableScript: {fileID: 0}
+  defaultTransform: {fileID: 0}
+  lerpTime: 1
+  lightBulbIcon: {fileID: 0}
+  isInSeries: 0
+  lightBulbTriggerReference: {fileID: 0}
+  rigidbodyPhysics: {fileID: 0}
+  lightBulbTransform: {fileID: 0}
+  isInTrigger: 0
 --- !u!114 &203732274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14579,10 +14590,12 @@ MonoBehaviour:
   LiveWire: {fileID: 2100000, guid: cfc7389a5ecc7714ca9963615c1a330c, type: 2}
   wireModel: {fileID: 0}
   wireIcon: {fileID: 175232127}
-  batteryTrigger: {fileID: 2116840076}
-  lightBulbTrigger: {fileID: 1810238014}
-  diodeObject: {fileID: 0}
-  diodeTrigger: {fileID: 0}
+  batteries: []
+  minBatteryCount: 1
+  lightBulbs: []
+  resistors: []
+  diode: {fileID: 0}
+  LEDComp: {fileID: 0}
   switchIcon: {fileID: 1841062777}
   infoTextBox: {fileID: 0}
   switchComponentRef: {fileID: 0}
@@ -15761,7 +15774,7 @@ MonoBehaviour:
   videoPlayer: {fileID: 351301912}
   splashVideoDisplay: {fileID: 1833095130}
   splashVideos:
-  - {fileID: 32900000, guid: 96b5ef36eb1bc174283f70b2671bbcb7, type: 3}
+  - {fileID: 32900000, guid: 336fa771126675f44b5538a59da61878, type: 3}
   onSplashVideosFinished:
     m_PersistentCalls:
       m_Calls:

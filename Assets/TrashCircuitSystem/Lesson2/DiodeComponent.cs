@@ -41,8 +41,6 @@ public class DiodeComponent : MonoBehaviour
 
     public VrgGrabbable vrgGrabbableScript;
 
-    public DiodeIconScript DiodeIcon;
-
     public Button flipButton;
 
     public TextMeshProUGUI diodeDescription;
@@ -134,6 +132,7 @@ public class DiodeComponent : MonoBehaviour
         rigidbodyPhysics.constraints = RigidbodyConstraints.FreezeAll;
         diodeIcon.diodeActive = positiveBiasIcon;
         isPositiveBias = true;
+        flipButton.gameObject.SetActive(false);
 
     }
 

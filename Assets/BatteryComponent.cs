@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using VrGrabber;
+using UnityEngine.SceneManagement;
 
 public class BatteryComponent : MonoBehaviour
 {
@@ -33,6 +34,8 @@ public class BatteryComponent : MonoBehaviour
     public bool batteryOverheating;
 
     public VrgGrabbable vrgGrabbableScript;
+
+    public bool turn90 = false;
 
     
 
@@ -158,7 +161,16 @@ public class BatteryComponent : MonoBehaviour
     private void BatteryInTrigger()
     {
         batteryComp.transform.position = Vector3.Lerp(startLerpPosition, BatteryTransform.position, lerpTime);
-        batteryComp.transform.localEulerAngles = new Vector3(200, 0, 90);
+        if (turn90)
+        {
+            batteryComp.transform.localEulerAngles = new Vector3(0, 90, 90);
+        }
+
+        else
+        {
+            batteryComp.transform.localEulerAngles = new Vector3(200, 0, 90);
+        }
+        
         rigidbodyPhysics.velocity = Vector3.zero;
         rigidbodyPhysics.angularVelocity = Vector3.zero;
         rigidbodyPhysics.constraints = RigidbodyConstraints.FreezeAll;

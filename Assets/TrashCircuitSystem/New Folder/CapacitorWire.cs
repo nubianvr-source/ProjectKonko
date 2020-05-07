@@ -37,6 +37,7 @@ public class CapacitorWire : MonoBehaviour
     public LightBulbComponent bulbComponent;
     public GameObject continueBtn;
 
+    public float capacitorWaitTime = 3f;
 
 
 
@@ -121,15 +122,30 @@ public class CapacitorWire : MonoBehaviour
     IEnumerator CapacitorTurnOnWait()
 
     {
-        yield return new WaitForSeconds(3F);
+        yield return new WaitForSeconds(capacitorWaitTime);
         bulbComponent.lightOn();
-        infoTextBox.text = "The light is on";
+        switch (capacitorWaitTime)
+        {
+            case 2:
+                infoTextBox.text = "The light is on, now lets try one with a bigger capacity, click the continue button to proceed";
+                break;
+            case 5:
+                infoTextBox.text = "The light is on, now lets try one with an even bigger capacity, click the continue button to proceed";
+                break;
+            case 7:
+                infoTextBox.text = "Great we tried all capacitors with variant capacities and saw how they all worked, now let's continue with the lesson";
+                break;
+            default:
+                infoTextBox.text = "The light is on";
+                break;
+        }
+        
 
     }
     IEnumerator CapacitorTurnOffWait()
 
     {
-        yield return new WaitForSeconds(3F);
+        yield return new WaitForSeconds(capacitorWaitTime);
         bulbComponent.lightOff();
         wireModel.GetComponent<MeshRenderer>().material = wireInactive;
         wireIcon.WireInactiveFunc();

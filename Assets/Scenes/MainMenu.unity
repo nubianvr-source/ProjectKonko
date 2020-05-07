@@ -3911,11 +3911,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1763394565}
     - target: {fileID: 4403379707006494929, guid: f25b050dd8853ec41952c387c3e00760,
         type: 3}
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 1763394565}
+    - target: {fileID: 4403379707006494929, guid: f25b050dd8853ec41952c387c3e00760,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 4403379707006494929, guid: f25b050dd8853ec41952c387c3e00760,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Play
       objectReference: {fileID: 0}
     - target: {fileID: 4403379706705932854, guid: f25b050dd8853ec41952c387c3e00760,
         type: 3}
@@ -5632,8 +5642,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lightBulbComp: {fileID: 5725337332952316704}
+  lightBulbMesh: {fileID: 0}
   LightOffMat: {fileID: 2100000, guid: 706edf3761eabd44d9033289cb86b484, type: 2}
   LightOnMat: {fileID: 2100000, guid: 8556a53875a50d246b9b51429298edf8, type: 2}
+  GrabbedComp: 0
+  vrgGrabbableScript: {fileID: 0}
+  defaultTransform: {fileID: 0}
+  lerpTime: 1
+  lightBulbIcon: {fileID: 0}
+  isInSeries: 0
+  lightBulbTriggerReference: {fileID: 0}
+  rigidbodyPhysics: {fileID: 0}
+  lightBulbTransform: {fileID: 0}
+  isInTrigger: 0
 --- !u!114 &203732274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13296,10 +13317,12 @@ MonoBehaviour:
   LiveWire: {fileID: 2100000, guid: cfc7389a5ecc7714ca9963615c1a330c, type: 2}
   wireModel: {fileID: 0}
   wireIcon: {fileID: 175232127}
-  batteryTrigger: {fileID: 2116840076}
-  lightBulbTrigger: {fileID: 1810238014}
-  diodeObject: {fileID: 0}
-  diodeTrigger: {fileID: 0}
+  batteries: []
+  minBatteryCount: 1
+  lightBulbs: []
+  resistors: []
+  diode: {fileID: 0}
+  LEDComp: {fileID: 0}
   switchIcon: {fileID: 1841062777}
   infoTextBox: {fileID: 0}
   switchComponentRef: {fileID: 0}
@@ -31457,11 +31480,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1763394565}
     - target: {fileID: 4403379707006494929, guid: f25b050dd8853ec41952c387c3e00760,
         type: 3}
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 1763394565}
+    - target: {fileID: 4403379707006494929, guid: f25b050dd8853ec41952c387c3e00760,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 4403379707006494929, guid: f25b050dd8853ec41952c387c3e00760,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Play
       objectReference: {fileID: 0}
     - target: {fileID: 4403379706705932854, guid: f25b050dd8853ec41952c387c3e00760,
         type: 3}
@@ -40631,11 +40664,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1763394565}
     - target: {fileID: 4403379707006494929, guid: f25b050dd8853ec41952c387c3e00760,
         type: 3}
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 1763394565}
+    - target: {fileID: 4403379707006494929, guid: f25b050dd8853ec41952c387c3e00760,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 4403379707006494929, guid: f25b050dd8853ec41952c387c3e00760,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Play
       objectReference: {fileID: 0}
     - target: {fileID: 4403379706705932854, guid: f25b050dd8853ec41952c387c3e00760,
         type: 3}
@@ -44080,11 +44123,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1763394565}
     - target: {fileID: 4403379707006494929, guid: f25b050dd8853ec41952c387c3e00760,
         type: 3}
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 1763394565}
+    - target: {fileID: 4403379707006494929, guid: f25b050dd8853ec41952c387c3e00760,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 4403379707006494929, guid: f25b050dd8853ec41952c387c3e00760,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Play
       objectReference: {fileID: 0}
     - target: {fileID: 4403379706705932854, guid: f25b050dd8853ec41952c387c3e00760,
         type: 3}
@@ -49081,8 +49134,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_MethodName: PlaySound
+        - m_Target: {fileID: 1763394565}
+          m_MethodName: Play
           m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -49096,8 +49149,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_MethodName: PlaySound
+        - m_Target: {fileID: 1763394565}
+          m_MethodName: Play
           m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -54938,11 +54991,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1763394565}
     - target: {fileID: 4403379707006494929, guid: f25b050dd8853ec41952c387c3e00760,
         type: 3}
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 1763394565}
+    - target: {fileID: 4403379707006494929, guid: f25b050dd8853ec41952c387c3e00760,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 4403379707006494929, guid: f25b050dd8853ec41952c387c3e00760,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Play
       objectReference: {fileID: 0}
     - target: {fileID: 4403379706705932854, guid: f25b050dd8853ec41952c387c3e00760,
         type: 3}
@@ -66407,11 +66470,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1763394565}
     - target: {fileID: 4403379707006494929, guid: f25b050dd8853ec41952c387c3e00760,
         type: 3}
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 1763394565}
+    - target: {fileID: 4403379707006494929, guid: f25b050dd8853ec41952c387c3e00760,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 4403379707006494929, guid: f25b050dd8853ec41952c387c3e00760,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Play
       objectReference: {fileID: 0}
     - target: {fileID: 4403379706705932854, guid: f25b050dd8853ec41952c387c3e00760,
         type: 3}
