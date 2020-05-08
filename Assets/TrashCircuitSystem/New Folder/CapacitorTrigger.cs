@@ -61,9 +61,9 @@ public class CapacitorTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Battery")
+        if (other.gameObject.tag == "Capacitor")
         {
-            FindObjectOfType<AudioManager>().PlaySound("SuccessTrigger");
+            FindObjectOfType<SoundManager>().Play("SuccessTrigger");
 
             isInTrigger = true;
 
@@ -73,9 +73,9 @@ public class CapacitorTrigger : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "Battery")
+        if (other.gameObject.tag == "Capacitor")
         {
-            FindObjectOfType<AudioManager>().PlaySound("");
+            FindObjectOfType<SoundManager>().Play("");
             isInTrigger = false;
 
         }

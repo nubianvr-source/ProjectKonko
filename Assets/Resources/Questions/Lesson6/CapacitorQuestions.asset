@@ -29,7 +29,7 @@ MonoBehaviour:
   - _info: "A capacitor can also control the amount of time it takes for something
       to happen in a circuit \r\n"
     _isCorrect: 1
-    _interventionText: Depending on how much electrical energyit posseses
+    _interventionText: Depending on how much electrical energy it posseses
   _useTimer: 0
   _timer: 0
   _answerType: 0

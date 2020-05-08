@@ -10,6 +10,7 @@ TagManager:
   - Diode
   - Resistor
   - LED
+  - Capacitor
   layers:
   - Default
   - TransparentFX

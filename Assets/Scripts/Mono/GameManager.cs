@@ -192,7 +192,7 @@ public class GameManager : MonoBehaviour {
             events.DisplayResolutionScreen(type, Questions[currentQuestion].Answers[answerIndex].interventionText, Questions[currentQuestion].AddScore);
         }
 
-        AudioManager.Instance.PlaySound((isCorrect) ? "CorrectSFX" : "IncorrectSFX");
+        SoundManager.instance.Play((isCorrect) ? "CorrectSFX" : "IncorrectSFX");
 
         if (type != UIManager.ResolutionScreenType.Finish)
         {

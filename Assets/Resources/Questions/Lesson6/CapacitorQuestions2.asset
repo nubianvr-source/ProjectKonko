@@ -19,9 +19,8 @@ MonoBehaviour:
     _interventionText: This is a resistor connected in series
   - _info: Battery is connected end to end with other capacitors
     _isCorrect: 1
-    _interventionText: Yes this is correct because the electic current would move
-      from the battery into the capacitor to charge it as soon as the circuit is turned
-      on
+    _interventionText: Electic current would move from the battery into the capacitor
+      to charge it as soon as the circuit is turned on
   - _info: Battery is connected side by side with other resistors
     _isCorrect: 0
     _interventionText: This is a resistor connected in parallel

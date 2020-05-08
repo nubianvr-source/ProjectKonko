@@ -42,6 +42,8 @@ public class Lesson1WireScript : MonoBehaviour
     [Header("Other")]
     public LightBulbComponent bulbComponent;
     public GameObject continueBtn;
+    public bool firstActivity = false;
+    public bool secondActivityLesson2 = false;
 
     private bool batteryLoopThroughFunctionRun = false;
 
@@ -165,10 +167,21 @@ public class Lesson1WireScript : MonoBehaviour
 
                     if (buildindex == 3)
                     {
+                        if (firstActivity)
+                        {
                         //Casue the battery to explode 
                         batteryItem.batteryOverheating = true;
                         infoTextBox.text = "As you can see the battery is overheating, this is because there is no load in the circuit.";
                         continueBtn.SetActive(true);
+                        }
+
+                        else 
+                        {
+                            batteryItem.batteryOverheating = true;
+                            infoTextBox.text = "There is no load in the circuit";
+
+                        }
+
 
                     }
                     else
@@ -334,7 +347,7 @@ public class Lesson1WireScript : MonoBehaviour
 
                     var scene = SceneManager.GetActiveScene();
                     int buildindex = scene.buildIndex;
-                    if (buildindex == 3)
+                    if (secondActivityLesson2)
                     {
                         infoTextBox.text = "The battery voltage is not enough to power the lightbulb, we might need to add one more battery";
                         continueBtn.SetActive(true);
@@ -473,8 +486,17 @@ public class Lesson1WireScript : MonoBehaviour
                         switch (buildindex)
                         {
                             case 3:
+                                if (secondActivityLesson2)
+                                {
                                 infoTextBox.text = "The battery voltage is not enough to power the lightbulb, we might need to add one more battery";
                                 continueBtn.SetActive(true);
+                                }
+
+                                else
+                                {
+                                    infoTextBox.text = "The battery voltage is not enough to power the lightbulb, we might need to add one more battery";
+                                }
+                               
                                 break;
                             case 4:
                                 infoTextBox.text = "The battery voltage is not enough to power the 3V lightbulb, since the batteries are arranged in parallel voltage isnt added up";
@@ -604,9 +626,15 @@ public class Lesson1WireScript : MonoBehaviour
         lightBulbsInTriggers = 0;
         //bulbComponent.lightOff();
         //switchIcon.SwitchOff();
+        batteryLoopThroughFunctionRun = false;
+        if(LEDComp != null)
+        {
         LEDComp.flipButton.gameObject.SetActive(false);
         LEDComp.LEDDescription.gameObject.SetActive(true);
         LEDComp.TurnOffLED();
+
+        }
+        
         foreach (LightBulbComponent lightBulbItem in lightBulbs)
         {
             if (lightBulbItem.isInTrigger == true)
