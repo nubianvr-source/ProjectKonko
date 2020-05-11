@@ -94,6 +94,11 @@ public class DiodeComponent : MonoBehaviour
         CheckPositiveBias();
         startLerpPosition = diodeComp.transform.position;
         //InEditorVR();
+        if (!OnGrabbed)
+        {
+            IsDiodeInTrigger();
+            
+        }
     }
 
     /*
@@ -161,6 +166,7 @@ public class DiodeComponent : MonoBehaviour
     public void UnlockDiodeConstraints()
 
     {
+        OnGrabbed = true;
         rigidbodyPhysics.constraints = RigidbodyConstraints.None;
         if (diodeTriggerReference != null)
         {
@@ -172,6 +178,8 @@ public class DiodeComponent : MonoBehaviour
 
     public void OnDiodeDropped()
     {
+        OnGrabbed = false;
+
         IsDiodeInTrigger();
     }
 

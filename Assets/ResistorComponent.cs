@@ -71,7 +71,11 @@ public class ResistorComponent : MonoBehaviour
     {
         startLerpPosition = resistorComp.transform.position;
         // InEditorVR();
-        IsResistorInTrigger();
+        if (!OnGrabbed)
+        { 
+            IsResistorInTrigger();
+        }
+       
     }
 
 
@@ -107,6 +111,7 @@ public class ResistorComponent : MonoBehaviour
 
     public void UnlockResistorConstraints()
     {
+        OnGrabbed = true;
         rigidbodyPhysics.constraints = RigidbodyConstraints.None;
         if (resistorTriggerReference != null)
         {
@@ -118,6 +123,7 @@ public class ResistorComponent : MonoBehaviour
     public void OnResistorDropped()
     {
         IsResistorInTrigger();
+        OnGrabbed = false;
     }
 
     private void IsResistorInTrigger()

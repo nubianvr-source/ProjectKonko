@@ -95,11 +95,16 @@ public class LEDComponent : MonoBehaviour
             CheckPositiveBias();
         }
         startLerpPosition = LEDComp.transform.position;
-        IsLEDInTrigger();
+        if (!OnGrabbed)
+        { 
+          IsLEDInTrigger();
+        }
+       
     }
 
     public void UnlockLEDConstraints()
     {
+        OnGrabbed = true;
         rigidbodyPhysics.constraints = RigidbodyConstraints.None;
         if (LEDTriggerReference != null)
         {
@@ -150,6 +155,7 @@ public class LEDComponent : MonoBehaviour
     public void OnLEDDropped()
     {
         IsLEDInTrigger();
+        OnGrabbed = false;
     }
 
     private void IsLEDInTrigger()

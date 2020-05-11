@@ -82,7 +82,12 @@ public class LightBulbComponent : MonoBehaviour
         startLerpPosition = lightBulbComp.transform.position;
 
         // InEditorVR();
-        IsLightBulbInTrigger();
+        if (!GrabbedComp)
+        { 
+          IsLightBulbInTrigger();
+        }
+
+       
          
     }
 
@@ -107,6 +112,7 @@ public class LightBulbComponent : MonoBehaviour
 
     public void unlockLightBulbConstraints()
     {
+        GrabbedComp = true;
         rigidbodyPhysics.constraints = RigidbodyConstraints.None;
         if (lightBulbTriggerReference != null)
         {
@@ -130,7 +136,7 @@ public class LightBulbComponent : MonoBehaviour
     public void OnLlightBulbDropped()
     {
         IsLightBulbInTrigger();
-    
+        GrabbedComp = false;
     }
 
     private void IsLightBulbInTrigger()

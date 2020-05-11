@@ -96,7 +96,11 @@ public class BatteryComponent : MonoBehaviour
         }
 
         // InEditorVR();
-        IsBatteryInTrigger();
+        if (!OnGrabbed)
+        {
+            IsBatteryInTrigger();
+        }
+       
 
         
     }
@@ -124,6 +128,7 @@ public class BatteryComponent : MonoBehaviour
 
     public void unlockBatteryConstraints()
     {
+        OnGrabbed = true;
         rigidbodyPhysics.constraints = RigidbodyConstraints.None;
         if (batteryTriggerReference != null)
         {
@@ -144,6 +149,7 @@ public class BatteryComponent : MonoBehaviour
     public void OnBatteryDropped()
     {
         IsBatteryInTrigger();
+        OnGrabbed = false;
     }
 
     private void IsBatteryInTrigger()

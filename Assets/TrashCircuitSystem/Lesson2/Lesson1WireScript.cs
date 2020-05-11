@@ -164,32 +164,41 @@ public class Lesson1WireScript : MonoBehaviour
 
                 foreach (BatteryComponent batteryItem in batteries)
                 {
-
-                    if (buildindex == 3)
+                    if (batteryItem.isInTrigger)
                     {
-                        if (firstActivity)
+                        if (buildindex == 3)
                         {
-                        //Casue the battery to explode 
-                        batteryItem.batteryOverheating = true;
-                        infoTextBox.text = "As you can see the battery is overheating, this is because there is no load in the circuit.";
-                        continueBtn.SetActive(true);
-                        }
+                            if (firstActivity)
+                            {
+                                //Casue the battery to explode 
+                                batteryItem.batteryOverheating = true;
+                                infoTextBox.text = "As you can see the battery is overheating, this is because there is no load in the circuit.";
+                                continueBtn.SetActive(true);
+                            }
 
-                        else 
+                            else
+                            {
+                                batteryItem.batteryOverheating = true;
+                                infoTextBox.text = "There is no load in the circuit";
+
+                            }
+
+
+                        }
+                        else
                         {
+
                             batteryItem.batteryOverheating = true;
                             infoTextBox.text = "There is no load in the circuit";
-
                         }
-
-
                     }
+
                     else
                     {
-
-                        batteryItem.batteryOverheating = true;
-                        infoTextBox.text = "There is no load in the circuit";
+                        infoTextBox.text = "Please a battety into the circuit.";
                     }
+
+
                 }
 
 
@@ -488,15 +497,15 @@ public class Lesson1WireScript : MonoBehaviour
                             case 3:
                                 if (secondActivityLesson2)
                                 {
-                                infoTextBox.text = "The battery voltage is not enough to power the lightbulb, we might need to add one more battery";
-                                continueBtn.SetActive(true);
+                                    infoTextBox.text = "The battery voltage is not enough to power the lightbulb, we might need to add one more battery";
+                                    continueBtn.SetActive(true);
                                 }
 
                                 else
                                 {
                                     infoTextBox.text = "The battery voltage is not enough to power the lightbulb, we might need to add one more battery";
                                 }
-                               
+
                                 break;
                             case 4:
                                 infoTextBox.text = "The battery voltage is not enough to power the 3V lightbulb, since the batteries are arranged in parallel voltage isnt added up";
@@ -627,14 +636,14 @@ public class Lesson1WireScript : MonoBehaviour
         //bulbComponent.lightOff();
         //switchIcon.SwitchOff();
         batteryLoopThroughFunctionRun = false;
-        if(LEDComp != null)
+        if (LEDComp != null)
         {
-        LEDComp.flipButton.gameObject.SetActive(false);
-        LEDComp.LEDDescription.gameObject.SetActive(true);
-        LEDComp.TurnOffLED();
+            LEDComp.flipButton.gameObject.SetActive(false);
+            LEDComp.LEDDescription.gameObject.SetActive(true);
+            LEDComp.TurnOffLED();
 
         }
-        
+
         foreach (LightBulbComponent lightBulbItem in lightBulbs)
         {
             if (lightBulbItem.isInTrigger == true)
