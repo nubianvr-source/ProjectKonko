@@ -45,6 +45,8 @@ public class Lesson1WireScript : MonoBehaviour
     public bool firstActivity = false;
     public bool secondActivityLesson2 = false;
 
+    public GameObject[] Triggers;
+
     private bool batteryLoopThroughFunctionRun = false;
 
 
@@ -64,7 +66,6 @@ public class Lesson1WireScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         toggleChanged();
     }
     private float coloNumberConversion(float num)
@@ -73,9 +74,17 @@ public class Lesson1WireScript : MonoBehaviour
     }
     public void setCircuitActive()
     {
+        foreach (var trigger in Triggers)
+        {
+            trigger.gameObject.SetActive(false);
+        }
         if (batteryLoopThroughFunctionRun == false)
         {
             batteryLoopThroughFunctionRun = true;
+            foreach (var trigger in Triggers)
+            {
+                trigger.gameObject.SetActive(false);
+            }
             foreach (BatteryComponent batteryItem in batteries)
             {
                 if (batteryItem.isInTrigger == true)
@@ -338,7 +347,8 @@ public class Lesson1WireScript : MonoBehaviour
                         int buildindex = scene.buildIndex;
                         if (buildindex == 4)
                         {
-                            continueBtn.SetActive(true);
+                            // continueBtn.SetActive(true);
+                            infoTextBox.text = "The battery voltage is not enough to power the lightbulb, we might need to add one more battery";
                         }
                         else
                         {
@@ -364,6 +374,7 @@ public class Lesson1WireScript : MonoBehaviour
                     else
                     {
                         infoTextBox.text = "The lightbulbs in a series connection is incomplete";
+                        continueBtn.SetActive(false);
                         for (int i = 0; i < lightBulbs.Length; i++)
                         {
                             lightBulbs[i].lightOff();
@@ -665,6 +676,11 @@ public class Lesson1WireScript : MonoBehaviour
                 batteryItem.batteryOverheating = false;
 
             }
+        }
+
+        foreach (var trigger in Triggers)
+        {
+            trigger.gameObject.SetActive(true);
         }
     }
 
