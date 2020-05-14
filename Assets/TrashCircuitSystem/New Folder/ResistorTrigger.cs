@@ -50,6 +50,8 @@ public class ResistorTrigger : MonoBehaviour
     void Update()
     {
         startLerpPosition = circuitComp.transform.position;
+
+     
     }
 
 

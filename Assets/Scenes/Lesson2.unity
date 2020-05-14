@@ -3483,7 +3483,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 112947198}
   m_LocalRotation: {x: 0, y: -0.98322314, z: 0, w: 0.1824073}
-  m_LocalPosition: {x: -1.46, y: -1.69, z: -7.7}
+  m_LocalPosition: {x: -1.32, y: -1.69, z: -7.76}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 714067111}
@@ -5104,7 +5104,6 @@ MonoBehaviour:
   continueBtn: {fileID: 1659989192}
   firstActivity: 0
   secondActivityLesson2: 0
-  Triggers: []
   isCurrentRunning: 0
 --- !u!120 &148115771
 LineRenderer:
@@ -9283,7 +9282,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &266064080
 Transform:
   m_ObjectHideFlags: 0
@@ -18693,7 +18692,6 @@ MonoBehaviour:
   continueBtn: {fileID: 530301403}
   firstActivity: 1
   secondActivityLesson2: 0
-  Triggers: []
   isCurrentRunning: 0
 --- !u!120 &515249442
 LineRenderer:
@@ -22540,7 +22538,7 @@ PrefabInstance:
     - target: {fileID: 2210752795689557295, guid: 1835d307f4608a9489b7bab670941a9a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 2210752795689557295, guid: 1835d307f4608a9489b7bab670941a9a,
         type: 3}
@@ -54027,7 +54025,6 @@ MonoBehaviour:
   continueBtn: {fileID: 880356393}
   firstActivity: 0
   secondActivityLesson2: 1
-  Triggers: []
   isCurrentRunning: 0
 --- !u!120 &1520682603
 LineRenderer:

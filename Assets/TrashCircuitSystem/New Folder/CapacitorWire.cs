@@ -1,7 +1,6 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
 public class CapacitorWire : MonoBehaviour
 {
@@ -38,7 +37,8 @@ public class CapacitorWire : MonoBehaviour
     public GameObject continueBtn;
 
     public float capacitorWaitTime = 3f;
-
+    private bool turnOFFWaitCR = false;
+    private bool turnONWaitCR = false;
 
 
 
@@ -59,7 +59,7 @@ public class CapacitorWire : MonoBehaviour
     {
         isBatteryInTrigger = batteryTrigger.isInTrigger;
         isLightBulbInTrigger = lightBulbTrigger.isInTrigger;
-       // isDiodePositiveBias = diodeObject.isPositiveBias;
+        // isDiodePositiveBias = diodeObject.isPositiveBias;
 
     }
 
@@ -72,6 +72,7 @@ public class CapacitorWire : MonoBehaviour
 
                 if (capacitor.isInTrigger)
                 {
+                    StopCoroutine(CapacitorTurnOffWait());
                     StartCoroutine(CapacitorTurnOnWait());
 
                     isCurrentRunning = true;
@@ -95,6 +96,7 @@ public class CapacitorWire : MonoBehaviour
                     batteryTrigger.batteryIcon.BatteryPowerActive();
                     wireIcon.WireActiveFunc();
                     //continueBtn.SetActive(true);
+                    capacitor.gameObject.SetActive(false);
                     switchIcon.SwitchOn();
                     bulbComponent.lightOn();
 
@@ -120,55 +122,79 @@ public class CapacitorWire : MonoBehaviour
     }
 
     IEnumerator CapacitorTurnOnWait()
-
     {
-        yield return new WaitForSeconds(capacitorWaitTime);
-        bulbComponent.lightOn();
-        switch (capacitorWaitTime)
+        if (!turnONWaitCR)
         {
-            case 2:
-                infoTextBox.text = "The light is on, now lets try one with a bigger capacity, click the continue button to proceed";
-                break;
-            case 5:
-                infoTextBox.text = "The light is on, now lets try one with an even bigger capacity, click the continue button to proceed";
-                break;
-            case 7:
-                infoTextBox.text = "Great we tried all capacitors with variant capacities and saw how they all worked, now let's continue with the lesson";
-                break;
-            default:
-                infoTextBox.text = "The light is on";
-                break;
+            turnONWaitCR = true;
+            yield return new WaitForSeconds(capacitorWaitTime);
+            bulbComponent.lightOn();
+            switch (capacitorWaitTime)
+            {
+                case 2:
+                    infoTextBox.text = "The light is on, now lets try one with a bigger capacity, click the continue button to proceed";
+                    break;
+                case 5:
+                    infoTextBox.text = "The light is on, now lets try one with an even bigger capacity, click the continue button to proceed";
+                    break;
+                case 7:
+                    infoTextBox.text = "Great we tried all capacitors with variant capacities and saw how they all worked, now let's continue with the lesson";
+                    break;
+                default:
+                    infoTextBox.text = "The light is on";
+                    break;
+            }
+            turnONWaitCR = false;
         }
-        
+
+        else
+        {
+            yield return null;
+        }
+
+
+
 
     }
     IEnumerator CapacitorTurnOffWait()
 
     {
-        yield return new WaitForSeconds(capacitorWaitTime);
-        bulbComponent.lightOff();
-        wireModel.GetComponent<MeshRenderer>().material = wireInactive;
-        wireIcon.WireInactiveFunc();
-        lightBulbTrigger.lightBulbIcon.LightBulbIconOff();
+        if (!turnOFFWaitCR)
+        {
+            turnOFFWaitCR = true;
+            yield return new WaitForSeconds(capacitorWaitTime);
+            bulbComponent.lightOff();
+            wireModel.GetComponent<MeshRenderer>().material = wireInactive;
+            wireIcon.WireInactiveFunc();
+            lightBulbTrigger.lightBulbIcon.LightBulbIconOff();
+            turnOFFWaitCR = false;
+
+        }
+        else
+        {
+            yield return null;
+        }
 
 
     }
     public void setCircuitInactive()
     {
         isCurrentRunning = false;
-       
+
         batteryTrigger.batteryIcon.BatteryPowerInactive();
         if (capacitor.isInTrigger)
         {
             switchIcon.SwitchOff();
+            StopCoroutine(CapacitorTurnOnWait());
             StartCoroutine(CapacitorTurnOffWait());
         }
-        else 
+        else
         {
             bulbComponent.lightOff();
             wireModel.GetComponent<MeshRenderer>().material = wireInactive;
             wireIcon.WireInactiveFunc();
             lightBulbTrigger.lightBulbIcon.LightBulbIconOff();
+            capacitor.gameObject.SetActive(true);
+
         }
 
 

@@ -34,7 +34,7 @@ public class LightBulbTriggerScript : MonoBehaviour
 
     public LightBulbIcon lightBulbIcon;
 
-
+    
 
     // Start is called before the first frame update
     void Start()
@@ -50,6 +50,7 @@ public class LightBulbTriggerScript : MonoBehaviour
     void Update()
     {
          startLerpPosition = circuitComp.transform.position;
+       
     }
 
     public void unlockLightBulbConstraints ()

@@ -41,6 +41,8 @@ public class DiodeTriggerScript : MonoBehaviour
     public TextMeshProUGUI diodeDescription;
 
 
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -56,6 +58,7 @@ public class DiodeTriggerScript : MonoBehaviour
     void Update()
     {
         startLerpPosition = circuitComp.transform.position;
+       
     }
 
     public void unlockDiodeConstraints()

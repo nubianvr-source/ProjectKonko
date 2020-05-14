@@ -35,6 +35,8 @@ public class BatteryTriggerScript : MonoBehaviour
     public BatteryIconScript batteryIcon;
     public GameObject batteryText;
 
+ 
+
 
     // Start is called before the first frame update
     void Start()
@@ -51,6 +53,7 @@ public class BatteryTriggerScript : MonoBehaviour
     void Update()
     {
         startLerpPosition = circuitComp.transform.position;
+        
     }
 
 
@@ -74,7 +77,7 @@ public class BatteryTriggerScript : MonoBehaviour
             battery.batteryTriggerReference = this;
             battery.BatteryTransform = BatteryTransform;
             battery.isInTrigger = true;
-
+            isInTrigger = battery.isInTrigger;
         }
 
     }
@@ -87,7 +90,7 @@ public class BatteryTriggerScript : MonoBehaviour
             var battery = other.GetComponent<BatteryComponent>();
             battery.batteryTriggerReference = this;
             battery.isInTrigger = false;
-
+            isInTrigger = battery.isInTrigger;
         }
     }
 

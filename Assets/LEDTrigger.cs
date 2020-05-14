@@ -8,6 +8,14 @@ public class LEDTrigger : MonoBehaviour
     //Light bulb transform reference
     public Transform LEDTransform;
 
+    public bool isInTrigger;
+
+    
+
+    private void Update()
+    {
+      
+    }
 
     private void OnTriggerEnter(Collider other)
     {

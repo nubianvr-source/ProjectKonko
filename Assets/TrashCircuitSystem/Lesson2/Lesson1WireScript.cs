@@ -45,7 +45,7 @@ public class Lesson1WireScript : MonoBehaviour
     public bool firstActivity = false;
     public bool secondActivityLesson2 = false;
 
-    public GameObject[] Triggers;
+
 
     private bool batteryLoopThroughFunctionRun = false;
 
@@ -74,69 +74,64 @@ public class Lesson1WireScript : MonoBehaviour
     }
     public void setCircuitActive()
     {
-        foreach (var trigger in Triggers)
-        {
-            trigger.gameObject.SetActive(false);
-        }
-        if (batteryLoopThroughFunctionRun == false)
-        {
-            batteryLoopThroughFunctionRun = true;
-            foreach (var trigger in Triggers)
+
+       
+
+
+            for (int i = 0; i < batteries.Length; i++)
             {
-                trigger.gameObject.SetActive(false);
-            }
-            foreach (BatteryComponent batteryItem in batteries)
-            {
-                if (batteryItem.isInTrigger == true)
+                if (batteries[i].isInTrigger == true)
                 {
-
                     batteryCircuitCount += 1;
-                    print("batteryInCircuit" + batteryCircuitCount);
-
-
-                    for (int i = 0; i < lightBulbs.Length; i++)
-                    {
-                        if (lightBulbs[i].isInSeries == true)
-                        {
-                            if (lightBulbs[i].isInTrigger == true)
-                            {
-                                lightBulbsInTriggers += 1;
-                                print("lightBulbinTriggers" + lightBulbsInTriggers);
-                            }
-                            else
-                            {
-
-                            }
-
-                        }
-                        else
-                        {
-                            if (lightBulbs[i].isInTrigger == true)
-                            {
-                                lightBulbsInTriggers += 1;
-                            }
-                        }
-
-
-
-                    }
-
-                    for (int i = 0; i < resistors.Length; i++)
-                    {
-                        if (resistors[i].isInTrigger == true)
-                        {
-                            totalCircuitResistance = totalCircuitResistance + resistors[i].resistanceFloat;
-                            resistorsInTriggers += 1;
-                        }
-                    }
-
-
-
                 }
             }
 
 
-        }
+
+
+            for (int i = 0; i < lightBulbs.Length; i++)
+            {
+                if (lightBulbs[i].isInSeries == true)
+                {
+                    if (lightBulbs[i].isInTrigger == true)
+                    {
+                        lightBulbsInTriggers += 1;
+                        print("lightBulbinTriggers" + lightBulbsInTriggers);
+                    }
+                    else
+                    {
+
+                    }
+
+                }
+                else
+                {
+                    if (lightBulbs[i].isInTrigger == true)
+                    {
+                        lightBulbsInTriggers += 1;
+                    }
+                }
+
+
+
+            }
+
+            for (int i = 0; i < resistors.Length; i++)
+            {
+                if (resistors[i].isInTrigger == true)
+                {
+                    totalCircuitResistance = totalCircuitResistance + resistors[i].resistanceFloat;
+                    resistorsInTriggers += 1;
+                }
+            }
+
+
+
+
+
+
+
+        
 
         if (lightBulbsInTriggers <= 0 && resistorsInTriggers <= 0)
         {
@@ -183,13 +178,14 @@ public class Lesson1WireScript : MonoBehaviour
                                 batteryItem.batteryOverheating = true;
                                 infoTextBox.text = "As you can see the battery is overheating, this is because there is no load in the circuit.";
                                 continueBtn.SetActive(true);
+                                wireModel.GetComponent<MeshRenderer>().material = LiveWire;
                             }
 
                             else
                             {
                                 batteryItem.batteryOverheating = true;
                                 infoTextBox.text = "There is no load in the circuit";
-
+                                wireModel.GetComponent<MeshRenderer>().material = LiveWire;
                             }
 
 
@@ -199,6 +195,7 @@ public class Lesson1WireScript : MonoBehaviour
 
                             batteryItem.batteryOverheating = true;
                             infoTextBox.text = "There is no load in the circuit";
+                            wireModel.GetComponent<MeshRenderer>().material = LiveWire;
                         }
                     }
 
@@ -678,10 +675,7 @@ public class Lesson1WireScript : MonoBehaviour
             }
         }
 
-        foreach (var trigger in Triggers)
-        {
-            trigger.gameObject.SetActive(true);
-        }
+
     }
 
     public void toggleChanged()
