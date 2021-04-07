@@ -1,5 +1,5 @@
 # Project Konko
-Project Konko is an Open Source Virtual Reality lesson creator built in Unity. It is designed by NubianVR (www.nubianvr.com) and primarily targetted at the Oculus Go VR device - intended to be adapted to other devices down the line. It seeks to provide the tools that will allow developers, creators and educators to:
+Project Konko is an Open Source Virtual Reality lesson creator built in Unity. It is designed & supported by NubianVR (www.nubianvr.com) and primarily targetted at the Oculus Go VR device - intended to be adapted to other devices down the line. It seeks to provide the tools that will allow developers, creators and educators to:
 - deploy 2D & 360 video lessons in Virtual Reality
 - manipulate 3D object in Virtual Reality environments
 - build multiple choice lesson assessment in Virtual Reality
